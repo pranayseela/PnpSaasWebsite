@@ -269,9 +269,21 @@
                     <p class="text-white leading-relaxed mb-4">
                         If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                     </p>
-                    <div class="space-y-2 text-white">
+                    <div class="space-y-4 text-white">
                         <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                        <p><strong>Email:</strong> <a href="mailto:support@pnpsaas.com" class="underline hover:text-blue-200">support@pnpsaas.com</a></p>
+                        <div>
+                            <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
+                            <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
+                                <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center gap-2">
+                                    <i class="fas fa-envelope text-blue-300"></i>
+                                    <span>support@pnpsaas.com</span>
+                                </a>
+                                <div class="h-10 w-px bg-white/20"></div>
+                                <button onclick="copyEmail('support@pnpsaas.com')" class="px-4 py-3 bg-white/5 hover:bg-white/10 text-white hover:text-blue-200 transition duration-300" title="Copy email address">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
                         <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
                     </div>
                 </div>
@@ -287,15 +299,25 @@
                     <p class="text-lg font-semibold text-white mb-2">Pnptechnologiesllc</p>
                     <p class="text-sm text-gray-400">© 2026 All rights reserved.</p>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-envelope text-blue-400"></i>
-                    <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300">
-                        support@pnpsaas.com
+                <div class="flex items-center gap-2 bg-gray-700 rounded-lg px-4 py-2 border border-gray-600 hover:border-blue-500 transition duration-300">
+                    <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center gap-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@pnpsaas.com</span>
                     </a>
+                    <div class="h-4 w-px bg-gray-600"></div>
+                    <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 transition duration-300" title="Copy email address">
+                        <i class="fas fa-copy"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
+        <i class="fas fa-check-circle text-green-400 text-xl"></i>
+        <span class="font-medium">Email copied to clipboard!</span>
+    </div>
 
     <script>
         // Set last updated date
@@ -303,6 +325,73 @@
             year: 'numeric', 
             month: 'long', 
             day: 'numeric' 
+        });
+
+        // Copy email to clipboard function with toast notification
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                // Show toast notification
+                const toast = document.getElementById('toast');
+                if (toast) {
+                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                    toast.classList.add('opacity-100', 'translate-y-0');
+                    
+                    // Hide toast after 3 seconds
+                    setTimeout(function() {
+                        toast.classList.remove('opacity-100', 'translate-y-0');
+                        toast.classList.add('opacity-0', 'translate-y-4');
+                        setTimeout(function() {
+                            toast.classList.add('hidden');
+                        }, 300);
+                    }, 3000);
+                }
+            }).catch(function(err) {
+                console.error('Failed to copy email:', err);
+                alert('Email: ' + email + '\n\n(Please copy manually)');
+            });
+        }
+
+        // Enhanced mailto link handler - always copy email as backup
+        document.querySelectorAll('a[href^="mailto:"]').forEach(mailtoLink => {
+            mailtoLink.addEventListener('click', function(e) {
+                const email = this.getAttribute('href').replace('mailto:', '');
+                
+                // Always copy email to clipboard as a backup (in case mailto doesn't work)
+                // This ensures users can paste it even if their email app doesn't open
+                navigator.clipboard.writeText(email).then(function() {
+                    // Show a helpful toast message
+                    const toast = document.getElementById('toast');
+                    if (toast) {
+                        // Check if we're on macOS/iOS (where mailto might not work)
+                        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                        
+                        if (isMac || isIOS) {
+                            toast.innerHTML = '<i class="fas fa-info-circle text-blue-400 text-xl"></i><span class="font-medium">Email copied! If your email app didn\'t open, paste it manually.</span>';
+                        } else {
+                            toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
+                        }
+                        
+                        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                        toast.classList.add('opacity-100', 'translate-y-0');
+                        
+                        setTimeout(function() {
+                            toast.classList.remove('opacity-100', 'translate-y-0');
+                            toast.classList.add('opacity-0', 'translate-y-4');
+                            setTimeout(function() {
+                                toast.classList.add('hidden');
+                                // Reset toast content
+                                toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
+                            }, 300);
+                        }, 4000);
+                    }
+                }).catch(function(err) {
+                    console.error('Failed to copy email:', err);
+                });
+                
+                // Allow the default mailto behavior to proceed
+                // Don't prevent default - let the browser try to open the email app
+            });
         });
     </script>
 </body>

@@ -27,10 +27,18 @@
                 <p class="text-lg md:text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
                     Launch your SaaS application faster with our production-ready starter kit. Built with best practices, clean architecture, and modern technologies.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="mailto:support@pnpsaas.com" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition duration-300 shadow-lg hover:shadow-xl">
-                        Contact for Early Access
-                    </a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <!-- Enterprise-style Email Input Group -->
+                    <div class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-200 hover:border-blue-400 transition duration-300">
+                        <a href="mailto:support@pnpsaas.com" class="px-6 py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center gap-2">
+                            <i class="fas fa-envelope text-blue-600"></i>
+                            <span>support@pnpsaas.com</span>
+                        </a>
+                        <div class="h-10 w-px bg-gray-300"></div>
+                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-5 py-4 bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition duration-300 border-l border-gray-200" title="Copy email address">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                     <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition duration-300">
                         Learn More
                     </a>
@@ -136,9 +144,17 @@
                             <span>Lifetime Updates</span>
                         </li>
                     </ul>
-                    <a href="mailto:support@pnpsaas.com" class="w-full bg-white text-blue-700 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition duration-300 shadow-lg block text-center">
-                        Contact for Early Access
-                    </a>
+                    <!-- Enterprise-style Email Input Group -->
+                    <div class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-200 hover:border-blue-400 transition duration-300">
+                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-6 py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center gap-2">
+                            <i class="fas fa-envelope text-blue-600"></i>
+                            <span>support@pnpsaas.com</span>
+                        </a>
+                        <div class="h-12 w-px bg-gray-300"></div>
+                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-5 py-4 bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition duration-300 border-l border-gray-200" title="Copy email address">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,10 +163,19 @@
     <!-- Footer -->
     <footer class="py-10 bg-gray-900 text-white text-center">
         <p>© 2026 Pnptechnologiesllc</p>
-        <div class="space-x-4 mt-2">
+        <div class="space-x-4 mt-2 flex items-center justify-center flex-wrap gap-2">
             <a href="privacy.html" class="text-blue-400 hover:underline">Privacy Policy</a>
             <a href="terms.html" class="text-blue-400 hover:underline">Terms of Service</a>
-            <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:underline">Support</a>
+            <div class="flex items-center gap-2 bg-gray-800 rounded-lg px-3 py-2 border border-gray-700 hover:border-blue-500 transition duration-300">
+                <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@pnpsaas.com</span>
+                </a>
+                <div class="h-4 w-px bg-gray-600"></div>
+                <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 transition duration-300" title="Copy email address">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
         </div>
     </footer>
 
@@ -398,9 +423,21 @@
                         <p class="text-white leading-relaxed mb-4">
                             If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                         </p>
-                        <div class="space-y-2 text-white">
+                        <div class="space-y-4 text-white">
                             <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                            <p><strong>Email:</strong> <a href="mailto:support@pnpsaas.com" class="underline hover:text-blue-200">support@pnpsaas.com</a></p>
+                            <div>
+                                <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
+                                <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
+                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center gap-2">
+                                        <i class="fas fa-envelope text-blue-300"></i>
+                                        <span>support@pnpsaas.com</span>
+                                    </a>
+                                    <div class="h-10 w-px bg-white/20"></div>
+                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-4 py-3 bg-white/5 hover:bg-white/10 text-white hover:text-blue-200 transition duration-300" title="Copy email address">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
                         </div>
                     </div>
@@ -641,15 +678,33 @@
                         <p class="text-white leading-relaxed mb-4">
                             If you have any questions about these Terms of Service, please contact us:
                         </p>
-                        <div class="space-y-2 text-white">
+                        <div class="space-y-4 text-white">
                             <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                            <p><strong>Email:</strong> <a href="mailto:support@pnpsaas.com" class="underline hover:text-blue-200">support@pnpsaas.com</a></p>
+                            <div>
+                                <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
+                                <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
+                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center gap-2">
+                                        <i class="fas fa-envelope text-blue-300"></i>
+                                        <span>support@pnpsaas.com</span>
+                                    </a>
+                                    <div class="h-10 w-px bg-white/20"></div>
+                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-4 py-3 bg-white/5 hover:bg-white/10 text-white hover:text-blue-200 transition duration-300" title="Copy email address">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
+        <i class="fas fa-check-circle text-green-400 text-xl"></i>
+        <span class="font-medium">Email copied to clipboard!</span>
     </div>
 
     <!-- Smooth Scroll Script -->
@@ -721,7 +776,75 @@
             }
         });
 
-        // Smooth scroll
+        // Copy email to clipboard function with toast notification
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                // Show toast notification
+                const toast = document.getElementById('toast');
+                if (toast) {
+                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                    toast.classList.add('opacity-100', 'translate-y-0');
+                    
+                    // Hide toast after 3 seconds
+                    setTimeout(function() {
+                        toast.classList.remove('opacity-100', 'translate-y-0');
+                        toast.classList.add('opacity-0', 'translate-y-4');
+                        setTimeout(function() {
+                            toast.classList.add('hidden');
+                        }, 300);
+                    }, 3000);
+                }
+            }).catch(function(err) {
+                console.error('Failed to copy email:', err);
+                // Fallback: show alert if clipboard API fails
+                alert('Email: ' + email + '\n\n(Please copy manually)');
+            });
+        }
+
+        // Enhanced mailto link handler - always copy email as backup
+        document.querySelectorAll('a[href^="mailto:"]').forEach(mailtoLink => {
+            mailtoLink.addEventListener('click', function(e) {
+                const email = this.getAttribute('href').replace('mailto:', '');
+                
+                // Always copy email to clipboard as a backup (in case mailto doesn't work)
+                // This ensures users can paste it even if their email app doesn't open
+                navigator.clipboard.writeText(email).then(function() {
+                    // Show a helpful toast message
+                    const toast = document.getElementById('toast');
+                    if (toast) {
+                        // Check if we're on macOS/iOS (where mailto might not work)
+                        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                        
+                        if (isMac || isIOS) {
+                            toast.innerHTML = '<i class="fas fa-info-circle text-blue-400 text-xl"></i><span class="font-medium">Email copied! If your email app didn\'t open, paste it manually.</span>';
+                        } else {
+                            toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
+                        }
+                        
+                        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                        toast.classList.add('opacity-100', 'translate-y-0');
+                        
+                        setTimeout(function() {
+                            toast.classList.remove('opacity-100', 'translate-y-0');
+                            toast.classList.add('opacity-0', 'translate-y-4');
+                            setTimeout(function() {
+                                toast.classList.add('hidden');
+                                // Reset toast content
+                                toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
+                            }, 300);
+                        }, 4000);
+                    }
+                }).catch(function(err) {
+                    console.error('Failed to copy email:', err);
+                });
+                
+                // Allow the default mailto behavior to proceed
+                // Don't prevent default - let the browser try to open the email app
+            });
+        });
+
+        // Smooth scroll - only for hash links, not mailto links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
