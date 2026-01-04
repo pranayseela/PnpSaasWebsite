@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PnPSaaS - Professional SaaS Starter Kit</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>PnPSaaS - The Enterprise .NET 10 Starter Kit | Professional SaaS Development</title>
+    <meta name="title" content="PnPSaaS - The Enterprise .NET 10 Starter Kit | Professional SaaS Development">
+    <meta name="description" content="Launch your SaaS application faster with PnPSaaS - a production-ready .NET 10 starter kit featuring clean architecture, authentication, multi-tenancy, PostgreSQL, EF Core, and Blazor. One-time payment, lifetime access.">
+    <meta name="keywords" content=".NET 10, SaaS starter kit, Blazor, PostgreSQL, EF Core, multi-tenant, authentication, enterprise software, .NET development">
+    <meta name="author" content="Pnptechnologiesllc">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pnpsaas.com/">
+    <meta property="og:title" content="PnPSaaS - The Enterprise .NET 10 Starter Kit">
+    <meta property="og:description" content="Launch your SaaS application faster with a production-ready .NET 10 starter kit. Clean architecture, authentication, multi-tenancy, and more.">
+    <meta property="og:image" content="https://pnpsaas.com/images/PnPSaaS_Landing_Page.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pnpsaas.com/">
+    <meta property="twitter:title" content="PnPSaaS - The Enterprise .NET 10 Starter Kit">
+    <meta property="twitter:description" content="Launch your SaaS application faster with a production-ready .NET 10 starter kit. Clean architecture, authentication, multi-tenancy, and more.">
+    <meta property="twitter:image" content="https://pnpsaas.com/images/PnPSaaS_Landing_Page.png">
+    
+    <!-- Favicon -->
+    <link rel="canonical" href="https://pnpsaas.com/">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,9 +41,45 @@
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        
+        /* Accessibility: Focus styles */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        /* Ensure sufficient color contrast */
+        .text-blue-600 {
+            color: #2563eb;
+        }
+        
+        .bg-blue-50 {
+            background-color: #eff6ff;
+        }
+        
+        /* Skip to main content link for screen readers */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #2563eb;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
     </style>
 </head>
 <body class="bg-white">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200">
         <div class="container mx-auto px-4 sm:px-6">
@@ -34,11 +95,13 @@
                     <a href="#features" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
                     <a href="#gallery" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
                     <a href="#pricing" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
+                    <a href="#tech-stack" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
+                    <a href="#faq" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
                     <a href="#support" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
                     
                     <!-- Legal Dropdown -->
                     <div class="relative group">
-                        <button class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium flex items-center gap-1">
+                        <button class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium flex items-center gap-1" aria-expanded="false" aria-haspopup="true" aria-label="Legal menu">
                             Legal
                             <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                         </button>
@@ -56,7 +119,7 @@
                     </a>
                     
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300" aria-label="Toggle menu">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                         <i class="fas fa-bars text-xl" id="menu-icon"></i>
                     </button>
                 </div>
@@ -69,6 +132,8 @@
                     <a href="#features" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
                     <a href="#gallery" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
                     <a href="#pricing" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
+                    <a href="#tech-stack" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
+                    <a href="#faq" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
                     <a href="#support" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
                     <div class="px-4 py-2">
                         <p class="text-sm font-semibold text-gray-500 mb-2">Legal</p>
@@ -86,6 +151,8 @@
     <!-- Spacer for fixed navbar -->
     <div class="h-16 md:h-20"></div>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white min-h-screen flex items-center">
         <div class="container mx-auto px-6 py-20">
@@ -199,7 +266,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_Landing_Page.png" alt="Professional Landing Page" class="w-full h-auto object-cover">
+                            <img src="images/PnPSaaS_Landing_Page.png" alt="Professional Landing Page showcasing modern SaaS design with clean UI and professional layout" class="w-full h-auto object-cover" loading="lazy">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -223,7 +290,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Login_Interface.png" alt="Secure Login Interface" class="w-full h-auto object-cover">
+                            <img src="images/PnPSaaS_User_Login_Interface.png" alt="Secure Login Interface with JWT authentication and modern user experience design" class="w-full h-auto object-cover" loading="lazy">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -247,7 +314,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Registration_Interface.png" alt="Seamless User Registration" class="w-full h-auto object-cover">
+                            <img src="images/PnPSaaS_User_Registration_Interface.png" alt="Seamless User Registration interface with built-in validation and identity management" class="w-full h-auto object-cover" loading="lazy">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -255,6 +322,78 @@
                         <p class="text-gray-600 leading-relaxed">
                             Optimized account creation flow with built-in validation and identity management.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="tech-stack" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Technology Stack
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Built with modern, enterprise-grade technologies for performance and scalability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- .NET 10 -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 mx-auto">
+                        <i class="fab fa-microsoft text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">.NET 10</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Latest .NET framework with cutting-edge performance and modern C# features.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Backend</span>
+                    </div>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg mb-4 mx-auto">
+                        <i class="fas fa-database text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">PostgreSQL</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Robust, open-source relational database with advanced features and reliability.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Database</span>
+                    </div>
+                </div>
+
+                <!-- EF Core -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 mx-auto">
+                        <i class="fas fa-layer-group text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">EF Core</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Modern ORM for .NET with code-first migrations and LINQ support.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">ORM</span>
+                    </div>
+                </div>
+
+                <!-- Blazor -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 mx-auto">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Blazor</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Build interactive web UIs with C# instead of JavaScript. Full-stack .NET development.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Frontend</span>
                     </div>
                 </div>
             </div>
@@ -321,6 +460,63 @@
             </div>
         </div>
     </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Everything you need to know about PnPSaaS
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1: One-time Payment -->
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
+                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:bg-gray-50" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span class="text-lg font-semibold text-gray-900">Is this a one-time payment?</span>
+                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-answer-1" class="faq-answer hidden px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes. One payment gives you lifetime access to the current version and all future updates of the .NET 10 Starter Kit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2: Client Projects -->
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
+                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span class="text-lg font-semibold text-gray-900">Can I use this for client projects?</span>
+                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-answer-2" class="faq-answer hidden px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Absolutely. The license allows for use in personal and unlimited commercial/client projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3: Full Source Code -->
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
+                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span class="text-lg font-semibold text-gray-900">Does it include the full source code?</span>
+                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-answer-3" class="faq-answer hidden px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes, you get 100% access to the Clean Architecture source code, including the Blazor UI and Infrastructure layers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
 
     <!-- Footer -->
     <footer id="support" class="py-10 bg-gray-900 text-white text-center">
@@ -1016,7 +1212,12 @@
 
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
                 mobileMenu.classList.toggle('hidden');
+                
+                // Update aria-expanded for accessibility
+                mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+                
                 // Toggle hamburger icon to X
                 if (mobileMenu.classList.contains('hidden')) {
                     menuIcon.classList.remove('fa-times');
@@ -1024,6 +1225,17 @@
                 } else {
                     menuIcon.classList.remove('fa-bars');
                     menuIcon.classList.add('fa-times');
+                }
+            });
+            
+            // Close menu on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                    mobileMenuButton.focus();
                 }
             });
         }
@@ -1122,7 +1334,76 @@
         galleryItems.forEach(item => {
             galleryObserver.observe(item);
         });
+
+        // Technology Stack Scroll Animation
+        const techCards = document.querySelectorAll('.tech-card');
+        
+        const techObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                    techObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        techCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            techObserver.observe(card);
+        });
+
+        // FAQ Accordion Toggle Function
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('.faq-icon');
+            const isOpen = !answer.classList.contains('hidden');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    const otherButton = item.querySelector('.faq-question');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherIcon = item.querySelector('.faq-icon');
+                    otherAnswer.classList.add('hidden');
+                    otherIcon.classList.remove('rotate-180');
+                    otherButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current FAQ item
+            if (isOpen) {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+        
+        // Add keyboard support for FAQ buttons
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFaq(this);
+                }
+            });
+        });
     </script>
 </body>
 </html>
+
+
+
 
