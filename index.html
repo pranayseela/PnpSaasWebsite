@@ -253,7 +253,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_Landing_Page.png" alt="Professional Landing Page - SaaS Boilerplate .NET 10 UI with modern design and clean interface" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2006">
+                            <img src="images/PnPSaaS_Landing_Page.png" alt="PnPSaaS Landing Page Preview - Professional SaaS Boilerplate .NET 10 UI Dashboard" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2006">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -277,7 +277,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Login_Interface.png" alt="Secure Login Interface - SaaS Boilerplate .NET 10 UI with JWT authentication" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2008">
+                            <img src="images/PnPSaaS_User_Login_Interface.png" alt="PnPSaaS Login Interface Preview - Secure Authentication Dashboard .NET 10 UI" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2008">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -301,7 +301,7 @@
                         </div>
                         <!-- Browser Content -->
                         <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Registration_Interface.png" alt="User Registration Interface - SaaS Boilerplate .NET 10 UI with validation and identity management" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2010">
+                            <img src="images/PnPSaaS_User_Registration_Interface.png" alt="PnPSaaS Registration Interface Preview - User Signup Dashboard .NET 10 UI" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2010">
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -1146,7 +1146,6 @@
                     }, 3000);
                 }
             }).catch(function(err) {
-                console.error('Failed to copy email:', err);
                 // Fallback: show alert if clipboard API fails
                 alert('Email: ' + email + '\n\n(Please copy manually)');
             });
@@ -1187,7 +1186,7 @@
                         }, 4000);
                     }
                 }).catch(function(err) {
-                    console.error('Failed to copy email:', err);
+                    // Silent error handling - clipboard copy failed
                 });
                 
                 // Allow the default mailto behavior to proceed

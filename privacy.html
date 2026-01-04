@@ -382,7 +382,6 @@
                     }, 3000);
                 }
             }).catch(function(err) {
-                console.error('Failed to copy email:', err);
                 alert('Email: ' + email + '\n\n(Please copy manually)');
             });
         }
@@ -422,7 +421,7 @@
                         }, 4000);
                     }
                 }).catch(function(err) {
-                    console.error('Failed to copy email:', err);
+                    // Silent error handling - clipboard copy failed
                 });
                 
                 // Allow the default mailto behavior to proceed
