@@ -27,19 +27,20 @@
                 <p class="text-lg md:text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
                     Launch your SaaS application faster with our production-ready starter kit. Built with best practices, clean architecture, and modern technologies.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
                     <!-- Enterprise-style Email Input Group -->
-                    <div class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-200 hover:border-blue-400 transition duration-300">
-                        <a href="mailto:support@pnpsaas.com" class="px-6 py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center gap-2">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white rounded-lg shadow-md sm:shadow-lg overflow-hidden border border-gray-200 sm:border-2 hover:border-blue-400 transition duration-300 w-full sm:w-auto">
+                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
                             <i class="fas fa-envelope text-blue-600"></i>
-                            <span>support@pnpsaas.com</span>
+                            <span class="text-sm sm:text-base">support@pnpsaas.com</span>
                         </a>
-                        <div class="h-10 w-px bg-gray-300"></div>
-                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-5 py-4 bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition duration-300 border-l border-gray-200" title="Copy email address">
-                            <i class="fas fa-copy"></i>
+                        <div class="hidden sm:block h-10 w-px bg-gray-300"></div>
+                        <div class="sm:hidden h-px w-full bg-gray-300"></div>
+                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-5 py-3 sm:py-4 bg-gray-50 hover:bg-blue-50 active:bg-blue-100 text-gray-600 hover:text-blue-600 transition duration-300 sm:border-l border-gray-200 min-h-[48px] flex items-center justify-center" title="Copy email address">
+                            <i class="fas fa-copy text-lg"></i>
                         </button>
                     </div>
-                    <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition duration-300">
+                    <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition duration-300 w-full sm:w-auto text-center">
                         Learn More
                     </a>
                 </div>
@@ -145,14 +146,15 @@
                         </li>
                     </ul>
                     <!-- Enterprise-style Email Input Group -->
-                    <div class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-200 hover:border-blue-400 transition duration-300">
-                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-6 py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center gap-2">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white rounded-lg shadow-md sm:shadow-lg overflow-hidden border border-gray-200 sm:border-2 hover:border-blue-400 transition duration-300">
+                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center sm:justify-center gap-2 min-h-[48px]">
                             <i class="fas fa-envelope text-blue-600"></i>
-                            <span>support@pnpsaas.com</span>
+                            <span class="text-sm sm:text-base">support@pnpsaas.com</span>
                         </a>
-                        <div class="h-12 w-px bg-gray-300"></div>
-                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-5 py-4 bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-blue-600 transition duration-300 border-l border-gray-200" title="Copy email address">
-                            <i class="fas fa-copy"></i>
+                        <div class="hidden sm:block h-12 w-px bg-gray-300"></div>
+                        <div class="sm:hidden h-px w-full bg-gray-300"></div>
+                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-5 py-3 sm:py-4 bg-gray-50 hover:bg-blue-50 active:bg-blue-100 text-gray-600 hover:text-blue-600 transition duration-300 sm:border-l border-gray-200 min-h-[48px] flex items-center justify-center" title="Copy email address">
+                            <i class="fas fa-copy text-lg"></i>
                         </button>
                     </div>
                 </div>
@@ -163,17 +165,18 @@
     <!-- Footer -->
     <footer class="py-10 bg-gray-900 text-white text-center">
         <p>© 2026 Pnptechnologiesllc</p>
-        <div class="space-x-4 mt-2 flex items-center justify-center flex-wrap gap-2">
-            <a href="privacy.html" class="text-blue-400 hover:underline">Privacy Policy</a>
-            <a href="terms.html" class="text-blue-400 hover:underline">Terms of Service</a>
-            <div class="flex items-center gap-2 bg-gray-800 rounded-lg px-3 py-2 border border-gray-700 hover:border-blue-500 transition duration-300">
-                <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center gap-2">
+        <div class="space-x-2 sm:space-x-4 mt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 px-4">
+            <a href="privacy.html" class="text-blue-400 hover:underline text-sm sm:text-base">Privacy Policy</a>
+            <a href="terms.html" class="text-blue-400 hover:underline text-sm sm:text-base">Terms of Service</a>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-0 sm:gap-2 bg-gray-800 rounded-lg px-3 sm:px-3 py-2 border border-gray-700 hover:border-blue-500 transition duration-300 w-full sm:w-auto">
+                <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center sm:justify-start gap-2 py-2 sm:py-0 min-h-[44px] sm:min-h-0">
                     <i class="fas fa-envelope"></i>
-                    <span>support@pnpsaas.com</span>
+                    <span class="text-sm sm:text-base">support@pnpsaas.com</span>
                 </a>
-                <div class="h-4 w-px bg-gray-600"></div>
-                <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 transition duration-300" title="Copy email address">
-                    <i class="fas fa-copy"></i>
+                <div class="hidden sm:block h-4 w-px bg-gray-600"></div>
+                <div class="sm:hidden h-px w-full bg-gray-600 my-1"></div>
+                <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 active:text-blue-200 transition duration-300 py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center" title="Copy email address">
+                    <i class="fas fa-copy text-base sm:text-sm"></i>
                 </button>
             </div>
         </div>
@@ -427,14 +430,15 @@
                             <p><strong>Entity:</strong> Pnptechnologiesllc</p>
                             <div>
                                 <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                                <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center gap-2">
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
+                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
                                         <i class="fas fa-envelope text-blue-300"></i>
-                                        <span>support@pnpsaas.com</span>
+                                        <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
                                     </a>
-                                    <div class="h-10 w-px bg-white/20"></div>
-                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-4 py-3 bg-white/5 hover:bg-white/10 text-white hover:text-blue-200 transition duration-300" title="Copy email address">
-                                        <i class="fas fa-copy"></i>
+                                    <div class="hidden sm:block h-10 w-px bg-white/20"></div>
+                                    <div class="sm:hidden h-px w-full bg-white/20"></div>
+                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
+                                        <i class="fas fa-copy text-lg"></i>
                                     </button>
                                 </div>
                             </div>
@@ -682,14 +686,15 @@
                             <p><strong>Entity:</strong> Pnptechnologiesllc</p>
                             <div>
                                 <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                                <div class="flex items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center gap-2">
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
+                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
                                         <i class="fas fa-envelope text-blue-300"></i>
-                                        <span>support@pnpsaas.com</span>
+                                        <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
                                     </a>
-                                    <div class="h-10 w-px bg-white/20"></div>
-                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-4 py-3 bg-white/5 hover:bg-white/10 text-white hover:text-blue-200 transition duration-300" title="Copy email address">
-                                        <i class="fas fa-copy"></i>
+                                    <div class="hidden sm:block h-10 w-px bg-white/20"></div>
+                                    <div class="sm:hidden h-px w-full bg-white/20"></div>
+                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
+                                        <i class="fas fa-copy text-lg"></i>
                                     </button>
                                 </div>
                             </div>
