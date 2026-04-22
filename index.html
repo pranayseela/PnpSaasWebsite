@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>PnPSaaS | Enterprise .NET 10 Starter Kit</title>
-    <meta name="title" content="PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="description" content="Production-ready .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy. Built with Blazor, PostgreSQL, EF Core. One-time payment, lifetime access.">
-    <meta name="keywords" content=".NET 10, SaaS starter kit, Blazor, PostgreSQL, EF Core, multi-tenant, authentication, enterprise software, .NET development, Clean Architecture">
+    <title>PnPSaaS | The Ultimate .NET 10 & Blazor SaaS Boilerplate</title>
+    <meta name="title" content="PnPSaaS | The Ultimate .NET 10 & Blazor SaaS Boilerplate">
+    <meta name="description" content="Launch your SaaS in days, not months. A production-ready .NET 10 boilerplate with Multi-tenancy, Clean Architecture, MediatR, CQRS, Stripe, Redis, and MudBlazor UI.">
+    <meta name="keywords" content=".NET 10, SaaS starter kit, Blazor, PostgreSQL, EF Core, multi-tenant, authentication, MediatR, CQRS, Stripe integration, MudBlazor, Hangfire, Redis, Serilog">
     <meta name="author" content="Pnptechnologiesllc">
     <meta name="robots" content="index, follow">
     
@@ -146,30 +146,26 @@
         <div class="container mx-auto px-6 py-20">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    PnPSaaS
+                    Ship your SaaS <span class="text-blue-200">130+ hours</span> faster.
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                    Professional SaaS Starter Kit
+                    The most complete .NET 10 & Blazor SaaS Boilerplate.
                 </p>
-                <p class="text-lg md:text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
-                    Launch your SaaS application faster with our production-ready starter kit. Built with best practices, clean architecture, and modern technologies.
+                <p class="text-lg md:text-xl mb-12 text-blue-200 max-w-3xl mx-auto">
+                    Stop building the same boilerplate over and over. Launch your application with Multi-tenancy, Stripe Billing, CQRS, and MudBlazor UI already perfectly integrated and ready for production.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
-                    <!-- Enterprise-style Email Input Group -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white rounded-lg shadow-md sm:shadow-lg overflow-hidden border border-gray-200 sm:border-2 hover:border-blue-400 transition duration-300 w-full sm:w-auto">
-                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                            <i class="fas fa-envelope text-blue-600"></i>
-                            <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                        </a>
-                        <div class="hidden sm:block h-10 w-px bg-gray-300"></div>
-                        <div class="sm:hidden h-px w-full bg-gray-300"></div>
-                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-5 py-3 sm:py-4 bg-gray-50 hover:bg-blue-50 active:bg-blue-100 text-gray-600 hover:text-blue-600 transition duration-300 sm:border-l border-gray-200 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                            <i class="fas fa-copy text-lg"></i>
-                        </button>
-                    </div>
-                    <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition duration-300 w-full sm:w-auto text-center">
-                        Learn More
+                    <a href="#pricing" class="bg-white text-blue-700 px-10 py-4 rounded-lg font-bold text-xl hover:bg-blue-50 transition duration-300 w-full sm:w-auto text-center shadow-2xl transform hover:-translate-y-1">
+                        Get Started - $149
                     </a>
+                    <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition duration-300 w-full sm:w-auto text-center">
+                        Explore Features
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center justify-center space-x-8 opacity-70">
+                    <div class="flex items-center space-x-2"><i class="fab fa-microsoft text-2xl"></i> <span class="font-medium">.NET 10</span></div>
+                    <div class="flex items-center space-x-2"><i class="fas fa-layer-group text-2xl"></i> <span class="font-medium">Clean Architecture</span></div>
+                    <div class="flex items-center space-x-2"><i class="fab fa-stripe text-3xl"></i> <span class="font-medium">Stripe Ready</span></div>
                 </div>
             </div>
         </div>
@@ -180,48 +176,87 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    What's Inside
+                    The Ultimate SaaS Foundation
                 </h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Everything you need to build and launch your SaaS application
+                    We built the hard parts so you can focus on your business logic.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Clean Architecture -->
+                <!-- Multi-Tenancy -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Multi-Tenant by Default</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Sleep easy knowing your customer data is safe. Built-in EF Core Global Query Filters ensure every tenant only ever sees their own data—automatically.
+                    </p>
+                </div>
+
+                <!-- Clean Architecture & CQRS -->
                 <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                     <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                         <i class="fas fa-sitemap text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                        Clean Architecture
+                        CQRS & MediatR
                     </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Well-structured, maintainable codebase following clean architecture principles. Scalable and easy to extend as your business grows.
+                        Don't build a mess. Use the industry-standard MediatR pattern to keep your controllers lean, your logic decoupled, and your requests automatically validated with FluentValidation.
                     </p>
                 </div>
 
-                <!-- Auth -->
+                <!-- Stripe Billing -->
                 <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                     <div class="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                        <i class="fab fa-stripe-s text-green-600 text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                        Authentication
+                        Stripe Billing
                     </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Secure authentication system built-in. User registration, login, password reset, and session management ready to use.
+                        Stop fighting with webhooks. Our pre-built Stripe integration handles checkout sessions, subscription syncing, and secure signature verification out of the box.
                     </p>
                 </div>
 
-                <!-- Multi-Tenancy -->
+                <!-- RBAC Security -->
                 <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    <div class="bg-red-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Multi-Tenancy</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        Granular RBAC Security
+                    </h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Native support for SaaS data isolation. Easily manage multiple clients within a single deployment using proven tenant-isolation patterns.
+                        Go beyond simple 'Admin' roles. Use our custom permission-based system to define exactly what each user can see and do, right down to the specific API endpoint.
+                    </p>
+                </div>
+
+                <!-- Background Jobs -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        Hangfire & Redis
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Enterprise-grade infrastructure included. Process background jobs reliably with Hangfire (backed by PostgreSQL) and accelerate performance with Redis distributed caching.
+                    </p>
+                </div>
+
+                <!-- DevOps & Observability -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        DevOps Ready
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Deploy instantly with included Dockerfiles and docker-compose orchestration. Monitor your app in production with structured JSON logging powered by Serilog.
                     </p>
                 </div>
             </div>
@@ -336,52 +371,52 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">.NET 10</h3>
                     <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Latest .NET framework with cutting-edge performance and modern C# features.
+                        Latest .NET framework with cutting-edge performance and native OpenAPI documentation.
                     </p>
                     <div class="mt-4 flex items-center justify-center">
                         <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Backend</span>
                     </div>
                 </div>
 
-                <!-- PostgreSQL -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg mb-4 mx-auto">
-                        <i class="fas fa-database text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">PostgreSQL</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Robust, open-source relational database with advanced features and reliability.
-                    </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Database</span>
-                    </div>
-                </div>
-
-                <!-- EF Core -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 mx-auto">
-                        <i class="fas fa-layer-group text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">EF Core</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Modern ORM for .NET with code-first migrations and LINQ support.
-                    </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">ORM</span>
-                    </div>
-                </div>
-
-                <!-- Blazor -->
+                <!-- Blazor & MudBlazor -->
                 <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                     <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 mx-auto">
                         <i class="fas fa-code text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Blazor</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">MudBlazor</h3>
                     <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Build interactive web UIs with C# instead of JavaScript. Full-stack .NET development.
+                        Build beautiful, interactive web UIs instantly with Blazor Auto rendering and MudBlazor components.
                     </p>
                     <div class="mt-4 flex items-center justify-center">
                         <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Frontend</span>
+                    </div>
+                </div>
+
+                <!-- PostgreSQL & EF Core -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 mx-auto">
+                        <i class="fas fa-database text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">EF Core + Postgres</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Robust ORM paired with PostgreSQL. Includes pre-configured Audit Logging and multi-tenant filters.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">Database</span>
+                    </div>
+                </div>
+
+                <!-- Redis & Hangfire -->
+                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg mb-4 mx-auto">
+                        <i class="fas fa-layer-group text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Redis & Hangfire</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed text-center">
+                        Distributed caching for speed, and robust background job processing for scale.
+                    </p>
+                    <div class="mt-4 flex items-center justify-center">
+                        <span class="text-xs font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">Infrastructure</span>
                     </div>
                 </div>
             </div>
@@ -462,33 +497,46 @@
                     </button>
                     <div id="faq-answer-1" class="faq-answer hidden px-6 pb-5">
                         <p class="text-gray-600 leading-relaxed">
-                            Yes. One payment gives you lifetime access to the current version and all future updates of the .NET 10 Starter Kit.
+                            Yes. One payment gives you lifetime access to the current version of the .NET 10 Starter Kit and all future updates. No recurring subscriptions.
                         </p>
                     </div>
                 </div>
 
-                <!-- FAQ Item 2: Client Projects -->
+                <!-- FAQ Item 2: What about Stripe? -->
                 <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
                     <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-2">
-                        <span class="text-lg font-semibold text-gray-900">Can I use this for client projects?</span>
+                        <span class="text-lg font-semibold text-gray-900">Do I need to write my own Stripe webhooks?</span>
                         <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
                     </button>
                     <div id="faq-answer-2" class="faq-answer hidden px-6 pb-5">
                         <p class="text-gray-600 leading-relaxed">
-                            Absolutely. The license allows for use in personal and unlimited commercial/client projects.
+                            No! We have already built the integration using Stripe.net. Checkout sessions and secure, signature-verified webhooks are pre-configured to sync subscription statuses automatically.
                         </p>
                     </div>
                 </div>
 
-                <!-- FAQ Item 3: Full Source Code -->
+                <!-- FAQ Item 3: Client Projects -->
                 <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
                     <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-3">
-                        <span class="text-lg font-semibold text-gray-900">Does it include the full source code?</span>
+                        <span class="text-lg font-semibold text-gray-900">Can I use this for client projects?</span>
                         <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
                     </button>
                     <div id="faq-answer-3" class="faq-answer hidden px-6 pb-5">
                         <p class="text-gray-600 leading-relaxed">
-                            Yes, you get 100% access to the Clean Architecture source code, including the Blazor UI and Infrastructure layers.
+                            Absolutely. The license allows for use in personal and unlimited commercial/client projects. Build as many SaaS applications as you want.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4: Full Source Code -->
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
+                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span class="text-lg font-semibold text-gray-900">Does it include the full source code?</span>
+                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-answer-4" class="faq-answer hidden px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes, you get 100% access to the Clean Architecture source code, including the Blazor UI (MudBlazor), Infrastructure layers (EF Core, Hangfire, Redis), and API endpoints.
                         </p>
                     </div>
                 </div>
