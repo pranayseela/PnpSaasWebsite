@@ -1,1392 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>PnPSaaS | Enterprise .NET 10 Starter Kit</title>
-    <meta name="title" content="PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="description" content="Production-ready .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy. Built with Blazor, PostgreSQL, EF Core. One-time payment, lifetime access.">
-    <meta name="keywords" content=".NET 10, SaaS starter kit, Blazor, PostgreSQL, EF Core, multi-tenant, authentication, enterprise software, .NET development, Clean Architecture">
-    <meta name="author" content="Pnptechnologiesllc">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook / WhatsApp / iMessage -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pnpsaas.com/">
-    <meta property="og:title" content="PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta property="og:description" content="Production-ready .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy. Built with Blazor, PostgreSQL, EF Core. One-time payment, lifetime access.">
-    <meta property="og:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:secure_url" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="PnPSaaS - Enterprise .NET 10 Starter Kit with Clean Architecture and Multi-tenancy">
-    <meta property="og:site_name" content="PnPSaaS">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pnpsaas.com/">
-    <meta name="twitter:title" content="PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="twitter:description" content="Production-ready .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy. Built with Blazor, PostgreSQL, EF Core. One-time payment, lifetime access.">
-    <meta name="twitter:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
+    <title>AIExecutiveAssistant | Your Private Executive Memory</title>
+    <meta name="title" content="AIExecutiveAssistant | Your Private Executive Memory">
+    <meta name="description" content="Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive support layer for professionals, built with local-first and privacy-first intelligence.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://pnpsaas.com/">
     
-    <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "PnPSaaS",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": ".NET 10",
-      "offers": {
-        "@type": "Offer",
-        "price": "149",
-        "priceCurrency": "USD"
-      },
-      "description": "Production-ready .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy. Built with Blazor, PostgreSQL, EF Core. One-time payment, lifetime access.",
-      "url": "https://pnpsaas.com/",
-      "author": {
-        "@type": "Organization",
-        "name": "Pnptechnologiesllc"
-      }
-    }
-    </script>
-    
-    <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');body{font-family:'Inter',sans-serif}nav.scrolled{background-color:rgba(255,255,255,0.98);box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06)}a:focus-visible,button:focus-visible{outline:2px solid #3b82f6;outline-offset:2px;border-radius:4px}.text-blue-600{color:#2563eb}.bg-blue-50{background-color:#eff6ff}.skip-link{position:absolute;top:-40px;left:0;background:#2563eb;color:white;padding:8px;text-decoration:none;z-index:100}.skip-link:focus{top:0}</style>
-</head>
-<body class="bg-white">
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Logo -->
-                <a href="#home" class="flex items-center space-x-2 text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                    <span>PnPSaaS</span>
-                </a>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            grey: '#1D1D1F',
+                            light: '#F5F5F7',
+                            muted: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-1">
-                    <a href="#home" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Home</a>
-                    <a href="#features" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
-                    <a href="#gallery" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
-                    <a href="#pricing" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
-                    <a href="#tech-stack" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
-                    <a href="#faq" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
-                    <a href="#support" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
-                    
-                    <!-- Legal Dropdown -->
-                    <div class="relative group">
-                        <button class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium flex items-center gap-1" aria-expanded="false" aria-haspopup="true" aria-label="Legal menu">
-                            Legal
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                            <a href="privacy.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-t-lg">Privacy Policy</a>
-                            <a href="terms.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-b-lg">Terms of Service</a>
-                        </div>
-                    </div>
-                </div>
+    <style>
+        body {
+            background-color: #000000;
+            color: #F5F5F7;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass {
+            background: rgba(29, 29, 31, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-                <!-- CTA Button & Mobile Menu Toggle -->
-                <div class="flex items-center space-x-3">
-                    <a href="https://pnpsaas.lemonsqueezy.com/checkout/buy/1192560?embed=1" class="lemonsqueezy-button hidden lg:block bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                        Get Started
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
-                    </button>
-                </div>
+        .text-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-padding {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="selection:bg-white/20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/60">
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#briefing" class="hover:text-white transition-colors">Briefing</a>
+                <a href="#privacy" class="hover:text-white transition-colors">Privacy</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Legal</a>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-200 mt-2">
-                <div class="flex flex-col space-y-1 pt-4">
-                    <a href="#home" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Home</a>
-                    <a href="#features" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
-                    <a href="#gallery" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
-                    <a href="#pricing" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
-                    <a href="#tech-stack" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
-                    <a href="#faq" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
-                    <a href="#support" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
-                    <div class="px-4 py-2">
-                        <p class="text-sm font-semibold text-gray-500 mb-2">Legal</p>
-                        <a href="privacy.html" class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300">Privacy Policy</a>
-                        <a href="terms.html" class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300">Terms of Service</a>
-                    </div>
-                    <a href="https://pnpsaas.lemonsqueezy.com/checkout/buy/1192560?embed=1" class="lemonsqueezy-button mx-4 mt-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center">
-                        Get Started
-                    </a>
-                </div>
-            </div>
+            <a href="#" class="bg-white text-black text-xs font-semibold px-4 py-2 rounded-full hover:bg-white/90 transition-all">
+                Get Started
+            </a>
         </div>
     </nav>
 
-    <!-- Spacer for fixed navbar -->
-    <div class="h-16 md:h-20"></div>
-
-    <!-- Main Content -->
-    <main id="main-content">
-    <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white min-h-screen flex items-center">
-        <div class="container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    PnPSaaS
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+            <div class="max-w-4xl fade-in" id="hero">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8 text-gradient">
+                    Your private<br>executive memory.
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                    Professional SaaS Starter Kit
+                <p class="text-xl md:text-2xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                    Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive layer that live on your device, ensuring your thoughts never fade.
                 </p>
-                <p class="text-lg md:text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
-                    Launch your SaaS application faster with our production-ready starter kit. Built with best practices, clean architecture, and modern technologies.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
-                    <!-- Enterprise-style Email Input Group -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white rounded-lg shadow-md sm:shadow-lg overflow-hidden border border-gray-200 sm:border-2 hover:border-blue-400 transition duration-300 w-full sm:w-auto">
-                        <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-gray-700 hover:text-blue-700 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                            <i class="fas fa-envelope text-blue-600"></i>
-                            <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                        </a>
-                        <div class="hidden sm:block h-10 w-px bg-gray-300"></div>
-                        <div class="sm:hidden h-px w-full bg-gray-300"></div>
-                        <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-5 py-3 sm:py-4 bg-gray-50 hover:bg-blue-50 active:bg-blue-100 text-gray-600 hover:text-blue-600 transition duration-300 sm:border-l border-gray-200 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                            <i class="fas fa-copy text-lg"></i>
-                        </button>
-                    </div>
-                    <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition duration-300 w-full sm:w-auto text-center">
-                        Learn More
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#" class="text-lg font-medium text-white group flex items-center gap-2">
+                        Experience Continuity
+                        <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- What's Inside Section -->
-    <section id="features" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    What's Inside
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Everything you need to build and launch your SaaS application
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Clean Architecture -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-sitemap text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                        Clean Architecture
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Well-structured, maintainable codebase following clean architecture principles. Scalable and easy to extend as your business grows.
-                    </p>
-                </div>
-
-                <!-- Auth -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                        Authentication
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Secure authentication system built-in. User registration, login, password reset, and session management ready to use.
-                    </p>
-                </div>
-
-                <!-- Multi-Tenancy -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-users text-purple-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Multi-Tenancy</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Native support for SaaS data isolation. Easily manage multiple clients within a single deployment using proven tenant-isolation patterns.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Built for Enterprise
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Explore the high-performance UI components included in the PnPSaaS starter kit.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Item 1: Professional Landing Page -->
-                <div class="gallery-item opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <div class="browser-frame bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
-                        <!-- Browser Header -->
-                        <div class="bg-gray-100 px-4 py-3 flex items-center border-b border-gray-200">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                        </div>
-                        <!-- Browser Content -->
-                        <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_Landing_Page.png" alt="PnPSaaS Landing Page Preview - Professional SaaS Boilerplate .NET 10 UI Dashboard" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2006">
-                        </div>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Professional Landing Page</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            A modern, high-conversion homepage designed to showcase your SaaS value proposition.
+        <!-- Product Experience / Semantic Recall -->
+        <section id="experience" class="section-padding px-6 bg-apple-grey">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="fade-in">
+                        <span class="text-sm font-semibold tracking-widest text-white/40 uppercase mb-4 block">Semantic Recall</span>
+                        <h2 class="text-4xl md:text-5xl font-medium mb-8 leading-tight">Capture once. <br>Recall effortlessly.</h2>
+                        <p class="text-lg text-white/60 font-light leading-relaxed">
+                            Every thought, meeting, and reflection is semantically indexed on-device. No more digging through notes. Just ask, and your memory answers.
                         </p>
                     </div>
-                </div>
-
-                <!-- Item 2: Secure Login Interface -->
-                <div class="gallery-item opacity-0 translate-y-8 transition-all duration-700 ease-out" style="transition-delay: 150ms">
-                    <div class="browser-frame bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
-                        <!-- Browser Header -->
-                        <div class="bg-gray-100 px-4 py-3 flex items-center border-b border-gray-200">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                        </div>
-                        <!-- Browser Content -->
-                        <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Login_Interface.png" alt="PnPSaaS Login Interface Preview - Secure Authentication Dashboard .NET 10 UI" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2008">
+                    <div class="glass aspect-square rounded-3xl flex items-center justify-center p-12 fade-in">
+                        <div class="text-center">
+                            <i class="fas fa-brain text-6xl text-white/20 mb-6"></i>
+                            <p class="text-white/40 italic font-light">Continuity-of-thought system</p>
                         </div>
                     </div>
-                    <div class="mt-6 text-center">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Secure Login Interface</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Clean, production-ready authentication UI integrated with JWT security.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 3: Seamless User Registration -->
-                <div class="gallery-item opacity-0 translate-y-8 transition-all duration-700 ease-out" style="transition-delay: 300ms">
-                    <div class="browser-frame bg-white rounded-lg overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
-                        <!-- Browser Header -->
-                        <div class="bg-gray-100 px-4 py-3 flex items-center border-b border-gray-200">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                        </div>
-                        <!-- Browser Content -->
-                        <div class="bg-white overflow-hidden">
-                            <img src="images/PnPSaaS_User_Registration_Interface.png" alt="PnPSaaS Registration Interface Preview - User Signup Dashboard .NET 10 UI" class="w-full h-auto object-cover" loading="lazy" width="3600" height="2010">
-                        </div>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Seamless User Registration</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Optimized account creation flow with built-in validation and identity management.
-                        </p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Technology Stack Section -->
-    <section id="tech-stack" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Technology Stack
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Built with modern, enterprise-grade technologies for performance and scalability.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <!-- .NET 10 -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 mx-auto">
-                        <i class="fab fa-microsoft text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">.NET 10</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Latest .NET framework with cutting-edge performance and modern C# features.
+        <!-- Executive Brief Showcase -->
+        <section id="briefing" class="section-padding px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <div class="fade-in">
+                    <span class="text-sm font-semibold tracking-widest text-white/40 uppercase mb-4 block">Flagship Feature</span>
+                    <h2 class="text-4xl md:text-6xl font-medium mb-12 text-gradient">The Executive Brief.</h2>
+                    <p class="text-xl text-white/60 font-light leading-relaxed mb-16 max-w-2xl mx-auto">
+                        A morning synthesis of your unresolved follow-ups, recurring themes, and situational clarity. It’s not a list; it’s continuity.
                     </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Backend</span>
+                </div>
+                <div class="glass p-8 md:p-12 rounded-[2rem] text-left fade-in">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-3 h-3 rounded-full bg-orange-400"></div>
+                        <span class="text-sm font-medium text-white/80">Situational Clarity</span>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="h-4 bg-white/10 rounded-full w-3/4"></div>
+                        <div class="h-4 bg-white/5 rounded-full w-full"></div>
+                        <div class="h-4 bg-white/5 rounded-full w-5/6"></div>
+                    </div>
+                    <div class="mt-12 pt-12 border-t border-white/10 flex justify-between items-center">
+                        <span class="text-xs text-white/40">CALM COGNITIVE SUPPORT</span>
+                        <span class="text-xs text-white/40">09:00 AM</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- PostgreSQL -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg mb-4 mx-auto">
-                        <i class="fas fa-database text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">PostgreSQL</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Robust, open-source relational database with advanced features and reliability.
+        <!-- Privacy & Trust Section -->
+        <section id="privacy" class="section-padding px-6 bg-white text-black">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-20 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-medium mb-8">Private by design.</h2>
+                    <p class="text-xl text-black/60 font-light max-w-2xl mx-auto">
+                        No accounts. No surveillance. No cloud dependency. Your executive memory stays exactly where it belongs: on your device.
                     </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Database</span>
-                    </div>
                 </div>
-
-                <!-- EF Core -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 mx-auto">
-                        <i class="fas fa-layer-group text-white text-3xl"></i>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
+                        <i class="fas fa-microchip text-2xl mb-6"></i>
+                        <h3 class="text-xl font-medium mb-4">On-Device Intelligence</h3>
+                        <p class="text-black/60 font-light">Processing happens locally using the Neural Engine. Your data never leaves your hands.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">EF Core</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Modern ORM for .NET with code-first migrations and LINQ support.
-                    </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">ORM</span>
+                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
+                        <i class="fas fa-lock text-2xl mb-6"></i>
+                        <h3 class="text-xl font-medium mb-4">No Accounts</h3>
+                        <p class="text-black/60 font-light">We don't want your email. We don't want your password. We don't want your identity.</p>
                     </div>
-                </div>
-
-                <!-- Blazor -->
-                <div class="tech-card bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 mx-auto">
-                        <i class="fas fa-code text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Blazor</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed text-center">
-                        Build interactive web UIs with C# instead of JavaScript. Full-stack .NET development.
-                    </p>
-                    <div class="mt-4 flex items-center justify-center">
-                        <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Frontend</span>
+                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
+                        <i class="fas fa-cloud-slash text-2xl mb-6"></i>
+                        <h3 class="text-xl font-medium mb-4">Zero Cloud</h3>
+                        <p class="text-black/60 font-light">A pure local-first architecture ensures 100% privacy and lightning-fast performance.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Simple Pricing
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    One-time payment. Lifetime access. No recurring fees.
-                </p>
-            </div>
-
-            <div class="max-w-md mx-auto">
-                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl p-8 text-white transform hover:scale-105 transition duration-300">
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold mb-2">Starter Kit</h3>
-                        <p class="text-blue-200">Everything you need to get started</p>
+        <!-- Apple Ecosystem Integration -->
+        <section class="section-padding px-6 bg-apple-black">
+            <div class="container mx-auto max-w-4xl text-center fade-in">
+                <h2 class="text-4xl md:text-5xl font-medium mb-12">Native to your workflow.</h2>
+                <div class="flex flex-wrap justify-center gap-12 text-white/40">
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-microphone text-2xl"></i>
+                        <span class="text-xs font-medium">Siri</span>
                     </div>
-                    <div class="text-center mb-8">
-                        <span class="text-6xl font-bold">$149</span>
-                        <p class="text-blue-200 mt-2">One-time payment</p>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-search text-2xl"></i>
+                        <span class="text-xs font-medium">Spotlight</span>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-300 mr-3 mt-1"></i>
-                            <span>Clean Architecture</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-300 mr-3 mt-1"></i>
-                            <span>Authentication System</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-300 mr-3 mt-1"></i>
-                            <span>Multi-Tenancy Support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-300 mr-3 mt-1"></i>
-                            <span>Production Ready</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-300 mr-3 mt-1"></i>
-                            <span>Lifetime Updates</span>
-                        </li>
-                    </ul>
-                    <!-- Get Started Button -->
-                    <a href="https://pnpsaas.lemonsqueezy.com/checkout/buy/1192560?embed=1" class="lemonsqueezy-button block w-full bg-white text-blue-600 px-8 py-5 rounded-lg font-bold text-xl hover:bg-blue-50 hover:text-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center border-2 border-white/20">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Frequently Asked Questions
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Everything you need to know about PnPSaaS
-                </p>
-            </div>
-
-            <div class="max-w-3xl mx-auto">
-                <!-- FAQ Item 1: One-time Payment -->
-                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
-                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:bg-gray-50" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-1">
-                        <span class="text-lg font-semibold text-gray-900">Is this a one-time payment?</span>
-                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-answer-1" class="faq-answer hidden px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Yes. One payment gives you lifetime access to the current version and all future updates of the .NET 10 Starter Kit.
-                        </p>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-calendar text-2xl"></i>
+                        <span class="text-xs font-medium">Calendar</span>
                     </div>
-                </div>
-
-                <!-- FAQ Item 2: Client Projects -->
-                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
-                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-2">
-                        <span class="text-lg font-semibold text-gray-900">Can I use this for client projects?</span>
-                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-answer-2" class="faq-answer hidden px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Absolutely. The license allows for use in personal and unlimited commercial/client projects.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3: Full Source Code -->
-                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden border border-gray-200">
-                    <button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 focus:bg-gray-50 transition duration-300" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-3">
-                        <span class="text-lg font-semibold text-gray-900">Does it include the full source code?</span>
-                        <i class="fas fa-chevron-down faq-icon text-blue-600 transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-answer-3" class="faq-answer hidden px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Yes, you get 100% access to the Clean Architecture source code, including the Blazor UI and Infrastructure layers.
-                        </p>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-bell text-2xl"></i>
+                        <span class="text-xs font-medium">Reminders</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Final CTA -->
+        <section class="section-padding px-6 text-center">
+            <div class="max-w-3xl mx-auto fade-in">
+                <h2 class="text-4xl md:text-6xl font-medium mb-12 text-gradient">Regain your cognitive clarity.</h2>
+                <a href="#" class="inline-block bg-white text-black px-10 py-5 rounded-full text-xl font-medium hover:bg-white/90 transition-all transform hover:scale-105">
+                    Get Started
+                </a>
+                <p class="mt-8 text-white/40 font-light">Experience the premium continuity system.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="support" class="py-10 bg-gray-900 text-white text-center">
-        <p>© <span id="copyright-year"></span> Pnptechnologiesllc</p>
-        <p class="text-gray-400 text-xs mt-2 mb-4">Payments and billing are securely processed by Lemon Squeezy, our Merchant of Record.</p>
-        <div class="space-x-2 sm:space-x-4 mt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 px-4">
-            <a href="privacy.html" class="text-blue-400 hover:underline text-sm sm:text-base">Privacy Policy</a>
-            <a href="terms.html" class="text-blue-400 hover:underline text-sm sm:text-base">Terms of Service</a>
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-0 sm:gap-2 bg-gray-800 rounded-lg px-3 sm:px-3 py-2 border border-gray-700 hover:border-blue-500 transition duration-300 w-full sm:w-auto items-center">
-                <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center sm:justify-start gap-2 py-2 sm:py-0 min-h-[44px] sm:min-h-0">
-                    <i class="fas fa-envelope"></i>
-                    <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                </a>
-                <div class="hidden sm:block h-4 w-px bg-gray-600"></div>
-                <div class="sm:hidden h-px w-full bg-gray-600 my-1"></div>
-                <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 active:text-blue-200 transition duration-300 py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center" title="Copy email address">
-                    <i class="fas fa-copy text-base sm:text-sm"></i>
-                </button>
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <div class="container mx-auto">
+            <p class="text-sm text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
+            <div class="mt-4 flex justify-center space-x-6 text-xs text-white/60">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-gray-900 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto my-8">
-            <!-- Modal Header -->
-            <div class="sticky top-0 bg-gray-900 border-b border-gray-700 px-6 py-4 flex justify-between items-center z-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Privacy Policy</h2>
-                <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-white text-3xl leading-none transition duration-300">&times;</button>
-            </div>
-            
-            <!-- Modal Content -->
-            <div class="p-6 md:p-12 text-gray-300">
-                <p class="text-gray-400 mb-8">
-                    <strong class="text-gray-300">Last Updated:</strong> 
-                    <span id="privacy-last-updated"></span>
-                </p>
-
-                <!-- Introduction -->
-                <section class="mb-8">
-                    <p class="leading-relaxed mb-4">
-                        Pnptechnologiesllc ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong class="text-white">pnpsaas.com</strong> and purchase or use our product, <strong class="text-white">PnPSaaS</strong> (a .NET 10 Starter Kit).
-                    </p>
-                    <p class="leading-relaxed">
-                        Please read this Privacy Policy carefully. By using our website or purchasing our product, you agree to the collection and use of information in accordance with this policy.
-                    </p>
-                </section>
-
-                <!-- Information We Collect -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-database text-blue-400 mr-3"></i>
-                        Information We Collect
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6 mb-4">
-                        <p class="leading-relaxed mb-4">
-                            We collect information that you provide directly to us when you:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Purchase PnPSaaS through our website</li>
-                            <li>Contact us for customer support</li>
-                            <li>Subscribe to receive updates about our product</li>
-                            <li>Interact with our website</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="text-xl font-semibold text-white mb-2">Personal Information</h4>
-                            <p class="leading-relaxed">
-                                When you make a purchase, we collect the following personal information:
-                            </p>
-                            <ul class="list-disc list-inside space-y-1 ml-4 mt-2">
-                                <li><strong class="text-white">Name:</strong> To process your order and provide personalized support</li>
-                                <li><strong class="text-white">Email Address:</strong> To send you product updates, support communications, and transaction confirmations</li>
-                                <li><strong class="text-white">Payment Information:</strong> Processed securely through <strong class="text-blue-400">Lemon Squeezy</strong>, our payment processor. We do not store your full payment card details on our servers.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-semibold text-white mb-2">Automatically Collected Information</h4>
-                            <p class="leading-relaxed">
-                                When you visit our website, we automatically collect certain information about your device, including:
-                            </p>
-                            <ul class="list-disc list-inside space-y-1 ml-4 mt-2">
-                                <li>IP address</li>
-                                <li>Browser type and version</li>
-                                <li>Pages you visit and time spent on pages</li>
-                                <li>Referring website addresses</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- How We Use Your Information -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-cog text-blue-400 mr-3"></i>
-                        How We Use Your Information
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We use the information we collect for the following purposes:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li><strong class="text-white">To Provide the Product:</strong> Process your purchase, deliver PnPSaaS, and provide access to product updates</li>
-                            <li><strong class="text-white">To Send Updates:</strong> Notify you about new features, updates, and improvements to PnPSaaS</li>
-                            <li><strong class="text-white">To Offer Support:</strong> Respond to your inquiries, provide technical support, and assist with product-related questions</li>
-                            <li><strong class="text-white">To Improve Our Services:</strong> Analyze usage patterns to enhance our website and product experience</li>
-                            <li><strong class="text-white">To Comply with Legal Obligations:</strong> Meet legal requirements and protect our rights</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Cookies and Tracking Technologies -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-cookie text-blue-400 mr-3"></i>
-                        Cookies and Tracking Technologies
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We use cookies and similar tracking technologies to enhance your experience on our website:
-                        </p>
-                        <div class="space-y-3">
-                            <div>
-                                <h4 class="text-lg font-semibold text-white mb-2">Essential Cookies</h4>
-                                <p class="leading-relaxed">
-                                    These cookies are necessary for the website to function properly. They enable basic site functionality, such as page navigation and access to secure areas.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-white mb-2">Analytics Cookies</h4>
-                                <p class="leading-relaxed">
-                                    We use analytics cookies to understand how visitors interact with our website. This helps us improve site performance and user experience. These cookies collect anonymous, aggregated information.
-                                </p>
-                            </div>
-                        </div>
-                        <p class="leading-relaxed mt-4">
-                            You can control cookies through your browser settings. However, disabling certain cookies may limit your ability to use some features of our website.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Data Security -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-shield-alt text-blue-400 mr-3"></i>
-                        Data Security
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Encryption of data in transit using SSL/TLS protocols</li>
-                            <li>Secure payment processing through Lemon Squeezy, which is PCI DSS compliant</li>
-                            <li>Regular security assessments and updates</li>
-                            <li>Limited access to personal information on a need-to-know basis</li>
-                            <li>Secure storage of data with industry-standard safeguards</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            While we strive to protect your personal information, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security, but we are committed to maintaining the highest standards of data protection.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Third-Party Services -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-handshake text-blue-400 mr-3"></i>
-                        Third-Party Services
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We use third-party services to operate our business:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li><strong class="text-white">Lemon Squeezy:</strong> Our payment processor handles payment transactions. Please review <a href="https://www.lemonsqueezy.com/privacy" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Lemon Squeezy's Privacy Policy</a> to understand how they handle your payment information.</li>
-                            <li><strong class="text-white">Analytics Providers:</strong> We may use analytics services to understand website usage patterns. These services collect anonymous, aggregated data.</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            These third-party services have their own privacy policies. We encourage you to review their policies to understand how they handle your information.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- User Rights -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-user-shield text-blue-400 mr-3"></i>
-                        Your Rights
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            Depending on your location, you may have certain rights regarding your personal information:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li><strong class="text-white">Access:</strong> Request access to the personal information we hold about you</li>
-                            <li><strong class="text-white">Correction:</strong> Request correction of inaccurate or incomplete information</li>
-                            <li><strong class="text-white">Deletion:</strong> Request deletion of your personal information, subject to legal obligations</li>
-                            <li><strong class="text-white">Objection:</strong> Object to processing of your personal information in certain circumstances</li>
-                            <li><strong class="text-white">Data Portability:</strong> Request transfer of your data to another service provider</li>
-                            <li><strong class="text-white">Withdraw Consent:</strong> Withdraw consent for data processing where consent is the legal basis</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            To exercise any of these rights, please contact us at <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Data Retention -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-clock text-blue-400 mr-3"></i>
-                        Data Retention
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed">
-                            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When we no longer need your information, we will securely delete or anonymize it.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Children's Privacy -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-child text-blue-400 mr-3"></i>
-                        Children's Privacy
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed">
-                            Our website and product are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately at <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>, and we will take steps to delete such information.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Changes to This Policy -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-edit text-blue-400 mr-3"></i>
-                        Changes to This Privacy Policy
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Posting the updated Privacy Policy on this page</li>
-                            <li>Updating the "Last Updated" date at the top of this policy</li>
-                            <li>Sending an email notification to the address associated with your account (for significant changes)</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            Your continued use of our website or product after any changes to this Privacy Policy constitutes acceptance of those changes. We encourage you to review this Privacy Policy periodically.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Contact Us -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
-                        Contact Us
-                    </h3>
-                    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-6">
-                        <p class="text-white leading-relaxed mb-4">
-                            If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
-                        </p>
-                        <div class="space-y-4 text-white">
-                            <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                            <div>
-                                <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                                        <i class="fas fa-envelope text-blue-300"></i>
-                                        <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
-                                    </a>
-                                    <div class="hidden sm:block h-10 w-px bg-white/20"></div>
-                                    <div class="sm:hidden h-px w-full bg-white/20"></div>
-                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                                        <i class="fas fa-copy text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terms of Service Modal -->
-    <div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-gray-900 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto my-8">
-            <!-- Modal Header -->
-            <div class="sticky top-0 bg-gray-900 border-b border-gray-700 px-6 py-4 flex justify-between items-center z-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Terms of Service</h2>
-                <button onclick="closeTermsModal()" class="text-gray-400 hover:text-white text-3xl leading-none transition duration-300">&times;</button>
-            </div>
-            
-            <!-- Modal Content -->
-            <div class="p-6 md:p-12 text-gray-300">
-                <p class="text-gray-400 mb-8">
-                    <strong class="text-gray-300">Last Updated:</strong> 
-                    <span id="terms-last-updated"></span>
-                </p>
-
-                <!-- Introduction -->
-                <section class="mb-8">
-                    <p class="leading-relaxed mb-4">
-                        These Terms of Service ("Terms") govern your purchase and use of <strong class="text-white">PnPSaaS</strong> (a .NET 10 Starter Kit) provided by <strong class="text-white">Pnptechnologiesllc</strong> ("we," "our," or "us"). By purchasing, downloading, or using PnPSaaS, you agree to be bound by these Terms.
-                    </p>
-                    <p class="leading-relaxed">
-                        Please read these Terms carefully before making a purchase. If you do not agree to these Terms, you must not purchase or use PnPSaaS.
-                    </p>
-                </section>
-
-                <!-- License -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-file-contract text-blue-400 mr-3"></i>
-                        License Grant
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            Subject to your compliance with these Terms, Pnptechnologiesllc grants you a <strong class="text-white">non-exclusive, non-transferable</strong> license to:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Use PnPSaaS for <strong class="text-white">personal projects</strong></li>
-                            <li>Use PnPSaaS for <strong class="text-white">commercial projects</strong> and applications</li>
-                            <li>Modify the source code to suit your specific needs</li>
-                            <li>Create derivative works based on PnPSaaS for your own use</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            This license is granted for a single user or organization. Each purchase entitles you to use PnPSaaS in accordance with these Terms.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Restrictions -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-ban text-blue-400 mr-3"></i>
-                        Restrictions
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            You are <strong class="text-white">expressly prohibited</strong> from:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li><strong class="text-white">Reselling</strong> the PnPSaaS source code or any portion thereof</li>
-                            <li><strong class="text-white">Redistributing</strong> the source code to third parties, whether for free or for compensation</li>
-                            <li><strong class="text-white">Sub-licensing</strong> or granting rights to use the source code to others</li>
-                            <li>Sharing your license or access credentials with others</li>
-                            <li>Using PnPSaaS to create a competing product or service that directly competes with PnPSaaS</li>
-                            <li>Removing or altering any copyright notices, proprietary labels, or trademarks from the source code</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            Violation of these restrictions may result in immediate termination of your license and may subject you to legal action.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Intellectual Property -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-copyright text-blue-400 mr-3"></i>
-                        Intellectual Property Rights
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            PnPSaaS, including all source code, documentation, designs, and related materials, is the exclusive property of Pnptechnologiesllc and is protected by copyright, trademark, and other intellectual property laws.
-                        </p>
-                        <p class="leading-relaxed">
-                            These Terms do not grant you any ownership rights in PnPSaaS. You acknowledge that all rights, title, and interest in PnPSaaS remain with Pnptechnologiesllc. You may not claim ownership or authorship of the original PnPSaaS codebase.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Refunds -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-undo text-blue-400 mr-3"></i>
-                        Refund Policy
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            <strong class="text-white">All sales are final and non-refundable.</strong>
-                        </p>
-                        <p class="leading-relaxed mb-4">
-                            Because PnPSaaS is a digital download of source code, once the purchase is completed and you have received access to the product, we cannot offer refunds. This policy applies to all purchases, regardless of the reason for the refund request.
-                        </p>
-                        <p class="leading-relaxed">
-                            By completing your purchase, you acknowledge that you have reviewed the product description, understand what you are purchasing, and agree that the sale is final. We encourage you to review all available information about PnPSaaS before making your purchase.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Disclaimer -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-exclamation-triangle text-blue-400 mr-3"></i>
-                        Disclaimer of Warranties
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            <strong class="text-white">PnPSaaS is provided "as-is" and "as available" without warranties of any kind, either express or implied.</strong>
-                        </p>
-                        <p class="leading-relaxed mb-4">
-                            To the fullest extent permitted by applicable law, Pnptechnologiesllc disclaims all warranties, including but not limited to:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Warranties of merchantability</li>
-                            <li>Warranties of fitness for a particular purpose</li>
-                            <li>Warranties of non-infringement</li>
-                            <li>Warranties that the software will meet your requirements</li>
-                            <li>Warranties that the software will be error-free or uninterrupted</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            You assume full responsibility for the use of PnPSaaS and any results obtained from such use. We do not guarantee that PnPSaaS will be compatible with all systems or that it will function without errors.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Limitation of Liability -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-gavel text-blue-400 mr-3"></i>
-                        Limitation of Liability
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            To the maximum extent permitted by applicable law, Pnptechnologiesllc shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Loss of profits or revenue</li>
-                            <li>Loss of data or information</li>
-                            <li>Business interruption</li>
-                            <li>Loss of business opportunities</li>
-                            <li>Cost of substitute products or services</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            In no event shall our total liability to you exceed the amount you paid for PnPSaaS. This limitation applies regardless of the theory of liability, whether in contract, tort, or otherwise.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Updates and Support -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-sync-alt text-blue-400 mr-3"></i>
-                        Updates and Support
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            Your purchase includes access to lifetime updates for PnPSaaS. We will notify you of major updates via email when available.
-                        </p>
-                        <p class="leading-relaxed">
-                            While we strive to provide support and assistance, we do not guarantee specific response times or that all issues will be resolved. Support is provided on a best-effort basis and may be limited to email communication.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Termination -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-times-circle text-blue-400 mr-3"></i>
-                        Termination
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We reserve the right to terminate or suspend your license immediately, without prior notice, if you violate any of these Terms.
-                        </p>
-                        <p class="leading-relaxed">
-                            Upon termination, you must immediately cease all use of PnPSaaS and delete all copies of the source code from your systems. The provisions of these Terms that by their nature should survive termination will survive, including but not limited to ownership provisions, warranty disclaimers, and limitations of liability.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Changes to Terms -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-edit text-blue-400 mr-3"></i>
-                        Changes to These Terms
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed mb-4">
-                            We reserve the right to modify these Terms at any time. We will notify you of material changes by:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 ml-4">
-                            <li>Posting the updated Terms on this page</li>
-                            <li>Updating the "Last Updated" date</li>
-                            <li>Sending an email notification to the address associated with your purchase (for significant changes)</li>
-                        </ul>
-                        <p class="leading-relaxed mt-4">
-                            Your continued use of PnPSaaS after any changes to these Terms constitutes acceptance of those changes. If you do not agree to the modified Terms, you must stop using PnPSaaS.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Governing Law -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-balance-scale text-blue-400 mr-3"></i>
-                        Governing Law
-                    </h3>
-                    <div class="bg-gray-800 rounded-lg p-6">
-                        <p class="leading-relaxed">
-                            These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Pnptechnologiesllc operates, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of PnPSaaS shall be resolved in the appropriate courts of that jurisdiction.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Contact Us -->
-                <section class="mb-8">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
-                        Contact Us
-                    </h3>
-                    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-6">
-                        <p class="text-white leading-relaxed mb-4">
-                            If you have any questions about these Terms of Service, please contact us:
-                        </p>
-                        <div class="space-y-4 text-white">
-                            <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                            <div>
-                                <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                    <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                                        <i class="fas fa-envelope text-blue-300"></i>
-                                        <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
-                                    </a>
-                                    <div class="hidden sm:block h-10 w-px bg-white/20"></div>
-                                    <div class="sm:hidden h-px w-full bg-white/20"></div>
-                                    <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                                        <i class="fas fa-copy text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
-        <i class="fas fa-check-circle text-green-400 text-xl"></i>
-        <span class="font-medium">Email copied to clipboard!</span>
-    </div>
-
-    <!-- Smooth Scroll Script -->
     <script>
-        // Set copyright year dynamically
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Set last updated dates
-        document.getElementById('privacy-last-updated').textContent = new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
-        document.getElementById('terms-last-updated').textContent = new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
-
-        // Privacy Modal Functions
-        function openPrivacyModal() {
-            const modal = document.getElementById('privacy-modal');
-            if (modal) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closePrivacyModal() {
-            const modal = document.getElementById('privacy-modal');
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Terms Modal Functions
-        function openTermsModal() {
-            const modal = document.getElementById('terms-modal');
-            if (modal) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeTermsModal() {
-            const modal = document.getElementById('terms-modal');
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Close modals when clicking outside
-        document.getElementById('privacy-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePrivacyModal();
-            }
-        });
-
-        document.getElementById('terms-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeTermsModal();
-            }
-        });
-
-        // Close modals with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closePrivacyModal();
-                closeTermsModal();
-            }
-        });
-
-        // Copy email to clipboard function with toast notification
-        function copyEmail(email) {
-            navigator.clipboard.writeText(email).then(function() {
-                // Show toast notification
-                const toast = document.getElementById('toast');
-                if (toast) {
-                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                    toast.classList.add('opacity-100', 'translate-y-0');
-                    
-                    // Hide toast after 3 seconds
-                    setTimeout(function() {
-                        toast.classList.remove('opacity-100', 'translate-y-0');
-                        toast.classList.add('opacity-0', 'translate-y-4');
-                        setTimeout(function() {
-                            toast.classList.add('hidden');
-                        }, 300);
-                    }, 3000);
-                }
-            }).catch(function(err) {
-                // Fallback: show alert if clipboard API fails
-                alert('Email: ' + email + '\n\n(Please copy manually)');
-            });
-        }
-
-        // Enhanced mailto link handler - always copy email as backup
-        document.querySelectorAll('a[href^="mailto:"]').forEach(mailtoLink => {
-            mailtoLink.addEventListener('click', function(e) {
-                const email = this.getAttribute('href').replace('mailto:', '');
-                
-                // Always copy email to clipboard as a backup (in case mailto doesn't work)
-                // This ensures users can paste it even if their email app doesn't open
-                navigator.clipboard.writeText(email).then(function() {
-                    // Show a helpful toast message
-                    const toast = document.getElementById('toast');
-                    if (toast) {
-                        // Check if we're on macOS/iOS (where mailto might not work)
-                        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                        
-                        if (isMac || isIOS) {
-                            toast.innerHTML = '<i class="fas fa-info-circle text-blue-400 text-xl"></i><span class="font-medium">Email copied! If your email app didn\'t open, paste it manually.</span>';
-                        } else {
-                            toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                        }
-                        
-                        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                        toast.classList.add('opacity-100', 'translate-y-0');
-                        
-                        setTimeout(function() {
-                            toast.classList.remove('opacity-100', 'translate-y-0');
-                            toast.classList.add('opacity-0', 'translate-y-4');
-                            setTimeout(function() {
-                                toast.classList.add('hidden');
-                                // Reset toast content
-                                toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                            }, 300);
-                        }, 4000);
-                    }
-                }).catch(function(err) {
-                    // Silent error handling - clipboard copy failed
-                });
-                
-                // Allow the default mailto behavior to proceed
-                // Don't prevent default - let the browser try to open the email app
-            });
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden');
-                
-                // Update aria-expanded for accessibility
-                mobileMenuButton.setAttribute('aria-expanded', !isHidden);
-                
-                // Toggle hamburger icon to X
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                } else {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
-                }
-            });
-            
-            // Close menu on Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                    mobileMenuButton.focus();
-                }
-            });
-        }
-
-        // Smooth scroll with navbar offset - handles all hash links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                
-                // Don't prevent default for empty hash
-                if (targetId === '#') return;
-                
-                const target = document.querySelector(targetId);
-                if (target) {
-                    // Close mobile menu if open
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        menuIcon.classList.remove('fa-times');
-                        menuIcon.classList.add('fa-bars');
-                    }
-
-                    // Calculate offset for fixed navbar (64px on mobile, 80px on desktop)
-                    const navbarHeight = window.innerWidth >= 768 ? 80 : 64;
-                    const targetPosition = target.offsetTop - navbarHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('nav');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Update active nav link on scroll
-        const sections = document.querySelectorAll('section[id], footer[id]');
-        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-
-        function updateActiveNavLink() {
-            const scrollPosition = window.scrollY + 100; // Offset for navbar
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('text-blue-600', 'bg-blue-50');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('text-blue-600', 'bg-blue-50');
-                        }
-                    });
-                }
-            });
-        }
-
-        // Throttle scroll event for performance
-        let ticking = false;
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    updateActiveNavLink();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // Product Gallery Scroll Animation
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        const galleryObserver = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    galleryObserver.unobserve(entry.target);
+                    entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+        }, observerOptions);
 
-        galleryItems.forEach(item => {
-            galleryObserver.observe(item);
-        });
-
-        // Technology Stack Scroll Animation
-        const techCards = document.querySelectorAll('.tech-card');
-        
-        const techObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
-                    techObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        techCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            techObserver.observe(card);
-        });
-
-        // FAQ Accordion Toggle Function
-        function toggleFaq(button) {
-            const faqItem = button.closest('.faq-item');
-            const answer = faqItem.querySelector('.faq-answer');
-            const icon = button.querySelector('.faq-icon');
-            const isOpen = !answer.classList.contains('hidden');
-
-            // Close all other FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) {
-                    const otherButton = item.querySelector('.faq-question');
-                    const otherAnswer = item.querySelector('.faq-answer');
-                    const otherIcon = item.querySelector('.faq-icon');
-                    otherAnswer.classList.add('hidden');
-                    otherIcon.classList.remove('rotate-180');
-                    otherButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-
-            // Toggle current FAQ item
-            if (isOpen) {
-                answer.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-                button.setAttribute('aria-expanded', 'false');
-            } else {
-                answer.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-                button.setAttribute('aria-expanded', 'true');
-            }
-        }
-        
-        // Add keyboard support for FAQ buttons
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleFaq(this);
-                }
-            });
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
-
-
-
-

@@ -1,34 +1,27 @@
-# PnPSaaS Website
+# AIExecutiveAssistant Website
 
-A professional single-page website for PnPSaaS built with Tailwind CSS.
+A premium, Apple-inspired website for AIExecutiveAssistant.
 
 ## Features
 
-- **Hero Section**: Eye-catching gradient background with call-to-action buttons
-- **What's Inside Section**: Highlights key features (Clean Architecture, Auth, Docker)
-- **Pricing Section**: Simple, clear pricing at $149
-- **Footer**: Company information and contact email
+- **Calm Design System**: Dark mode palette with glassmorphism and premium typography.
+- **Privacy-First**: Focus on local-first architecture and on-device intelligence.
+- **Apple Ecosystem Integration**: Highlighted Siri, Spotlight, and native workflows.
+- **Responsive & Performant**: Buttery transitions and mobile-first optimization.
 
-## Getting Started
+## Technology Stack
 
-Simply open `index.html` in your web browser. The website uses:
-- Tailwind CSS (via CDN)
-- Font Awesome icons (via CDN)
-- Google Fonts (Inter)
+- **Tailwind CSS**: Utility-first styling via CDN.
+- **Inter/SF Pro Display**: Modern, editorial typography.
+- **Vanilla JS**: Subtle intersection animations for a high-end feel.
 
-No build process or installation required!
+## Structure
 
-## Customization
+- `index.html`: Main experience and narrative.
+- `privacy.html`: Local-first privacy commitment.
+- `terms.html`: Premium service terms.
+- `thank-you.html`: Post-purchase experience.
 
-You can easily customize:
-- Colors: Modify Tailwind classes (currently using blue/indigo gradient theme)
-- Content: Edit the HTML directly
-- Styling: All styles use Tailwind utility classes
+## Delivery
 
-## Browser Support
-
-Works on all modern browsers that support:
-- CSS Grid
-- Flexbox
-- ES6 JavaScript
-
+The redesign was implemented based on the "Calm Cognitive Support" direction, moving away from SaaS clichés towards a trusted executive memory system.

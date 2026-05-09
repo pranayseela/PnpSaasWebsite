@@ -3,433 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Privacy Policy | PnPSaaS | Enterprise .NET 10 Starter Kit</title>
-    <meta name="title" content="Privacy Policy | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="description" content="Privacy Policy for PnPSaaS - Learn how we collect, use, and protect your personal information when using our .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy.">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook / WhatsApp / iMessage -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pnpsaas.com/privacy.html">
-    <meta property="og:title" content="Privacy Policy | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta property="og:description" content="Privacy Policy for PnPSaaS - Learn how we collect, use, and protect your personal information when using our .NET 10 SaaS starter kit.">
-    <meta property="og:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:secure_url" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="PnPSaaS - Enterprise .NET 10 Starter Kit with Clean Architecture and Multi-tenancy">
-    <meta property="og:site_name" content="PnPSaaS">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pnpsaas.com/privacy.html">
-    <meta name="twitter:title" content="Privacy Policy | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="twitter:description" content="Privacy Policy for PnPSaaS - Learn how we collect, use, and protect your personal information when using our .NET 10 SaaS starter kit.">
-    <meta name="twitter:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="canonical" href="https://pnpsaas.com/privacy.html">
-    
+    <title>Privacy | AIExecutiveAssistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            grey: '#1D1D1F',
+                            light: '#F5F5F7',
+                            muted: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #F5F5F7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(29, 29, 31, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-300">
-    <!-- Header -->
-    <header class="bg-gray-800 border-b border-gray-700">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold text-white hover:text-blue-400 transition duration-300">
-                    PnPSaaS
-                </a>
-                <a href="index.html" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center space-x-2">
-                    <i class="fas fa-arrow-left"></i>
-                    <span>Back to Home</span>
-                </a>
-            </div>
+<body>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
+            <a href="index.html" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Back</a>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12 max-w-4xl">
-        <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12">
-            <!-- Title -->
-            <div class="mb-8 pb-6 border-b border-gray-700">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
-                <p class="text-gray-300">
-                    <strong class="text-white">Last Updated:</strong> 
-                    <span id="last-updated"></span>
-                </p>
+    <main class="pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-medium mb-12 tracking-tight">Privacy Policy</h1>
+            
+            <div class="space-y-12 text-white/60 font-light leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Local-First by Design</h2>
+                    <p>
+                        AIExecutiveAssistant is built on a local-first architecture. This means your data—your thoughts, your voice, your memories—lives exclusively on your device. We do not use cloud storage, we do not have "accounts," and we do not maintain a central database of your private information.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">No Data Collection</h2>
+                    <p>
+                        We do not collect, store, or sell your personal data. Because the system operates entirely on-device using the Apple Neural Engine, we have no technical means of accessing your information. Your privacy is protected by the physical isolation of your hardware.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">On-Device Intelligence</h2>
+                    <p>
+                        All semantic indexing and AI processing occur locally. When you "ask your memory," the computation happens on your CPU and GPU. No audio files or transcripts are ever transmitted to our servers for processing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Purchases</h2>
+                    <p>
+                        When you purchase a license for AIExecutiveAssistant, the transaction is handled securely by our payment processor, Lemon Squeezy. We receive only the minimum information necessary to fulfill your order and provide support (e.g., your email address for license delivery).
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Security</h2>
+                    <p>
+                        Your data is secured by Apple's native encryption and file system protections. By keeping your data local, we eliminate the risk of large-scale cloud data breaches.
+                    </p>
+                </section>
+
+                <section>
+                    <p class="text-sm italic mt-12">
+                        Last updated: May 9, 2026. For questions regarding our privacy philosophy, contact support@pnpsaas.com.
+                    </p>
+                </section>
             </div>
-
-            <!-- Introduction -->
-            <section class="mb-8">
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    Pnptechnologiesllc ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong class="text-white">pnpsaas.com</strong> and purchase or use our product, <strong class="text-white">PnPSaaS</strong> (a .NET 10 Starter Kit).
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Please read this Privacy Policy carefully. By using our website or purchasing our product, you agree to the collection and use of information in accordance with this policy.
-                </p>
-            </section>
-
-            <!-- Information We Collect -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-database text-blue-400 mr-3"></i>
-                    Information We Collect
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6 mb-4">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We collect information that you provide directly to us when you:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Purchase PnPSaaS through our website</li>
-                        <li>Contact us for customer support</li>
-                        <li>Subscribe to receive updates about our product</li>
-                        <li>Interact with our website</li>
-                    </ul>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Personal Information</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            When you make a purchase, we collect the following personal information:
-                        </p>
-                        <ul class="list-disc list-inside space-y-1 text-gray-300 ml-4 mt-2">
-                            <li><strong class="text-white">Name:</strong> To process your order and provide personalized support</li>
-                            <li><strong class="text-white">Email Address:</strong> To send you product updates, support communications, and transaction confirmations</li>
-                            <li><strong class="text-white">Payment Information:</strong> Processed securely through <strong class="text-blue-400">Lemon Squeezy</strong>, our Merchant of Record and payment processor. We do not store your full payment card details on our servers.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Automatically Collected Information</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            When you visit our website, we automatically collect certain information about your device, including:
-                        </p>
-                        <ul class="list-disc list-inside space-y-1 text-gray-300 ml-4 mt-2">
-                            <li>IP address</li>
-                            <li>Browser type and version</li>
-                            <li>Pages you visit and time spent on pages</li>
-                            <li>Referring website addresses</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- How We Use Your Information -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-cog text-blue-400 mr-3"></i>
-                    How We Use Your Information
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We use the information we collect for the following purposes:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li><strong class="text-white">To Provide the Product:</strong> Process your purchase, deliver PnPSaaS, and provide access to product updates</li>
-                        <li><strong class="text-white">To Send Updates:</strong> Notify you about new features, updates, and improvements to PnPSaaS</li>
-                        <li><strong class="text-white">To Offer Support:</strong> Respond to your inquiries, provide technical support, and assist with product-related questions</li>
-                        <li><strong class="text-white">To Improve Our Services:</strong> Analyze usage patterns to enhance our website and product experience</li>
-                        <li><strong class="text-white">To Comply with Legal Obligations:</strong> Meet legal requirements and protect our rights</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Cookies and Tracking Technologies -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-cookie text-blue-400 mr-3"></i>
-                    Cookies and Tracking Technologies
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We use cookies and similar tracking technologies to enhance your experience on our website:
-                    </p>
-                    <div class="space-y-3">
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-2">Essential Cookies</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                These cookies are necessary for the website to function properly. They enable basic site functionality, such as page navigation and access to secure areas.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white mb-2">Analytics Cookies</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                We use analytics cookies to understand how visitors interact with our website. This helps us improve site performance and user experience. These cookies collect anonymous, aggregated information.
-                            </p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        You can control cookies through your browser settings. However, disabling certain cookies may limit your ability to use some features of our website.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Data Security -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-shield-alt text-blue-400 mr-3"></i>
-                    Data Security
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Encryption of data in transit using SSL/TLS protocols</li>
-                        <li>Secure payment processing through Lemon Squeezy, our Merchant of Record, which is PCI DSS compliant</li>
-                        <li>Regular security assessments and updates</li>
-                        <li>Limited access to personal information on a need-to-know basis</li>
-                        <li>Secure storage of data with industry-standard safeguards</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        While we strive to protect your personal information, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security, but we are committed to maintaining the highest standards of data protection.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Third-Party Services -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-handshake text-blue-400 mr-3"></i>
-                    Third-Party Services
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We use third-party services to operate our business:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li><strong class="text-white">Lemon Squeezy:</strong> Our Merchant of Record and payment processor handles payment transactions. Please review <a href="https://www.lemonsqueezy.com/privacy" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Lemon Squeezy's Privacy Policy</a> to understand how they handle your payment information.</li>
-                        <li><strong class="text-white">Analytics Providers:</strong> We may use analytics services to understand website usage patterns. These services collect anonymous, aggregated data.</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        These third-party services have their own privacy policies. We encourage you to review their policies to understand how they handle your information.
-                    </p>
-                </div>
-            </section>
-
-            <!-- User Rights -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-user-shield text-blue-400 mr-3"></i>
-                    Your Rights
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Depending on your location, you may have certain rights regarding your personal information:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li><strong class="text-white">Access:</strong> Request access to the personal information we hold about you</li>
-                        <li><strong class="text-white">Correction:</strong> Request correction of inaccurate or incomplete information</li>
-                        <li><strong class="text-white">Deletion:</strong> Request deletion of your personal information, subject to legal obligations</li>
-                        <li><strong class="text-white">Objection:</strong> Object to processing of your personal information in certain circumstances</li>
-                        <li><strong class="text-white">Data Portability:</strong> Request transfer of your data to another service provider</li>
-                        <li><strong class="text-white">Withdraw Consent:</strong> Withdraw consent for data processing where consent is the legal basis</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        To exercise any of these rights, please contact us at <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Data Retention -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-clock text-blue-400 mr-3"></i>
-                    Data Retention
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed">
-                        We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When we no longer need your information, we will securely delete or anonymize it.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Children's Privacy -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-child text-blue-400 mr-3"></i>
-                    Children's Privacy
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed">
-                        Our website and product are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately at <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>, and we will take steps to delete such information.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Changes to This Policy -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-edit text-blue-400 mr-3"></i>
-                    Changes to This Privacy Policy
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Posting the updated Privacy Policy on this page</li>
-                        <li>Updating the "Last Updated" date at the top of this policy</li>
-                        <li>Sending an email notification to the address associated with your account (for significant changes)</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        Your continued use of our website or product after any changes to this Privacy Policy constitutes acceptance of those changes. We encourage you to review this Privacy Policy periodically.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Contact Us -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-envelope text-blue-400 mr-3"></i>
-                    Contact Us
-                </h2>
-                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-6">
-                    <p class="text-white leading-relaxed mb-4">
-                        If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
-                    </p>
-                    <div class="space-y-4 text-white">
-                        <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                        <div>
-                            <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                                    <i class="fas fa-envelope text-blue-300"></i>
-                                    <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
-                                </a>
-                                <div class="hidden sm:block h-10 w-px bg-white/20"></div>
-                                <div class="sm:hidden h-px w-full bg-white/20"></div>
-                                <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                                    <i class="fas fa-copy text-lg"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 mt-12 py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-lg font-semibold text-white mb-2">Pnptechnologiesllc</p>
-                    <p class="text-sm text-gray-400">© <span id="copyright-year"></span> All rights reserved.</p>
-                    <p class="text-gray-500 text-xs mt-2">Payments and billing are securely processed by Lemon Squeezy, our Merchant of Record.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-0 sm:gap-2 bg-gray-700 rounded-lg px-3 sm:px-4 py-2 border border-gray-600 hover:border-blue-500 transition duration-300 w-full sm:w-auto items-center">
-                    <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center sm:justify-start gap-2 py-2 sm:py-0 min-h-[44px] sm:min-h-0">
-                        <i class="fas fa-envelope"></i>
-                        <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                    </a>
-                    <div class="hidden sm:block h-4 w-px bg-gray-600"></div>
-                    <div class="sm:hidden h-px w-full bg-gray-600 my-1"></div>
-                    <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 active:text-blue-200 transition duration-300 py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center" title="Copy email address">
-                        <i class="fas fa-copy text-base sm:text-sm"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
     </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
-        <i class="fas fa-check-circle text-green-400 text-xl"></i>
-        <span class="font-medium">Email copied to clipboard!</span>
-    </div>
-
-    <script>
-        // Set copyright year dynamically
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-        // Set last updated date
-        document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
-
-        // Copy email to clipboard function with toast notification
-        function copyEmail(email) {
-            navigator.clipboard.writeText(email).then(function() {
-                // Show toast notification
-                const toast = document.getElementById('toast');
-                if (toast) {
-                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                    toast.classList.add('opacity-100', 'translate-y-0');
-                    
-                    // Hide toast after 3 seconds
-                    setTimeout(function() {
-                        toast.classList.remove('opacity-100', 'translate-y-0');
-                        toast.classList.add('opacity-0', 'translate-y-4');
-                        setTimeout(function() {
-                            toast.classList.add('hidden');
-                        }, 300);
-                    }, 3000);
-                }
-            }).catch(function(err) {
-                alert('Email: ' + email + '\n\n(Please copy manually)');
-            });
-        }
-
-        // Enhanced mailto link handler - always copy email as backup
-        document.querySelectorAll('a[href^="mailto:"]').forEach(mailtoLink => {
-            mailtoLink.addEventListener('click', function(e) {
-                const email = this.getAttribute('href').replace('mailto:', '');
-                
-                // Always copy email to clipboard as a backup (in case mailto doesn't work)
-                // This ensures users can paste it even if their email app doesn't open
-                navigator.clipboard.writeText(email).then(function() {
-                    // Show a helpful toast message
-                    const toast = document.getElementById('toast');
-                    if (toast) {
-                        // Check if we're on macOS/iOS (where mailto might not work)
-                        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                        
-                        if (isMac || isIOS) {
-                            toast.innerHTML = '<i class="fas fa-info-circle text-blue-400 text-xl"></i><span class="font-medium">Email copied! If your email app didn\'t open, paste it manually.</span>';
-                        } else {
-                            toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                        }
-                        
-                        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                        toast.classList.add('opacity-100', 'translate-y-0');
-                        
-                        setTimeout(function() {
-                            toast.classList.remove('opacity-100', 'translate-y-0');
-                            toast.classList.add('opacity-0', 'translate-y-4');
-                            setTimeout(function() {
-                                toast.classList.add('hidden');
-                                // Reset toast content
-                                toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                            }, 300);
-                        }, 4000);
-                    }
-                }).catch(function(err) {
-                    // Silent error handling - clipboard copy failed
-                });
-                
-                // Allow the default mailto behavior to proceed
-                // Don't prevent default - let the browser try to open the email app
-            });
-        });
-    </script>
 </body>
 </html>
-

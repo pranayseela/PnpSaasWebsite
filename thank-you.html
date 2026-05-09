@@ -3,242 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Order Confirmed | PnPSaaS</title>
-    <meta name="title" content="Order Confirmed | PnPSaaS">
-    <meta name="description" content="Thank you for your purchase of PnPSaaS - Enterprise .NET 10 Starter Kit">
-    <meta name="robots" content="noindex, nofollow">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+    <title>Welcome | AIExecutiveAssistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');body{font-family:'Inter',sans-serif}nav.scrolled{background-color:rgba(255,255,255,0.98);box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06)}a:focus-visible,button:focus-visible{outline:2px solid #3b82f6;outline-offset:2px;border-radius:4px}.text-blue-600{color:#2563eb}.bg-blue-50{background-color:#eff6ff}.skip-link{position:absolute;top:-40px;left:0;background:#2563eb;color:white;padding:8px;text-decoration:none;z-index:100}.skip-link:focus{top:0}</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            grey: '#1D1D1F',
+                            light: '#F5F5F7',
+                            muted: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #F5F5F7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(29, 29, 31, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body class="bg-white">
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="min-h-screen flex flex-col items-center justify-center text-center px-6">
     
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-2 text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                    <span>PnPSaaS</span>
-                </a>
-
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-1">
-                    <a href="index.html#home" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Home</a>
-                    <a href="index.html#features" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
-                    <a href="index.html#gallery" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
-                    <a href="index.html#pricing" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
-                    <a href="index.html#tech-stack" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
-                    <a href="index.html#faq" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
-                    <a href="index.html#support" class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
-                    
-                    <!-- Legal Dropdown -->
-                    <div class="relative group">
-                        <button class="nav-link px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium flex items-center gap-1" aria-expanded="false" aria-haspopup="true" aria-label="Legal menu">
-                            Legal
-                            <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                            <a href="privacy.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-t-lg">Privacy Policy</a>
-                            <a href="terms.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-b-lg">Terms of Service</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Button & Mobile Menu Toggle -->
-                <div class="flex items-center space-x-3">
-                    <a href="https://pnpsaas.lemonsqueezy.com/checkout/buy/1192560?embed=1" class="lemonsqueezy-button hidden lg:block bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                        Get Started
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-200 mt-2">
-                <div class="flex flex-col space-y-1 pt-4">
-                    <a href="index.html#home" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Home</a>
-                    <a href="index.html#features" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Features</a>
-                    <a href="index.html#gallery" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Gallery</a>
-                    <a href="index.html#pricing" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Pricing</a>
-                    <a href="index.html#tech-stack" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Tech Stack</a>
-                    <a href="index.html#faq" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">FAQ</a>
-                    <a href="index.html#support" class="mobile-nav-link px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300 font-medium">Support</a>
-                    <div class="px-4 py-2">
-                        <p class="text-sm font-semibold text-gray-500 mb-2">Legal</p>
-                        <a href="privacy.html" class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300">Privacy Policy</a>
-                        <a href="terms.html" class="block px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition duration-300">Terms of Service</a>
-                    </div>
-                    <a href="https://pnpsaas.lemonsqueezy.com/checkout/buy/1192560?embed=1" class="lemonsqueezy-button mx-4 mt-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center">
-                        Get Started
-                    </a>
-                </div>
-            </div>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
+            <a href="index.html" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Home</a>
         </div>
     </nav>
 
-    <!-- Spacer for fixed navbar -->
-    <div class="h-16 md:h-20"></div>
-
-    <!-- Main Content -->
-    <main id="main-content" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <div class="container mx-auto px-6 py-20">
-            <div class="max-w-2xl mx-auto text-center">
-                <!-- Success Icon -->
-                <div class="mb-8 flex justify-center">
-                    <div class="bg-green-100 w-24 h-24 rounded-full flex items-center justify-center">
-                        <i class="fas fa-check-circle text-green-600 text-5xl"></i>
-                    </div>
-                </div>
-
-                <!-- Headline -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    Order Confirmed!
-                </h1>
-
-                <!-- Sub-headline -->
-                <h2 class="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-                    Your Enterprise .NET 10 Starter Kit is being prepared.
-                </h2>
-
-                <!-- Body Text -->
-                <div class="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-xl mx-auto space-y-4">
-                    <p>
-                        Thank you for your purchase. To ensure you receive the most up-to-date version, we are manually packaging your secure build.
-                    </p>
-                    <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg text-left">
-                        <p class="font-semibold text-gray-900 mb-2">
-                            <i class="fas fa-envelope text-blue-600 mr-2"></i>
-                            Your ZIP file will be delivered via email
-                        </p>
-                        <p class="text-gray-700">
-                            You will receive a secure ZIP download link at your email address within <strong class="text-gray-900">12-24 hours</strong>. Please check your inbox (and spam folder) for the delivery email.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Return to Home Button -->
-                <a href="index.html" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-800 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    Return to Home
-                </a>
+    <main class="max-w-2xl">
+        <div class="mb-12">
+            <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-8 border border-white/10">
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
             </div>
+            <h1 class="text-4xl md:text-6xl font-medium mb-6 tracking-tight text-gradient">Welcome to Clarity.</h1>
+            <p class="text-xl text-white/60 font-light leading-relaxed">
+                Your private continuity system is being prepared. Check your inbox for the invitation to experience executive memory.
+            </p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl text-left border border-white/5">
+            <p class="text-sm text-white/40 mb-4 uppercase tracking-widest font-semibold">Next Steps</p>
+            <ul class="space-y-6 text-white/80 font-light">
+                <li class="flex gap-4">
+                    <span class="text-white/20">01</span>
+                    <span>Verify your secure license in your email.</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-white/20">02</span>
+                    <span>Download the Apple-native application.</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-white/20">03</span>
+                    <span>Experience the first morning brief.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-12">
+            <a href="index.html" class="text-sm font-medium text-white/40 hover:text-white transition-colors">
+                Return to the experience
+            </a>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer id="support" class="py-10 bg-gray-900 text-white text-center">
-        <p>© <span id="copyright-year"></span> Pnptechnologiesllc</p>
-        <p class="text-gray-400 text-xs mt-2 mb-4">Payments and billing are securely processed by Lemon Squeezy, our Merchant of Record.</p>
-        <div class="space-x-2 sm:space-x-4 mt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 px-4">
-            <a href="privacy.html" class="text-blue-400 hover:underline text-sm sm:text-base">Privacy Policy</a>
-            <a href="terms.html" class="text-blue-400 hover:underline text-sm sm:text-base">Terms of Service</a>
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-0 sm:gap-2 bg-gray-800 rounded-lg px-3 sm:px-3 py-2 border border-gray-700 hover:border-blue-500 transition duration-300 w-full sm:w-auto items-center">
-                <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center sm:justify-start gap-2 py-2 sm:py-0 min-h-[44px] sm:min-h-0">
-                    <i class="fas fa-envelope"></i>
-                    <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                </a>
-                <div class="hidden sm:block h-4 w-px bg-gray-600"></div>
-                <div class="sm:hidden h-px w-full bg-gray-600 my-1"></div>
-                <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 active:text-blue-200 transition duration-300 py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center" title="Copy email address">
-                    <i class="fas fa-copy text-base sm:text-sm"></i>
-                </button>
-            </div>
-        </div>
+    <footer class="fixed bottom-0 left-0 right-0 py-8 px-6 text-center">
+        <p class="text-xs text-white/20 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
     </footer>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
-        <i class="fas fa-check-circle text-green-400 text-xl"></i>
-        <span class="font-medium">Email copied to clipboard!</span>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        // Set copyright year dynamically
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-        // Copy email to clipboard function with toast notification
-        function copyEmail(email) {
-            navigator.clipboard.writeText(email).then(function() {
-                // Show toast notification
-                const toast = document.getElementById('toast');
-                if (toast) {
-                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                    toast.classList.add('opacity-100', 'translate-y-0');
-                    
-                    // Hide toast after 3 seconds
-                    setTimeout(function() {
-                        toast.classList.remove('opacity-100', 'translate-y-0');
-                        toast.classList.add('opacity-0', 'translate-y-4');
-                        setTimeout(function() {
-                            toast.classList.add('hidden');
-                        }, 300);
-                    }, 3000);
-                }
-            }).catch(function(err) {
-                // Fallback: show alert if clipboard API fails
-                alert('Email: ' + email + '\n\n(Please copy manually)');
-            });
-        }
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden');
-                
-                // Update aria-expanded for accessibility
-                mobileMenuButton.setAttribute('aria-expanded', !isHidden);
-                
-                // Toggle hamburger icon to X
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                } else {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
-                }
-            });
-            
-            // Close menu on Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                    mobileMenuButton.focus();
-                }
-            });
-        }
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('nav');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html>
-

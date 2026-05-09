@@ -3,418 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Terms of Service | PnPSaaS | Enterprise .NET 10 Starter Kit</title>
-    <meta name="title" content="Terms of Service | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="description" content="Terms of Service for PnPSaaS - Read our license terms, usage restrictions, and refund policy for the .NET 10 SaaS starter kit with Clean Architecture and Multi-tenancy.">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook / WhatsApp / iMessage -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pnpsaas.com/terms.html">
-    <meta property="og:title" content="Terms of Service | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta property="og:description" content="Terms of Service for PnPSaaS - Read our license terms, usage restrictions, and refund policy for the .NET 10 SaaS starter kit.">
-    <meta property="og:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:secure_url" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="PnPSaaS - Enterprise .NET 10 Starter Kit with Clean Architecture and Multi-tenancy">
-    <meta property="og:site_name" content="PnPSaaS">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pnpsaas.com/terms.html">
-    <meta name="twitter:title" content="Terms of Service | PnPSaaS | Enterprise .NET 10 Starter Kit">
-    <meta name="twitter:description" content="Terms of Service for PnPSaaS - Read our license terms, usage restrictions, and refund policy for the .NET 10 SaaS starter kit.">
-    <meta name="twitter:image" content="https://pnpsaas.com/images/PnPSaaS_OG_Image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="canonical" href="https://pnpsaas.com/terms.html">
-    
+    <title>Terms | AIExecutiveAssistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            grey: '#1D1D1F',
+                            light: '#F5F5F7',
+                            muted: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #F5F5F7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(29, 29, 31, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-300">
-    <!-- Header -->
-    <header class="bg-gray-800 border-b border-gray-700">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold text-white hover:text-blue-400 transition duration-300">
-                    PnPSaaS
-                </a>
-                <a href="index.html" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center space-x-2">
-                    <i class="fas fa-arrow-left"></i>
-                    <span>Back to Home</span>
-                </a>
-            </div>
+<body>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
+            <a href="index.html" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Back</a>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12 max-w-4xl">
-        <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12">
-            <!-- Title -->
-            <div class="mb-8 pb-6 border-b border-gray-700">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Terms of Service</h1>
-                <p class="text-gray-300">
-                    <strong class="text-white">Last Updated:</strong> 
-                    <span id="last-updated"></span>
-                </p>
+    <main class="pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-medium mb-12 tracking-tight">Terms of Service</h1>
+            
+            <div class="space-y-12 text-white/60 font-light leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">License Agreement</h2>
+                    <p>
+                        By using AIExecutiveAssistant, you are granted a non-exclusive, non-transferable license to use the software for personal or professional purposes. This license is tied to your hardware and does not permit redistribution or sub-licensing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Acceptable Use</h2>
+                    <p>
+                        AIExecutiveAssistant is designed to be a cognitive support tool. You agree not to use the software for any illegal activities or to attempt to reverse-engineer the local-first architecture.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Intellectual Property</h2>
+                    <p>
+                        All software, designs, and branding associated with AIExecutiveAssistant are the exclusive property of Pnptechnologiesllc. Your use of the software does not grant you ownership of any intellectual property.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Refund Policy</h2>
+                    <p>
+                        Due to the digital nature of the product and the "local-first" deployment model, all sales are final. We encourage users to experience the system through our documentation and previews before purchasing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-medium text-white mb-4">Limitation of Liability</h2>
+                    <p>
+                        AIExecutiveAssistant is provided "as is". While we strive for absolute reliability in our continuity system, we are not liable for any data loss or cognitive fragmentation resulting from the use or misuse of the software.
+                    </p>
+                </section>
+
+                <section>
+                    <p class="text-sm italic mt-12">
+                        Last updated: May 9, 2026. For legal inquiries, contact support@pnpsaas.com.
+                    </p>
+                </section>
             </div>
-
-            <!-- Introduction -->
-            <section class="mb-8">
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    These Terms of Service ("Terms") govern your purchase and use of <strong class="text-white">PnPSaaS</strong> (a .NET 10 Starter Kit) provided by <strong class="text-white">Pnptechnologiesllc</strong> ("we," "our," or "us"). By purchasing, downloading, or using PnPSaaS, you agree to be bound by these Terms.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Please read these Terms carefully before making a purchase. If you do not agree to these Terms, you must not purchase or use PnPSaaS.
-                </p>
-            </section>
-
-            <!-- License -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-file-contract text-blue-400 mr-3"></i>
-                    License Grant
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Subject to your compliance with these Terms, Pnptechnologiesllc grants you a <strong class="text-white">non-exclusive, non-transferable</strong> license to:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Use PnPSaaS for <strong class="text-white">personal projects</strong></li>
-                        <li>Use PnPSaaS for <strong class="text-white">commercial projects</strong> and applications</li>
-                        <li>Modify the source code to suit your specific needs</li>
-                        <li>Create derivative works based on PnPSaaS for your own use</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        This license is granted for a single user or organization. Each purchase entitles you to use PnPSaaS in accordance with these Terms.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Restrictions -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-ban text-blue-400 mr-3"></i>
-                    Restrictions
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        You are <strong class="text-white">expressly prohibited</strong> from:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li><strong class="text-white">Reselling</strong> the PnPSaaS source code or any portion thereof</li>
-                        <li><strong class="text-white">Redistributing</strong> the source code to third parties, whether for free or for compensation</li>
-                        <li><strong class="text-white">Sub-licensing</strong> or granting rights to use the source code to others</li>
-                        <li>Sharing your license or access credentials with others</li>
-                        <li>Using PnPSaaS to create a competing product or service that directly competes with PnPSaaS</li>
-                        <li>Removing or altering any copyright notices, proprietary labels, or trademarks from the source code</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        Violation of these restrictions may result in immediate termination of your license and may subject you to legal action.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Intellectual Property -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-copyright text-blue-400 mr-3"></i>
-                    Intellectual Property Rights
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        PnPSaaS, including all source code, documentation, designs, and related materials, is the exclusive property of Pnptechnologiesllc and is protected by copyright, trademark, and other intellectual property laws.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        These Terms do not grant you any ownership rights in PnPSaaS. You acknowledge that all rights, title, and interest in PnPSaaS remain with Pnptechnologiesllc. You may not claim ownership or authorship of the original PnPSaaS codebase.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Refunds -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-undo text-blue-400 mr-3"></i>
-                    Refund Policy
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Due to the digital nature of the PnPSaaS source code, all sales are final and non-refundable once the download link has been accessed. For technical support, contact <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        All payments and billing are securely processed by <strong class="text-white">Lemon Squeezy</strong>, our Merchant of Record. For payment-related inquiries, please contact Lemon Squeezy directly or reach out to us at <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 underline">support@pnpsaas.com</a>.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Disclaimer -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-exclamation-triangle text-blue-400 mr-3"></i>
-                    Disclaimer of Warranties
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        <strong class="text-white">PnPSaaS is provided "as-is" and "as available" without warranties of any kind, either express or implied.</strong>
-                    </p>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        To the fullest extent permitted by applicable law, Pnptechnologiesllc disclaims all warranties, including but not limited to:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Warranties of merchantability</li>
-                        <li>Warranties of fitness for a particular purpose</li>
-                        <li>Warranties of non-infringement</li>
-                        <li>Warranties that the software will meet your requirements</li>
-                        <li>Warranties that the software will be error-free or uninterrupted</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        You assume full responsibility for the use of PnPSaaS and any results obtained from such use. We do not guarantee that PnPSaaS will be compatible with all systems or that it will function without errors.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Limitation of Liability -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-gavel text-blue-400 mr-3"></i>
-                    Limitation of Liability
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        To the maximum extent permitted by applicable law, Pnptechnologiesllc shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Loss of profits or revenue</li>
-                        <li>Loss of data or information</li>
-                        <li>Business interruption</li>
-                        <li>Loss of business opportunities</li>
-                        <li>Cost of substitute products or services</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        In no event shall our total liability to you exceed the amount you paid for PnPSaaS. This limitation applies regardless of the theory of liability, whether in contract, tort, or otherwise.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Updates and Support -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-sync-alt text-blue-400 mr-3"></i>
-                    Updates and Support
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Your purchase includes access to lifetime updates for PnPSaaS. We will notify you of major updates via email when available.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        While we strive to provide support and assistance, we do not guarantee specific response times or that all issues will be resolved. Support is provided on a best-effort basis and may be limited to email communication.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Termination -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-times-circle text-blue-400 mr-3"></i>
-                    Termination
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We reserve the right to terminate or suspend your license immediately, without prior notice, if you violate any of these Terms.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        Upon termination, you must immediately cease all use of PnPSaaS and delete all copies of the source code from your systems. The provisions of these Terms that by their nature should survive termination will survive, including but not limited to ownership provisions, warranty disclaimers, and limitations of liability.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Changes to Terms -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-edit text-blue-400 mr-3"></i>
-                    Changes to These Terms
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        We reserve the right to modify these Terms at any time. We will notify you of material changes by:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li>Posting the updated Terms on this page</li>
-                        <li>Updating the "Last Updated" date</li>
-                        <li>Sending an email notification to the address associated with your purchase (for significant changes)</li>
-                    </ul>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        Your continued use of PnPSaaS after any changes to these Terms constitutes acceptance of those changes. If you do not agree to the modified Terms, you must stop using PnPSaaS.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Governing Law -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-balance-scale text-blue-400 mr-3"></i>
-                    Governing Law
-                </h2>
-                <div class="bg-gray-900 rounded-lg p-6">
-                    <p class="text-gray-300 leading-relaxed">
-                        These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Pnptechnologiesllc operates, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of PnPSaaS shall be resolved in the appropriate courts of that jurisdiction.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Contact Us -->
-            <section class="mb-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center">
-                    <i class="fas fa-envelope text-blue-400 mr-3"></i>
-                    Contact Us
-                </h2>
-                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-6">
-                    <p class="text-white leading-relaxed mb-4">
-                        If you have any questions about these Terms of Service, please contact us:
-                    </p>
-                    <div class="space-y-4 text-white">
-                        <p><strong>Entity:</strong> Pnptechnologiesllc</p>
-                        <div>
-                            <p class="mb-2 text-sm text-blue-100"><strong>Email:</strong></p>
-                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:border-blue-300 transition duration-300">
-                                <a href="mailto:support@pnpsaas.com" class="flex-1 px-4 sm:px-4 py-3 text-white hover:text-blue-200 font-medium flex items-center justify-center sm:justify-start gap-2 min-h-[48px]">
-                                    <i class="fas fa-envelope text-blue-300"></i>
-                                    <span class="text-sm sm:text-base break-all sm:break-normal">support@pnpsaas.com</span>
-                                </a>
-                                <div class="hidden sm:block h-10 w-px bg-white/20"></div>
-                                <div class="sm:hidden h-px w-full bg-white/20"></div>
-                                <button onclick="copyEmail('support@pnpsaas.com')" class="px-6 sm:px-4 py-3 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white hover:text-blue-200 transition duration-300 min-h-[48px] flex items-center justify-center" title="Copy email address">
-                                    <i class="fas fa-copy text-lg"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p><strong>Website:</strong> <a href="https://pnpsaas.com" class="underline hover:text-blue-200">pnpsaas.com</a></p>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 mt-12 py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-lg font-semibold text-white mb-2">Pnptechnologiesllc</p>
-                    <p class="text-sm text-gray-400">© <span id="copyright-year"></span> All rights reserved.</p>
-                    <p class="text-gray-500 text-xs mt-2">Payments and billing are securely processed by Lemon Squeezy, our Merchant of Record.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-0 sm:gap-2 bg-gray-700 rounded-lg px-3 sm:px-4 py-2 border border-gray-600 hover:border-blue-500 transition duration-300 w-full sm:w-auto items-center">
-                    <a href="mailto:support@pnpsaas.com" class="text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center sm:justify-start gap-2 py-2 sm:py-0 min-h-[44px] sm:min-h-0">
-                        <i class="fas fa-envelope"></i>
-                        <span class="text-sm sm:text-base">support@pnpsaas.com</span>
-                    </a>
-                    <div class="hidden sm:block h-4 w-px bg-gray-600"></div>
-                    <div class="sm:hidden h-px w-full bg-gray-600 my-1"></div>
-                    <button onclick="copyEmail('support@pnpsaas.com')" class="text-blue-400 hover:text-blue-300 active:text-blue-200 transition duration-300 py-2 sm:py-0 min-h-[44px] sm:min-h-0 flex items-center justify-center" title="Copy email address">
-                        <i class="fas fa-copy text-base sm:text-sm"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
     </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform transition-all duration-300 translate-y-0 opacity-0">
-        <i class="fas fa-check-circle text-green-400 text-xl"></i>
-        <span class="font-medium">Email copied to clipboard!</span>
-    </div>
-
-    <script>
-        // Set copyright year dynamically
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-        // Set last updated date
-        document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
-
-        // Copy email to clipboard function with toast notification
-        function copyEmail(email) {
-            navigator.clipboard.writeText(email).then(function() {
-                // Show toast notification
-                const toast = document.getElementById('toast');
-                if (toast) {
-                    toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                    toast.classList.add('opacity-100', 'translate-y-0');
-                    
-                    // Hide toast after 3 seconds
-                    setTimeout(function() {
-                        toast.classList.remove('opacity-100', 'translate-y-0');
-                        toast.classList.add('opacity-0', 'translate-y-4');
-                        setTimeout(function() {
-                            toast.classList.add('hidden');
-                        }, 300);
-                    }, 3000);
-                }
-            }).catch(function(err) {
-                alert('Email: ' + email + '\n\n(Please copy manually)');
-            });
-        }
-
-        // Enhanced mailto link handler - always copy email as backup
-        document.querySelectorAll('a[href^="mailto:"]').forEach(mailtoLink => {
-            mailtoLink.addEventListener('click', function(e) {
-                const email = this.getAttribute('href').replace('mailto:', '');
-                
-                // Always copy email to clipboard as a backup (in case mailto doesn't work)
-                // This ensures users can paste it even if their email app doesn't open
-                navigator.clipboard.writeText(email).then(function() {
-                    // Show a helpful toast message
-                    const toast = document.getElementById('toast');
-                    if (toast) {
-                        // Check if we're on macOS/iOS (where mailto might not work)
-                        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                        
-                        if (isMac || isIOS) {
-                            toast.innerHTML = '<i class="fas fa-info-circle text-blue-400 text-xl"></i><span class="font-medium">Email copied! If your email app didn\'t open, paste it manually.</span>';
-                        } else {
-                            toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                        }
-                        
-                        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-                        toast.classList.add('opacity-100', 'translate-y-0');
-                        
-                        setTimeout(function() {
-                            toast.classList.remove('opacity-100', 'translate-y-0');
-                            toast.classList.add('opacity-0', 'translate-y-4');
-                            setTimeout(function() {
-                                toast.classList.add('hidden');
-                                // Reset toast content
-                                toast.innerHTML = '<i class="fas fa-check-circle text-green-400 text-xl"></i><span class="font-medium">Email copied to clipboard!</span>';
-                            }, 300);
-                        }, 4000);
-                    }
-                }).catch(function(err) {
-                    // Silent error handling - clipboard copy failed
-                });
-                
-                // Allow the default mailto behavior to proceed
-                // Don't prevent default - let the browser try to open the email app
-            });
-        });
-    </script>
 </body>
 </html>
-
