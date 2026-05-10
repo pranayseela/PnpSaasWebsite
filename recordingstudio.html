@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>Recording Studio | Professional SSD Recording for iPhone</title>
+    <meta name="description" content="Professional external SSD recording workflows for iPhone creators. Direct ProRes capture and high-performance media management.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            grey: '#1D1D1F',
+                            light: '#F5F5F7',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            textSecondary: 'rgba(245, 245, 247, 0.6)',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] },
+                    letterSpacing: { tightest: '-.025em', tighter: '-.015em' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; }
+        .nav-glass { background: rgba(0, 0, 0, 0.75); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .text-gradient { background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="selection:bg-white/10">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="container mx-auto px-6 h-14 md:h-16 flex items-center justify-between max-w-[1440px]">
+            <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
+            <a href="index.html" class="text-[10px] font-bold tracking-widest uppercase text-white/30 hover:text-white transition-colors">Back to Studio</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="min-h-[80svh] flex flex-col items-center justify-center text-center px-6 pt-16">
+            <div class="max-w-4xl fade-in">
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/20 mb-6 block">Cinema Grade Workflow</span>
+                <h1 class="text-5xl md:text-8xl font-semibold tracking-tightest mb-8 text-gradient leading-tight">
+                    Direct to SSD.<br>Direct to Edit.
+                </h1>
+                <p class="text-lg md:text-xl text-apple-textSecondary mb-12 max-w-2xl mx-auto font-light leading-relaxed tracking-tighter">
+                    Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.
+                </p>
+                <a href="thank-you.html" class="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white text-black text-xs font-bold tracking-widest uppercase hover:bg-apple-light transition-all">
+                    Experience Studio
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Depth -->
+        <section class="py-32 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="glass-card p-12 rounded-[3rem] fade-in">
+                        <h3 class="text-2xl font-semibold mb-6 tracking-tightest">ProRes Direct</h3>
+                        <p class="text-apple-textSecondary font-light leading-relaxed tracking-tighter">
+                            Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.
+                        </p>
+                    </div>
+                    <div class="glass-card p-12 rounded-[3rem] fade-in">
+                        <h3 class="text-2xl font-semibold mb-6 tracking-tightest">Media Hub</h3>
+                        <p class="text-apple-textSecondary font-light leading-relaxed tracking-tighter">
+                            Organize, review, and offload media with a professional management layer built for the modern creator.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Pillar -->
+        <section class="py-32 px-6 border-t border-white/5 bg-white/[0.01]">
+            <div class="container mx-auto max-w-4xl text-center fade-in">
+                <h2 class="text-4xl md:text-6xl font-semibold tracking-tightest mb-10">Native Power.</h2>
+                <p class="text-lg text-apple-textSecondary font-light leading-relaxed tracking-tighter mb-12">
+                    Deeply integrated with iOS camera APIs and external hardware. Recording Studio turns your iPhone into a professional-grade cinema brain.
+                </p>
+                <div class="flex flex-wrap justify-center gap-12 grayscale opacity-30">
+                    <i class="fas fa-video text-3xl"></i>
+                    <i class="fas fa-hdd text-3xl"></i>
+                    <i class="fab fa-usb text-3xl"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[10px] text-white/10 tracking-widest uppercase font-bold">© 2026 PnP Technologies LLC</p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
