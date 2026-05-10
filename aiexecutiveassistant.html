@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <title>AIExecutiveAssistant | Private Executive Memory</title>
-    <meta name="description" content="Continuity of Thought • Calm Cognitive Support. A premium, privacy-first tool designed for professionals to transform spontaneous thoughts into actionable intelligence entirely on-device.">
+    <title>AIExecutiveAssistant | Your Private Executive Memory</title>
+    <meta name="description" content="Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive support layer and private executive memory system for Apple ecosystem professionals.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -25,7 +25,10 @@
                             border: 'rgba(0, 0, 0, 0.05)',
                         }
                     },
-                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
+                    fontFamily: { 
+                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'New York', 'Georgia', 'serif']
+                    }
                 }
             }
         }
@@ -59,11 +62,16 @@
             transform: translateY(0);
         }
 
-        .feature-grid-item {
-            background: #F5F5F7;
-            border-radius: 24px;
-            padding: 40px;
-            transition: transform 0.6s var(--apple-ease);
+        .editorial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .brief-card {
+            background: #FFFFFF;
+            border-radius: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
         .content-width { max-width: 1200px; margin: 0 auto; }
@@ -108,15 +116,15 @@
     </nav>
 
     <main>
-        <!-- Hero -->
-        <section class="min-h-[80svh] flex flex-col items-center justify-center text-center px-6 pt-16">
+        <!-- Hero: Emotional Outcome -->
+        <section class="min-h-[85svh] flex flex-col items-center justify-center text-center px-6 pt-16 bg-white">
             <div class="max-w-5xl fade-in">
-                <span class="text-[12px] font-semibold tracking-[0.2em] uppercase text-apple-grey mb-6 block">Private Executive Memory</span>
-                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-gradient leading-tight">
-                    Continuity of Thought.
+                <span class="text-[12px] font-semibold tracking-[0.2em] uppercase text-apple-blue mb-6 block font-sans">A Calm Cognitive Support Layer</span>
+                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-apple-black leading-tight">
+                    Stop mentally carrying<br class="hidden md:block"> everything yourself.
                 </h1>
                 <p class="text-xl md:text-2xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">
-                    Transform spontaneous thoughts, visions, and meetings into actionable intelligence. Entirely on-device. Entirely private.
+                    AIExecutiveAssistant is your private executive memory. A system designed for continuity of thought in an increasingly fragmented professional world.
                 </p>
                 <div class="flex flex-col items-center gap-6">
                     <a href="thank-you.html" class="bg-apple-black text-white text-[17px] font-normal px-10 py-4 rounded-full hover:bg-apple-black/90 transition-all">
@@ -129,80 +137,128 @@
             </div>
         </section>
 
-        <!-- Flagship Features -->
-        <section class="py-32 px-6 bg-apple-offwhite">
+        <!-- The Executive Brief: Flagship Emotional Feature -->
+        <section class="py-32 md:py-48 px-6 bg-apple-offwhite">
             <div class="container mx-auto content-width">
-                <div class="mb-20 md:mb-32 text-center fade-in">
-                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">Designed for Professionals.</h2>
-                    <p class="text-xl md:text-2xl text-apple-grey font-normal tracking-tight">A cognitive layer that supports your workflow.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                    <div class="feature-grid-item fade-in bg-white shadow-sm">
-                        <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block">The Flagship</span>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">The Executive Brief</h3>
-                        <p class="text-apple-grey leading-relaxed text-lg tracking-tight">
-                            A morning context engine that surfaces "mind occupancy" and high-priority follow-ups. Start your day with situational clarity, not a cluttered inbox.
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="fade-in">
+                        <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block font-sans">Flagship Feature</span>
+                        <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-8 text-apple-black">The Executive Brief.</h2>
+                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic">
+                            “What’s occupying your mind today?”
                         </p>
+                        <p class="text-lg text-apple-grey font-normal leading-relaxed mb-10 tracking-tight">
+                            Start every morning with a calm, editorial-style synthesis of your recurring themes, unresolved follow-ups, and evolving projects. It’s situational clarity, designed to relieve the mental burden of management.
+                        </p>
+                        <ul class="space-y-4 text-[17px] text-apple-black/80 font-normal">
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-apple-blue mt-1"></i>
+                                <span>Surface mind occupancy & recurring themes</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-apple-blue mt-1"></i>
+                                <span>Identify unresolved commitments across days</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-apple-blue mt-1"></i>
+                                <span>Reflective, spacious editorial UI</span>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="feature-grid-item fade-in bg-white shadow-sm">
-                        <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block">Recall</span>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">Semantic Intelligence</h3>
-                        <p class="text-apple-grey leading-relaxed text-lg tracking-tight">
-                            Advanced weighted search with "Match Reason" transparency. Your memory understands the *why* behind your questions, not just the keywords.
-                        </p>
-                    </div>
-
-                    <div class="feature-grid-item fade-in bg-white shadow-sm">
-                        <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block">Native</span>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">Deep Ecosystem Integration</h3>
-                        <p class="text-apple-grey leading-relaxed text-lg tracking-tight">
-                            One-tap export to Apple Reminders and verified Calendar event creation. Siri and Lock Screen Widget integration ensures zero-friction capture.
-                        </p>
-                    </div>
-
-                    <div class="feature-grid-item fade-in bg-white shadow-sm">
-                        <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block">Editorial</span>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">Professional Editor</h3>
-                        <p class="text-apple-grey leading-relaxed text-lg tracking-tight">
-                            A premium transcript editor featuring Apple's "New York" serif typography. Designed for reflective thinking and high-fidelity output.
-                        </p>
+                    <div class="brief-card p-10 md:p-16 fade-in">
+                        <div class="space-y-8 font-serif">
+                            <div class="border-b border-apple-border pb-8">
+                                <p class="text-[12px] uppercase tracking-widest text-apple-grey font-sans mb-4">Monday Briefing</p>
+                                <h3 class="text-3xl font-semibold mb-4 italic">Themes of the Week</h3>
+                                <p class="text-apple-grey leading-relaxed">Discussions around <span class="text-apple-black font-medium">Series B strategy</span> and <span class="text-apple-black font-medium">Executive hiring</span> have surfaced in your last three voice notes.</p>
+                            </div>
+                            <div class="space-y-6">
+                                <h4 class="text-xl font-semibold italic">Unresolved Commitments</h4>
+                                <div class="flex gap-4 items-start">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-apple-blue mt-2.5"></div>
+                                    <p class="text-apple-grey">Follow up with Sarah regarding the Q3 roadmap (First mentioned Thursday).</p>
+                                </div>
+                                <div class="flex gap-4 items-start">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-apple-blue mt-2.5"></div>
+                                    <p class="text-apple-grey">Finalize the investor deck draft before the Wednesday board review.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Proof -->
-        <section class="py-32 px-6 bg-white">
-            <div class="container mx-auto max-w-4xl text-center fade-in">
-                <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-12">The Apple Standard.</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 text-left">
-                    <div>
-                        <h4 class="text-[19px] font-semibold mb-3 tracking-tight">100% Offline</h4>
-                        <p class="text-apple-grey text-[16px] leading-relaxed">
-                            All transcription, NLP, and metadata analysis happens locally via the Apple Neural Engine. No external APIs. No latency.
-                        </p>
+        <!-- Continuity Intelligence & Semantic Recall -->
+        <section class="py-32 md:py-48 px-6 bg-white">
+            <div class="container mx-auto content-width">
+                <div class="text-center mb-24 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">Continuity of Thought.</h2>
+                    <p class="text-xl md:text-2xl text-apple-grey font-normal tracking-tight max-w-3xl mx-auto">Reconnecting fragmented thoughts across time using on-device semantic intelligence.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="fade-in">
+                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Semantic Recall</h3>
+                        <p class="text-apple-grey leading-relaxed text-[16px] mb-6">Search your memory contextually. The system understands the *why* behind your query, surfacing related investor discussions or project strategy notes effortlessly.</p>
+                        <p class="text-apple-blue text-[15px] font-medium font-serif italic">“Match Reason: Discussed in Series B vision note.”</p>
                     </div>
-                    <div>
-                        <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Built on SwiftData</h4>
-                        <p class="text-apple-grey text-[16px] leading-relaxed">
-                            Utilizing Apple's latest persistence framework for a performant, durable memory store that lives only on your hardware.
-                        </p>
+                    <div class="fade-in">
+                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Voice-to-Memory</h3>
+                        <p class="text-apple-grey leading-relaxed text-[16px]">One-tap capture for spontaneous thoughts. Instant high-quality recording with fully local transcription. No external APIs, no cloud, no latency.</p>
                     </div>
-                    <div>
-                        <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Zero Backend</h4>
-                        <p class="text-apple-grey text-[16px] leading-relaxed">
-                            No accounts required. No data collection. Your identity is managed by your device's native security systems.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="text-[19px] font-semibold mb-3 tracking-tight">60 FPS Native</h4>
-                        <p class="text-apple-grey text-[16px] leading-relaxed">
-                            Crafted with SwiftUI and AVFoundation for the buttery responsiveness you expect from world-class Apple software.
-                        </p>
+                    <div class="fade-in">
+                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Assistant Actions</h3>
+                        <p class="text-apple-grey leading-relaxed text-[16px]">Every thought is actionable. One tap to create a Reminder, Calendar event, or Alert. AI enhances your workflow without ever gating it.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Native & Private: Technical Proof -->
+        <section class="py-32 px-6 bg-apple-offwhite border-t border-apple-border">
+            <div class="container mx-auto content-width">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+                    <div class="fade-in">
+                        <h2 class="text-4xl font-semibold tracking-tight mb-8">Apple Native.<br>Private by Design.</h2>
+                        <p class="text-lg text-apple-grey leading-relaxed mb-12 max-w-md">
+                            AIExecutiveAssistant is not a chatbot or a backend-heavy automation platform. It is a deeply integrated Apple-native tool built with the latest system frameworks.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8 text-[12px] font-semibold uppercase tracking-widest text-apple-black/40">
+                            <div class="flex flex-col gap-2">
+                                <span class="text-apple-black">SwiftUI</span>
+                                <span class="text-apple-black">SwiftData</span>
+                                <span class="text-apple-black">AVFoundation</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <span class="text-apple-black">AppIntents</span>
+                                <span class="text-apple-black">Spotlight Indexing</span>
+                                <span class="text-apple-black">Neural Engine</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-12 fade-in">
+                        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-black/[0.02]">
+                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Account-Free</h4>
+                            <p class="text-apple-grey text-[15px] leading-relaxed">No email required. No passwords to remember. Your identity is managed by your device's native security systems.</p>
+                        </div>
+                        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-black/[0.02]">
+                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Backend-Free</h4>
+                            <p class="text-apple-grey text-[15px] leading-relaxed">We have no servers. No external AI APIs are called. All intelligence is derived from the hardware in your hand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-32 md:py-48 px-6 bg-white text-center">
+            <div class="max-w-4xl mx-auto fade-in">
+                <h2 class="text-4xl md:text-7xl font-semibold tracking-tight mb-12">Regain your cognitive clarity.</h2>
+                <a href="thank-you.html" class="bg-apple-black text-white text-[19px] font-normal px-12 py-5 rounded-full hover:bg-apple-black/90 transition-all shadow-lg">
+                    Experience Continuity
+                </a>
+                <p class="mt-10 text-apple-grey font-normal text-lg">Your private executive memory is ready.</p>
             </div>
         </section>
     </main>
