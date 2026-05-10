@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Privacy Policy | PnP Technologies LLC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -18,24 +18,29 @@
         }
     </script>
     <style>
-        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; }
-        .nav-glass { background: rgba(0, 0, 0, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px; }
-        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: #fff; letter-spacing: -0.015em; }
-        p { font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; color: rgba(245, 245, 247, 0.6); letter-spacing: -0.01em; }
+        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .nav-glass { background: rgba(0, 0, 0, 0.75); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .content-container { max-width: 720px; margin: 0 auto; padding: clamp(80px, 15vh, 140px) 24px 80px; }
+        h2 { font-weight: 600; font-size: clamp(1.25rem, 4vw, 1.75rem); margin-top: 3.5rem; margin-bottom: 1.25rem; color: #fff; letter-spacing: -0.02em; }
+        p { font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; color: rgba(245, 245, 247, 0.6); letter-spacing: -0.01em; font-size: clamp(0.95rem, 2vw, 1.05rem); }
+        .back-link { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.4); transition: color 0.3s ease; }
+        .back-link:hover { color: #fff; }
     </style>
 </head>
 <body class="selection:bg-white/10">
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="container mx-auto px-6 h-14 flex items-center justify-between">
+        <div class="container mx-auto px-6 h-14 flex items-center justify-between max-w-[1440px]">
             <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
-            <a href="index.html" class="text-[12px] font-medium tracking-tighter uppercase text-white/50 hover:text-white transition-colors">Back to Studio</a>
+            <a href="index.html" class="back-link flex items-center gap-2">
+                <i class="fas fa-chevron-left text-[10px]"></i>
+                Studio
+            </a>
         </div>
     </nav>
 
     <main class="content-container">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tightest mb-4">Privacy Policy</h1>
-        <p class="text-xs uppercase tracking-widest font-bold text-white/20 mb-12">Last Updated: May 9, 2026</p>
+        <h1 class="text-4xl md:text-6xl font-semibold tracking-tightest mb-6 leading-tight">Privacy Policy</h1>
+        <p class="text-[10px] uppercase tracking-widest font-bold text-white/20 mb-16">Effective Date: May 9, 2026</p>
         
         <p>At PnP Technologies LLC, we believe privacy is a fundamental human right. Our studio is built on the philosophy that your data belongs to you, and your device should be a private sanctuary. This policy outlines our commitment to that belief.</p>
 
@@ -57,13 +62,13 @@
         <h2>6. Your Rights</h2>
         <p>Because your data stays on your device, you have absolute control. You can delete your information at any time simply by removing it from the application or deleting the application itself. We have no way to "recover" your data because we never had it.</p>
 
-        <div class="mt-20 pt-10 border-t border-white/5">
-            <p class="text-xs text-white/20">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
+        <div class="mt-24 pt-12 border-t border-white/5">
+            <p class="text-xs text-white/20 font-light tracking-tight">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
         </div>
     </main>
 
     <footer class="py-16 border-t border-white/5 text-center">
-        <p class="text-[11px] text-white/20 tracking-tighter font-light">© 2026 PnP Technologies LLC. All rights reserved.</p>
+        <p class="text-[10px] text-white/10 tracking-widest uppercase font-bold">© 2026 PnP Technologies LLC</p>
     </footer>
 </body>
 </html>
