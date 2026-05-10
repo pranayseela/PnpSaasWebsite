@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <title>AIExecutiveAssistant | Your Private Executive Memory</title>
+    <title>AIExecutiveAssistant | Private Executive Memory</title>
     <meta name="description" content="Private executive memory and continuity intelligence. Built for cognitive clarity and privacy-first on-device intelligence.">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,53 +32,79 @@
     </script>
 
     <style>
-        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; }
+        :root { --apple-ease: cubic-bezier(0.16, 1, 0.3, 1); }
+        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .nav-glass { background: rgba(0, 0, 0, 0.75); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
         .text-gradient { background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s var(--apple-ease); }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.6s var(--apple-ease); }
+        .content-width { max-width: 1440px; margin: 0 auto; }
+        #mobile-menu { transition: transform 0.5s var(--apple-ease), opacity 0.5s var(--apple-ease); }
+        #mobile-menu.hidden-custom { transform: translateY(-100%); opacity: 0; pointer-events: none; }
     </style>
 </head>
 <body class="selection:bg-white/10">
 
-    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="container mx-auto px-6 h-14 md:h-16 flex items-center justify-between max-w-[1440px]">
-            <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
-            <a href="index.html" class="text-[10px] font-bold tracking-widest uppercase text-white/30 hover:text-white transition-colors">Back to Studio</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] nav-glass">
+        <div class="container mx-auto px-6 h-14 md:h-16 flex items-center justify-between content-width">
+            <a href="index.html" class="text-sm font-semibold tracking-tighter hover:opacity-70 transition-opacity z-[110]">PnP Technologies LLC</a>
+            
+            <div class="hidden md:flex items-center space-x-12 text-[11px] font-bold tracking-widest uppercase text-white/40">
+                <a href="index.html#products" class="hover:text-white transition-colors">Software</a>
+                <a href="index.html#philosophy" class="hover:text-white transition-colors">Philosophy</a>
+                <a href="mailto:support@pnpsaas.com" class="hover:text-white transition-colors">Support</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden z-[110] p-2 -mr-2 text-white/50 hover:text-white transition-colors">
+                <div class="w-5 h-4 flex flex-col justify-between items-end">
+                    <span class="w-full h-[1.5px] bg-current transition-all duration-300 origin-right"></span>
+                    <span class="w-4/5 h-[1.5px] bg-current transition-all duration-300 origin-right"></span>
+                    <span class="w-full h-[1.5px] bg-current transition-all duration-300 origin-right"></span>
+                </div>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden-custom fixed inset-0 bg-black z-[105] flex flex-col items-center justify-center p-6 md:hidden">
+            <div class="flex flex-col items-center space-y-10 text-3xl font-medium tracking-tightest">
+                <a href="index.html#products" class="mobile-link">Software</a>
+                <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
+                <a href="mailto:support@pnpsaas.com" class="mobile-link">Support</a>
+            </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero -->
-        <section class="min-h-[80svh] flex flex-col items-center justify-center text-center px-6 pt-16">
-            <div class="max-w-4xl fade-in">
-                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/20 mb-6 block">Continuity Intelligence</span>
-                <h1 class="text-5xl md:text-8xl font-semibold tracking-tightest mb-8 text-gradient leading-tight">
+        <section class="min-h-[85svh] flex flex-col items-center justify-center text-center px-6 pt-16">
+            <div class="max-w-5xl fade-in">
+                <span class="text-[11px] font-bold tracking-[0.3em] uppercase text-white/20 mb-8 block">Continuity Intelligence</span>
+                <h1 class="text-5xl md:text-8xl lg:text-9xl font-semibold tracking-tightest mb-10 text-gradient leading-[0.95]">
                     Your private<br>executive memory.
                 </h1>
-                <p class="text-lg md:text-xl text-apple-textSecondary mb-12 max-w-2xl mx-auto font-light leading-relaxed tracking-tighter">
+                <p class="text-xl md:text-2xl text-apple-textSecondary mb-16 max-w-3xl mx-auto font-light leading-relaxed tracking-tighter">
                     Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive layer that lives on your device, ensuring your thoughts never fade.
                 </p>
-                <a href="thank-you.html" class="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white text-black text-xs font-bold tracking-widest uppercase hover:bg-apple-light transition-all">
+                <a href="thank-you.html" class="inline-flex items-center justify-center px-12 py-5 rounded-full bg-white text-black text-[12px] font-bold tracking-widest uppercase hover:bg-apple-light transition-all">
                     Experience Continuity
                 </a>
             </div>
         </section>
 
         <!-- Product Depth -->
-        <section class="py-32 px-6">
-            <div class="container mx-auto max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="glass-card p-12 rounded-[3rem] fade-in">
-                        <h3 class="text-2xl font-semibold mb-6 tracking-tightest">Semantic Recall</h3>
-                        <p class="text-apple-textSecondary font-light leading-relaxed tracking-tighter">
+        <section class="py-32 md:py-48 px-6">
+            <div class="container mx-auto content-width">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="glass-card p-10 md:p-20 rounded-[3rem] md:rounded-[4rem] fade-in">
+                        <h3 class="text-3xl md:text-4xl font-semibold mb-8 tracking-tightest">Semantic Recall</h3>
+                        <p class="text-lg md:text-xl text-apple-textSecondary font-light leading-relaxed tracking-tighter">
                             Every thought, meeting, and reflection is semantically indexed on-device. No more digging through notes. Just ask, and your memory answers.
                         </p>
                     </div>
-                    <div class="glass-card p-12 rounded-[3rem] fade-in">
-                        <h3 class="text-2xl font-semibold mb-6 tracking-tightest">The Executive Brief</h3>
-                        <p class="text-apple-textSecondary font-light leading-relaxed tracking-tighter">
+                    <div class="glass-card p-10 md:p-20 rounded-[3rem] md:rounded-[4rem] fade-in">
+                        <h3 class="text-3xl md:text-4xl font-semibold mb-8 tracking-tightest">The Executive Brief</h3>
+                        <p class="text-lg md:text-xl text-apple-textSecondary font-light leading-relaxed tracking-tighter">
                             A morning synthesis of your unresolved follow-ups and recurring themes. It’s not a list; it’s situational clarity.
                         </p>
                     </div>
@@ -87,27 +113,58 @@
         </section>
 
         <!-- Privacy Pillar -->
-        <section class="py-32 px-6 border-t border-white/5 bg-white/[0.01]">
-            <div class="container mx-auto max-w-4xl text-center fade-in">
-                <h2 class="text-4xl md:text-6xl font-semibold tracking-tightest mb-10">Private by Design.</h2>
-                <p class="text-lg text-apple-textSecondary font-light leading-relaxed tracking-tighter mb-12">
+        <section class="py-32 md:py-48 px-6 border-t border-white/5 bg-white/[0.01]">
+            <div class="container mx-auto max-w-5xl text-center fade-in">
+                <h2 class="text-4xl md:text-7xl font-semibold tracking-tightest mb-12">Private by Design.</h2>
+                <p class="text-xl md:text-2xl text-apple-textSecondary font-light leading-relaxed tracking-tighter mb-16 max-w-3xl mx-auto">
                     No accounts. No surveillance. No cloud dependency. Your executive memory stays exactly where it belongs: on your device, processed by the Apple Neural Engine.
                 </p>
-                <div class="flex flex-wrap justify-center gap-12 grayscale opacity-30">
-                    <i class="fab fa-apple text-3xl"></i>
-                    <i class="fas fa-microchip text-3xl"></i>
-                    <i class="fas fa-lock text-3xl"></i>
+                <div class="flex flex-wrap justify-center gap-16 md:gap-24 grayscale opacity-20">
+                    <i class="fab fa-apple text-4xl"></i>
+                    <i class="fas fa-microchip text-4xl"></i>
+                    <i class="fas fa-lock text-4xl"></i>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 border-t border-white/5 text-center">
-        <p class="text-[10px] text-white/10 tracking-widest uppercase font-bold">© 2026 PnP Technologies LLC</p>
+    <!-- Footer Standardized -->
+    <footer class="pt-32 pb-16 px-6 bg-apple-black border-t border-white/5">
+        <div class="container mx-auto content-width">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <div class="sm:col-span-2">
+                    <p class="text-2xl font-semibold tracking-tightest mb-8">PnP Technologies LLC</p>
+                    <p class="text-base text-apple-textSecondary font-light max-w-sm tracking-tighter leading-relaxed">
+                        A boutique software studio dedicated to building private, Apple-native experiences.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-white/20 mb-8">Studio</p>
+                    <ul class="space-y-5 text-sm font-medium tracking-tight">
+                        <li><a href="mailto:support@pnpsaas.com" class="text-white/40 hover:text-white transition-colors">Support</a></li>
+                        <li><a href="mailto:privacy@pnpsaas.com" class="text-white/40 hover:text-white transition-colors">Privacy Inquiries</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold tracking-[0.2em] uppercase text-white/20 mb-8">Legal</p>
+                    <ul class="space-y-5 text-sm font-medium tracking-tight">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
+                <p class="text-[12px] text-white/10 tracking-tight font-medium text-center md:text-left">© 2026 PnP Technologies LLC. All rights reserved.</p>
+                <div class="flex items-center gap-10 grayscale opacity-10 hover:grayscale-0 hover:opacity-100 transition-all duration-1000">
+                    <i class="fab fa-apple text-2xl"></i>
+                    <span class="text-[10px] font-bold tracking-[0.3em] uppercase">Ecosystem</span>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const observerOptions = { threshold: 0.1 };
+        const observerOptions = { threshold: 0.05, rootMargin: '0px 0px -20px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -117,6 +174,28 @@
             });
         }, observerOptions);
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        const menuSpans = menuToggle.querySelectorAll('span');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden-custom');
+            if (!isOpen) {
+                mobileMenu.classList.remove('hidden-custom');
+                body.style.overflow = 'hidden';
+                menuSpans[0].style.transform = 'rotate(-45deg) translate(-4.5px, 5.5px)';
+                menuSpans[1].style.opacity = '0';
+                menuSpans[2].style.transform = 'rotate(45deg) translate(-4.5px, -5.5px)';
+            } else {
+                mobileMenu.classList.add('hidden-custom');
+                body.style.overflow = '';
+                menuSpans[0].style.transform = '';
+                menuSpans[1].style.opacity = '1';
+                menuSpans[2].style.transform = '';
+            }
+        });
     </script>
 </body>
 </html>
