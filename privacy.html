@@ -22,7 +22,7 @@
         .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; }
         .nav-link:hover { opacity: 0.7; }
         .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
-        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3.5rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 4rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; border-bottom: 1px solid #F5F5F7; padding-bottom: 12px; }
         p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
         #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
         #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
@@ -43,36 +43,55 @@
             <div class="hidden md:flex items-center space-x-10">
                 <a href="index.html#products" class="nav-link">Software</a>
                 <a href="index.html#philosophy" class="nav-link">Philosophy</a>
-                <a href="support.html" class="nav-link">Support</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
                 <a href="terms.html" class="nav-link">Terms</a>
+                <a href="support.html" class="nav-link">Support</a>
             </div>
             <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80 focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <a href="index.html#products" class="mobile-link">Software</a>
             <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
-            <a href="support.html" class="mobile-link">Support</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="terms.html" class="mobile-link">Terms</a>
+            <a href="support.html" class="mobile-link">Support</a>
             <div class="mt-auto pt-8 text-[12px] opacity-50">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
 
     <main class="content-container">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Privacy Policy</h1>
-        <p class="text-[12px] font-semibold text-apple-grey mb-12 uppercase tracking-widest">Effective Date: May 9, 2026</p>
-        <p>At PnP Technologies LLC, we believe privacy is a fundamental human right. Our studio is built on the philosophy that your data belongs to you, and your device should be a private sanctuary. This policy outlines our commitment to that belief.</p>
-        <h2>1. Local-First by Design</h2>
-        <p>The core architecture of our software, including Ai Executive Assistant and Professional External Recording Studio, is "local-first." This means that your files, transcripts, memories, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
-        <h2>2. On-Device Intelligence</h2>
-        <p>We leverage the Apple Neural Engine to perform complex AI tasks locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
-        <h2>3. Data Collection</h2>
-        <p>We do not collect personal identifiers, email addresses (unless you contact support), or usage behavior for the purpose of tracking or advertising. We do not have "accounts" for our software; your identity is managed by your device's native security systems.</p>
-        <h2>4. Support Communications</h2>
-        <p>If you contact us at support@pnpsaas.com or privacy@pnpsaas.com, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties.</p>
-        <h2>5. Secure Transactions</h2>
-        <p>All licensing transactions are handled securely by our Merchant of Record, Lemon Squeezy. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-8">Privacy Policy</h1>
+        <p class="text-[12px] font-semibold text-apple-grey mb-16 uppercase tracking-widest">Effective Date: May 9, 2026</p>
+        
+        <section class="mb-16">
+            <p>At PnP Technologies LLC, we believe privacy is a fundamental human right. Our studio is built on the philosophy that your data belongs to you, and your device should be a private sanctuary. This policy outlines our commitment to that belief.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>1. Local-First by Design</h2>
+            <p>The core architecture of our software, including Ai Executive Assistant and Professional External Recording Studio, is "local-first." This means that your files, transcripts, memories, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>2. On-Device Intelligence</h2>
+            <p>We leverage the Apple Neural Engine to perform complex AI tasks locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>3. Data Collection</h2>
+            <p>We do not collect personal identifiers, email addresses (unless you contact support), or usage behavior for the purpose of tracking or advertising. We do not have "accounts" for our software; your identity is managed by your device's native security systems.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>4. Support Communications</h2>
+            <p>If you contact us at support@pnpsaas.com or privacy@pnpsaas.com, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>5. Secure Transactions</h2>
+            <p>All licensing transactions are handled securely by our Merchant of Record, Lemon Squeezy. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
+        </section>
+
         <div class="mt-24 pt-12 border-t border-apple-border">
             <p class="text-[12px] text-apple-grey">Questions regarding this policy should be directed to <a href="mailto:privacy@pnpsaas.com" class="text-apple-blue hover:underline">privacy@pnpsaas.com</a>.</p>
         </div>

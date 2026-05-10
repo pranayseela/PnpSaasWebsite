@@ -22,7 +22,7 @@
         .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; }
         .nav-link:hover { opacity: 0.7; }
         .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
-        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3.5rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 4rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; border-bottom: 1px solid #F5F5F7; padding-bottom: 12px; }
         p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
         #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
         #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
@@ -43,36 +43,55 @@
             <div class="hidden md:flex items-center space-x-10">
                 <a href="index.html#products" class="nav-link">Software</a>
                 <a href="index.html#philosophy" class="nav-link">Philosophy</a>
-                <a href="support.html" class="nav-link">Support</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
                 <a href="terms.html" class="nav-link">Terms</a>
+                <a href="support.html" class="nav-link">Support</a>
             </div>
             <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80 focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <a href="index.html#products" class="mobile-link">Software</a>
             <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
-            <a href="support.html" class="mobile-link">Support</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="terms.html" class="mobile-link">Terms</a>
+            <a href="support.html" class="mobile-link">Support</a>
             <div class="mt-auto pt-8 text-[12px] opacity-50">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
 
     <main class="content-container">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Terms of Service</h1>
-        <p class="text-[12px] font-semibold text-apple-grey mb-12 uppercase tracking-widest">Last Updated: May 9, 2026</p>
-        <p>By accessing our website or utilizing our applications, you agree to be bound by the following terms. These terms protect both you and the studio as we build private tools.</p>
-        <h2>1. Software Licensing</h2>
-        <p>Our applications are licensed, not sold. We grant you a non-exclusive right to use the software on your personal Apple devices. This license is intended for your private or professional use and may not be redistributed.</p>
-        <h2>2. Local-First Responsibility</h2>
-        <p>Because our software operates on a local-first model, you are solely responsible for the management and backup of your data. PnP Technologies LLC does not have access to your content and cannot recover lost data.</p>
-        <h2>3. Acceptable Use</h2>
-        <p>You agree to use our tools for lawful purposes. Any attempt to reverse-engineer or bypass the security systems of our software is strictly prohibited.</p>
-        <h2>4. Intellectual Property</h2>
-        <p>All software, designs, iconography, and branding are the exclusive property of PnP Technologies LLC. Your use of the software does not grant you ownership of any IP.</p>
-        <h2>5. Refunds & Sales</h2>
-        <p>Sales are managed securely through Lemon Squeezy. Due to the digital nature of our software and immediate access to the builds, all sales are final.</p>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-8">Terms of Service</h1>
+        <p class="text-[12px] font-semibold text-apple-grey mb-16 uppercase tracking-widest">Last Updated: May 9, 2026</p>
+        
+        <section class="mb-16">
+            <p>By accessing our website or utilizing our applications, you agree to be bound by the following terms. These terms protect both you and the studio as we build private tools.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>1. Software Licensing</h2>
+            <p>Our applications are licensed, not sold. We grant you a non-exclusive right to use the software on your personal Apple devices. This license is intended for your private or professional use and may not be redistributed.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>2. Local-First Responsibility</h2>
+            <p>Because our software operates on a local-first model, you are solely responsible for the management and backup of your data. PnP Technologies LLC does not have access to your content and cannot recover lost data.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>3. Acceptable Use</h2>
+            <p>You agree to use our tools for lawful purposes. Any attempt to reverse-engineer or bypass the security systems of our software is strictly prohibited.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>4. Intellectual Property</h2>
+            <p>All software, designs, iconography, and branding are the exclusive property of PnP Technologies LLC. Your use of the software does not grant you ownership of any IP.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2>5. Refunds & Sales</h2>
+            <p>Sales are managed securely through Lemon Squeezy. Due to the digital nature of our software and immediate access to the builds, all sales are final.</p>
+        </section>
+
         <div class="mt-24 pt-12 border-t border-apple-border">
             <p class="text-[12px] text-apple-grey">For inquiries regarding these terms, contact <a href="mailto:support@pnpsaas.com" class="text-apple-blue hover:underline">support@pnpsaas.com</a>.</p>
         </div>
