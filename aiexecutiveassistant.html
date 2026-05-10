@@ -37,128 +37,59 @@
     <style>
         :root { --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        
-        .nav-glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .text-gradient {
-            background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1.2s var(--apple-ease);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .brief-card {
-            background: #FFFFFF;
-            border-radius: 32px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-
+        .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .text-gradient { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1.2s var(--apple-ease); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .brief-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
         .content-width { max-width: 1200px; margin: 0 auto; }
-        
-        /* Mobile Menu */
-        #mobile-menu {
-            transition: opacity 0.4s var(--apple-ease), transform 0.4s var(--apple-ease);
-            background: #FFFFFF;
-        }
-        #mobile-menu.hidden-custom {
-            opacity: 0;
-            transform: translateY(-10px);
-            pointer-events: none;
-        }
+        #mobile-menu { transition: opacity 0.4s var(--apple-ease), transform 0.4s var(--apple-ease); background: #FFFFFF; }
+        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
     </style>
 </head>
 <body class="selection:bg-apple-blue/20">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-[100] nav-glass">
         <div class="container mx-auto px-6 h-12 md:h-14 flex items-center justify-between content-width">
             <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
-            
-            <div class="hidden md:flex items-center space-x-8 text-[12px] font-normal text-apple-black/80">
+            <div class="hidden md:flex items-center space-x-10 text-[12px] font-normal text-apple-black/80">
                 <a href="index.html#products" class="hover:text-apple-blue transition-colors">Software</a>
                 <a href="index.html#philosophy" class="hover:text-apple-blue transition-colors">Philosophy</a>
-                <a href="mailto:support@pnpsaas.com" class="hover:text-apple-blue transition-colors">Support</a>
+                <a href="support.html" class="hover:text-apple-blue transition-colors">Support</a>
             </div>
-
-            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80"><i class="fas fa-bars"></i></button>
         </div>
-
         <div id="mobile-menu" class="hidden-custom fixed inset-x-0 top-12 bottom-0 z-[105] flex flex-col p-10 md:hidden">
             <div class="flex flex-col space-y-6 text-3xl font-semibold tracking-tight">
                 <a href="index.html#products" class="mobile-link">Software</a>
                 <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
-                <a href="mailto:support@pnpsaas.com" class="mobile-link">Support</a>
+                <a href="support.html" class="mobile-link">Support</a>
             </div>
+            <div class="mt-auto text-[12px] text-apple-grey">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero: Emotional Outcome -->
         <section class="min-h-[85svh] flex flex-col items-center justify-center text-center px-6 pt-16 bg-white">
             <div class="max-w-5xl fade-in">
                 <span class="text-[12px] font-semibold tracking-[0.2em] uppercase text-apple-blue mb-6 block font-sans">A Calm Cognitive Support Layer</span>
-                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-apple-black leading-tight">
-                    Stop mentally carrying<br class="hidden md:block"> everything yourself.
-                </h1>
-                <p class="text-xl md:text-2xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">
-                    Ai Executive Assistant is your private executive memory. A system designed for continuity of thought in an increasingly fragmented professional world.
-                </p>
+                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-apple-black leading-tight">Stop mentally carrying<br class="hidden md:block"> everything yourself.</h1>
+                <p class="text-xl md:text-2xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">Ai Executive Assistant is your private executive memory. A system designed for continuity of thought in an increasingly fragmented professional world.</p>
                 <div class="flex flex-col items-center gap-6">
-                    <a href="thank-you.html" class="bg-apple-black text-white text-[17px] font-normal px-10 py-4 rounded-full hover:bg-apple-black/90 transition-all">
-                        Experience the System
-                    </a>
-                    <a href="index.html" class="text-apple-blue text-[17px] font-normal hover:underline flex items-center gap-2">
-                        Back to Studio <i class="fas fa-chevron-right text-[10px]"></i>
-                    </a>
+                    <a href="thank-you.html" class="bg-apple-black text-white text-[17px] font-normal px-10 py-4 rounded-full hover:bg-apple-black/90 transition-all">Experience the System</a>
+                    <a href="index.html" class="text-apple-blue text-[17px] font-normal hover:underline flex items-center gap-2">Back to Studio <i class="fas fa-chevron-right text-[10px]"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- The Executive Brief: Flagship Emotional Feature -->
         <section class="py-32 md:py-48 px-6 bg-apple-offwhite">
             <div class="container mx-auto content-width">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div class="fade-in">
                         <span class="text-apple-blue font-semibold text-xs tracking-widest uppercase mb-4 block font-sans">Flagship Feature</span>
                         <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-8 text-apple-black">The Executive Brief.</h2>
-                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic">
-                            “What’s occupying your mind today?”
-                        </p>
-                        <p class="text-lg text-apple-grey font-normal leading-relaxed mb-10 tracking-tight">
-                            Start every morning with a calm, editorial-style synthesis of your recurring themes, unresolved follow-ups, and evolving projects. It’s situational clarity, designed to relieve the mental burden of management.
-                        </p>
-                        <ul class="space-y-4 text-[17px] text-apple-black/80 font-normal">
-                            <li class="flex items-start gap-4">
-                                <i class="fas fa-check text-apple-blue mt-1"></i>
-                                <span>Surface mind occupancy & recurring themes</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <i class="fas fa-check text-apple-blue mt-1"></i>
-                                <span>Identify unresolved commitments across days</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <i class="fas fa-check text-apple-blue mt-1"></i>
-                                <span>Reflective, spacious editorial UI</span>
-                            </li>
-                        </ul>
+                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic">“What’s occupying your mind today?”</p>
+                        <p class="text-lg text-apple-grey font-normal leading-relaxed mb-10 tracking-tight">Start every morning with a calm, editorial-style synthesis of your recurring themes, unresolved follow-ups, and evolving projects. It’s situational clarity, designed to relieve the mental burden of management.</p>
                     </div>
                     <div class="brief-card p-10 md:p-16 fade-in">
                         <div class="space-y-8 font-serif">
@@ -167,103 +98,19 @@
                                 <h3 class="text-3xl font-semibold mb-4 italic">Themes of the Week</h3>
                                 <p class="text-apple-grey leading-relaxed">Discussions around <span class="text-apple-black font-medium">Series B strategy</span> and <span class="text-apple-black font-medium">Executive hiring</span> have surfaced in your last three voice notes.</p>
                             </div>
-                            <div class="space-y-6">
-                                <h4 class="text-xl font-semibold italic">Unresolved Commitments</h4>
-                                <div class="flex gap-4 items-start">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-apple-blue mt-2.5"></div>
-                                    <p class="text-apple-grey">Follow up with Sarah regarding the Q3 roadmap (First mentioned Thursday).</p>
-                                </div>
-                                <div class="flex gap-4 items-start">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-apple-blue mt-2.5"></div>
-                                    <p class="text-apple-grey">Finalize the investor deck draft before the Wednesday board review.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Continuity Intelligence & Semantic Recall -->
-        <section class="py-32 md:py-48 px-6 bg-white">
-            <div class="container mx-auto content-width">
-                <div class="text-center mb-24 fade-in">
-                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-6">Continuity of Thought.</h2>
-                    <p class="text-xl md:text-2xl text-apple-grey font-normal tracking-tight max-w-3xl mx-auto">Reconnecting fragmented thoughts across time using on-device semantic intelligence.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="fade-in">
-                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Semantic Recall</h3>
-                        <p class="text-apple-grey leading-relaxed text-[16px] mb-6">Search your memory contextually. The system understands the *why* behind your query, surfacing related investor discussions or project strategy notes effortlessly.</p>
-                        <p class="text-apple-blue text-[15px] font-medium font-serif italic">“Match Reason: Discussed in Series B vision note.”</p>
-                    </div>
-                    <div class="fade-in">
-                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Voice-to-Memory</h3>
-                        <p class="text-apple-grey leading-relaxed text-[16px]">One-tap capture for spontaneous thoughts. Instant high-quality recording with fully local transcription. No external APIs, no cloud, no latency.</p>
-                    </div>
-                    <div class="fade-in">
-                        <h3 class="text-[21px] font-semibold mb-4 tracking-tight">Assistant Actions</h3>
-                        <p class="text-apple-grey leading-relaxed text-[16px]">Every thought is actionable. One tap to create a Reminder, Calendar event, or Alert. AI enhances your workflow without ever gating it.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Native & Private: Technical Proof -->
-        <section class="py-32 px-6 bg-apple-offwhite border-t border-apple-border">
-            <div class="container mx-auto content-width">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-                    <div class="fade-in">
-                        <h2 class="text-4xl font-semibold tracking-tight mb-8">Apple Native.<br>Private by Design.</h2>
-                        <p class="text-lg text-apple-grey leading-relaxed mb-12 max-w-md">
-                            Ai Executive Assistant is not a chatbot or a backend-heavy automation platform. It is a deeply integrated Apple-native tool built with the latest system frameworks.
-                        </p>
-                        <div class="grid grid-cols-2 gap-8 text-[12px] font-semibold uppercase tracking-widest text-apple-black/40">
-                            <div class="flex flex-col gap-2">
-                                <span class="text-apple-black">SwiftUI</span>
-                                <span class="text-apple-black">SwiftData</span>
-                                <span class="text-apple-black">AVFoundation</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <span class="text-apple-black">AppIntents</span>
-                                <span class="text-apple-black">Spotlight Indexing</span>
-                                <span class="text-apple-black">Neural Engine</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid gap-12 fade-in">
-                        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-black/[0.02]">
-                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Account-Free</h4>
-                            <p class="text-apple-grey text-[15px] leading-relaxed">No email required. No passwords to remember. Your identity is managed by your device's native security systems.</p>
-                        </div>
-                        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-black/[0.02]">
-                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Backend-Free</h4>
-                            <p class="text-apple-grey text-[15px] leading-relaxed">We have no servers. No external AI APIs are called. All intelligence is derived from the hardware in your hand.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="py-32 md:py-48 px-6 bg-white text-center">
-            <div class="max-w-4xl mx-auto fade-in">
-                <h2 class="text-4xl md:text-7xl font-semibold tracking-tight mb-12">Regain your cognitive clarity.</h2>
-                <a href="thank-you.html" class="bg-apple-black text-white text-[19px] font-normal px-12 py-5 rounded-full hover:bg-apple-black/90 transition-all shadow-lg">
-                    Experience Continuity
-                </a>
-                <p class="mt-10 text-apple-grey font-normal text-lg">Your private executive memory is ready.</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="pt-24 pb-12 px-6 bg-apple-offwhite border-t border-apple-border">
+    <footer class="pt-24 pb-12 px-6 bg-apple-offwhite border-t border-apple-border text-center">
         <div class="container mx-auto content-width text-[12px] text-apple-grey">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
                 <div class="flex items-center gap-8">
+                    <a href="support.html" class="hover:text-apple-black">Support</a>
                     <a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a>
                     <a href="terms.html" class="hover:text-apple-black">Terms of Service</a>
                 </div>
@@ -281,7 +128,6 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         menuToggle.addEventListener('click', () => {

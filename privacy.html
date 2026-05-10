@@ -8,20 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 
-                        apple: { 
-                            black: '#1D1D1F', 
-                            grey: '#86868B', 
-                            offwhite: '#F5F5F7', 
-                            blue: '#0066CC',
-                            border: 'rgba(0, 0, 0, 0.1)' 
-                        } 
-                    },
-                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
-                }
-            }
+            theme: { extend: { colors: { apple: { black: '#1D1D1F', grey: '#86868B', offwhite: '#F5F5F7', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.1)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
         }
     </script>
     <style>
@@ -64,12 +51,21 @@
         <p>All licensing transactions are handled securely by our Merchant of Record, Lemon Squeezy. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
 
         <div class="mt-24 pt-12 border-t border-apple-border">
-            <p class="text-[12px] text-apple-grey">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
+            <p class="text-[12px] text-apple-grey">Questions regarding this policy should be directed to <a href="mailto:privacy@pnpsaas.com" class="text-apple-blue hover:underline">privacy@pnpsaas.com</a>.</p>
         </div>
     </main>
 
-    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center">
-        <p class="text-[12px] text-apple-grey">© 2026 PnP Technologies LLC. All rights reserved.</p>
+    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center text-[12px] text-apple-grey">
+        <div class="container mx-auto content-width">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
+                <div class="flex items-center gap-8">
+                    <a href="support.html" class="hover:text-apple-black">Support</a>
+                    <a href="privacy.html" class="hover:text-apple-black font-semibold">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-apple-black">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

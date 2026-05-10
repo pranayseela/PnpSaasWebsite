@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Support | PnP Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        apple: { 
+                            black: '#1D1D1F', 
+                            grey: '#86868B', 
+                            offwhite: '#F5F5F7', 
+                            blue: '#0066CC',
+                            border: 'rgba(0, 0, 0, 0.05)' 
+                        } 
+                    },
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); }
+        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3.5rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; }
+        p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
+        .support-card { background: #F5F5F7; border-radius: 24px; padding: 40px; margin-top: 40px; border: 1px solid rgba(0,0,0,0.02); }
+        .back-link { font-size: 17px; color: #0066CC; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="selection:bg-apple-blue/20">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="container mx-auto px-6 h-12 flex items-center justify-between max-w-[1200px]">
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
+            <a href="index.html" class="back-link">Studio</a>
+        </div>
+    </nav>
+
+    <main class="content-container text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Support</h1>
+        <p class="text-xl text-apple-grey font-normal mb-12">We’re here to help you regain your clarity.</p>
+        
+        <p>PnP Technologies is committed to building high-quality, reliable software. If you encounter any issues or have questions regarding our apps, our team is ready to assist you.</p>
+
+        <div class="support-card text-left">
+            <h2 class="mt-0 text-2xl">Direct Contact</h2>
+            <p class="text-apple-grey">For technical support, licensing inquiries, or feedback, please reach out via email. We typically respond within 24 hours.</p>
+            <a href="mailto:support@pnpsaas.com" class="text-apple-blue text-xl font-semibold hover:underline">support@pnpsaas.com</a>
+        </div>
+
+        <h2 class="text-2xl mt-12">App Support</h2>
+        <div class="space-y-8 text-left">
+            <div>
+                <h4 class="font-semibold mb-2">Ai Executive Assistant</h4>
+                <p class="text-apple-grey text-sm">For issues regarding local-first indexing, transcription quality, or voice-to-memory capture.</p>
+            </div>
+            <div class="border-t border-apple-border pt-6">
+                <h4 class="font-semibold mb-2">Professional External Recording Studio</h4>
+                <p class="text-apple-grey text-sm">For hardware compatibility questions or ProRes workflow troubleshooting.</p>
+            </div>
+        </div>
+
+        <div class="mt-24 pt-12 border-t border-apple-border text-center md:text-left">
+            <p class="text-[12px] text-apple-grey">For privacy-specific inquiries, please contact <a href="mailto:privacy@pnpsaas.com" class="text-apple-blue hover:underline">privacy@pnpsaas.com</a>.</p>
+        </div>
+    </main>
+
+    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center text-[12px] text-apple-grey">
+        <div class="container mx-auto content-width">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
+                <div class="flex items-center gap-8">
+                    <a href="support.html" class="hover:text-apple-black font-semibold">Support</a>
+                    <a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-apple-black">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

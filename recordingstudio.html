@@ -3,156 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    
     <title>Professional External Recording Studio | iPhone SSD Recording</title>
     <meta name="description" content="Professional external SSD recording workflows for iPhone creators. Direct ProRes capture and high-performance media management.">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        apple: {
-                            white: '#FFFFFF',
-                            offwhite: '#F5F5F7',
-                            black: '#1D1D1F',
-                            grey: '#86868B',
-                            blue: '#0066CC',
-                            border: 'rgba(0, 0, 0, 0.05)',
-                        }
-                    },
-                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
-                }
-            }
+            theme: { extend: { colors: { apple: { white: '#FFFFFF', offwhite: '#F5F5F7', black: '#1D1D1F', grey: '#86868B', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.05)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
         }
     </script>
-
     <style>
         :root { --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        
-        .nav-glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .text-gradient {
-            background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1.2s var(--apple-ease);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .glass-card {
-            background: #F5F5F7;
-            border-radius: 32px;
-            transition: transform 0.6s var(--apple-ease);
-        }
-
+        .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .text-gradient { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1.2s var(--apple-ease); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .glass-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
         .content-width { max-width: 1200px; margin: 0 auto; }
-        
-        /* Mobile Menu */
-        #mobile-menu {
-            transition: opacity 0.4s var(--apple-ease), transform 0.4s var(--apple-ease);
-            background: #FFFFFF;
-        }
-        #mobile-menu.hidden-custom {
-            opacity: 0;
-            transform: translateY(-10px);
-            pointer-events: none;
-        }
+        #mobile-menu { transition: opacity 0.4s var(--apple-ease), transform 0.4s var(--apple-ease); background: #FFFFFF; }
+        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
     </style>
 </head>
 <body class="selection:bg-apple-blue/20">
-
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-[100] nav-glass">
         <div class="container mx-auto px-6 h-12 md:h-14 flex items-center justify-between content-width">
             <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
-            
-            <div class="hidden md:flex items-center space-x-8 text-[12px] font-normal text-apple-black/80">
+            <div class="hidden md:flex items-center space-x-10 text-[12px] font-normal text-apple-black/80">
                 <a href="index.html#products" class="hover:text-apple-blue transition-colors">Software</a>
                 <a href="index.html#philosophy" class="hover:text-apple-blue transition-colors">Philosophy</a>
-                <a href="mailto:support@pnpsaas.com" class="hover:text-apple-blue transition-colors">Support</a>
+                <a href="support.html" class="hover:text-apple-blue transition-colors">Support</a>
             </div>
-
-            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80"><i class="fas fa-bars"></i></button>
         </div>
-
         <div id="mobile-menu" class="hidden-custom fixed inset-x-0 top-12 bottom-0 z-[105] flex flex-col p-10 md:hidden">
             <div class="flex flex-col space-y-6 text-3xl font-semibold tracking-tight">
                 <a href="index.html#products" class="mobile-link">Software</a>
                 <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
-                <a href="mailto:support@pnpsaas.com" class="mobile-link">Support</a>
+                <a href="support.html" class="mobile-link">Support</a>
             </div>
+            <div class="mt-auto text-[12px] text-apple-grey">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero -->
         <section class="min-h-[80svh] flex flex-col items-center justify-center text-center px-6 pt-16">
             <div class="max-w-5xl fade-in">
                 <span class="text-[12px] font-semibold tracking-[0.3em] uppercase text-apple-grey mb-6 block">Cinema Grade Workflow</span>
-                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-gradient leading-tight">
-                    Professional External<br>Recording Studio.
-                </h1>
-                <p class="text-xl md:text-2xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">
-                    Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.
-                </p>
+                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-gradient leading-tight">Professional External<br>Recording Studio.</h1>
+                <p class="text-xl md:text-2xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.</p>
                 <div class="flex flex-col items-center gap-6">
-                    <a href="thank-you.html" class="bg-apple-black text-white text-[17px] font-normal px-8 py-3 rounded-full hover:bg-apple-black/90 transition-all">
-                        Experience Studio
-                    </a>
+                    <a href="thank-you.html" class="bg-apple-black text-white text-[17px] font-normal px-8 py-3 rounded-full hover:bg-apple-black/90 transition-all">Experience Studio</a>
                     <a href="index.html" class="text-apple-blue text-[17px] font-normal hover:underline flex items-center gap-2">Back to Studio <i class="fas fa-chevron-right text-[10px]"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Product Depth -->
         <section class="py-32 px-6 bg-apple-offwhite">
             <div class="container mx-auto content-width">
                 <div class="grid md:grid-cols-2 gap-12">
                     <div class="glass-card p-12 md:p-16 fade-in bg-white shadow-sm">
                         <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">ProRes Direct</h3>
-                        <p class="text-apple-grey font-normal leading-relaxed text-lg tracking-tight">
-                            Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.
-                        </p>
+                        <p class="text-apple-grey font-normal leading-relaxed text-lg tracking-tight">Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.</p>
                     </div>
                     <div class="glass-card p-12 md:p-16 fade-in bg-white shadow-sm">
                         <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">Media Hub</h3>
-                        <p class="text-apple-grey font-normal leading-relaxed text-lg tracking-tight">
-                            Organize, review, and offload media with a professional management layer built for the modern creator.
-                        </p>
+                        <p class="text-apple-grey font-normal leading-relaxed text-lg tracking-tight">Organize, review, and offload media with a professional management layer built for the modern creator.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Ecosystem Pillar -->
         <section class="py-32 px-6 bg-white">
             <div class="container mx-auto max-w-4xl text-center fade-in">
                 <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-10">Native Power.</h2>
-                <p class="text-xl md:text-2xl text-apple-grey font-normal leading-relaxed tracking-tight mb-16">
-                    Deeply integrated with iOS camera APIs and external hardware. Professional External Recording Studio turns your iPhone into a professional-grade cinema brain.
-                </p>
+                <p class="text-xl md:text-2xl text-apple-grey font-normal leading-relaxed tracking-tight mb-16">Deeply integrated with iOS camera APIs and external hardware. Professional External Recording Studio turns your iPhone into a professional-grade cinema brain.</p>
                 <div class="flex flex-wrap justify-center gap-16 text-apple-black/10">
                     <i class="fas fa-video text-5xl"></i>
                     <i class="fas fa-hdd text-5xl"></i>
@@ -162,12 +88,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="pt-24 pb-12 px-6 bg-apple-offwhite border-t border-apple-border">
+    <footer class="pt-24 pb-12 px-6 bg-apple-offwhite border-t border-apple-border text-center">
         <div class="container mx-auto content-width text-[12px] text-apple-grey">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
                 <div class="flex items-center gap-8">
+                    <a href="support.html" class="hover:text-apple-black">Support</a>
                     <a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a>
                     <a href="terms.html" class="hover:text-apple-black">Terms of Service</a>
                 </div>
@@ -185,7 +111,6 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         menuToggle.addEventListener('click', () => {

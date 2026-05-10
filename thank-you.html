@@ -8,20 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 
-                        apple: { 
-                            black: '#1D1D1F', 
-                            grey: '#86868B', 
-                            offwhite: '#F5F5F7', 
-                            blue: '#0066CC',
-                            border: 'rgba(0, 0, 0, 0.1)' 
-                        } 
-                    },
-                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
-                }
-            }
+            theme: { extend: { colors: { apple: { black: '#1D1D1F', grey: '#86868B', offwhite: '#F5F5F7', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.1)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
         }
     </script>
     <style>
@@ -46,37 +33,31 @@
                     <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
                 </div>
                 <h1 class="text-5xl md:text-7xl font-semibold mb-6 tracking-tight text-gradient leading-tight">Welcome.</h1>
-                <p class="text-xl text-apple-grey font-normal leading-tight tracking-tight px-4">
-                    Your private continuity build is being prepared. Check your inbox for your secure license and installation guide.
-                </p>
+                <p class="text-xl text-apple-grey font-normal leading-tight tracking-tight px-4">Your private continuity build is being prepared. Check your inbox for your secure license and installation guide.</p>
             </div>
-
             <div class="p-10 rounded-[2.5rem] bg-apple-offwhite border border-apple-border text-left mb-12 shadow-sm">
                 <p class="text-[12px] font-semibold tracking-widest uppercase text-apple-grey mb-8">Installation Flow</p>
                 <ul class="space-y-8 text-sm font-normal tracking-tight">
-                    <li class="flex gap-6 items-start">
-                        <span class="text-apple-black/20 font-semibold w-4">01</span>
-                        <span class="text-apple-black">Verify your license key in the delivery email.</span>
-                    </li>
-                    <li class="flex gap-6 items-start">
-                        <span class="text-apple-black/20 font-semibold w-4">02</span>
-                        <span class="text-apple-black">Download the Apple-native application binary.</span>
-                    </li>
-                    <li class="flex gap-6 items-start">
-                        <span class="text-apple-black/20 font-semibold w-4">03</span>
-                        <span class="text-apple-black">Initialize your local-first memory vault.</span>
-                    </li>
+                    <li class="flex gap-6 items-start"><span class="text-apple-black/20 font-semibold w-4">01</span><span class="text-apple-black">Verify your license key in the delivery email.</span></li>
+                    <li class="flex gap-6 items-start"><span class="text-apple-black/20 font-semibold w-4">02</span><span class="text-apple-black">Download the Apple-native application binary.</span></li>
+                    <li class="flex gap-6 items-start"><span class="text-apple-black/20 font-semibold w-4">03</span><span class="text-apple-black">Initialize your local-first memory vault.</span></li>
                 </ul>
             </div>
-
-            <a href="index.html" class="bg-apple-black text-white text-[17px] font-normal px-8 py-3 rounded-full hover:bg-apple-black/90 transition-all inline-block">
-                Return to the Studio
-            </a>
+            <a href="index.html" class="bg-apple-black text-white text-[17px] font-normal px-8 py-3 rounded-full hover:bg-apple-black/90 transition-all inline-block">Return to the Studio</a>
         </div>
     </main>
 
-    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center">
-        <p class="text-[12px] text-apple-grey font-semibold">© 2026 PnP Technologies LLC. All rights reserved.</p>
+    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center text-[12px] text-apple-grey">
+        <div class="container mx-auto content-width">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
+                <div class="flex items-center gap-8">
+                    <a href="support.html" class="hover:text-apple-black">Support</a>
+                    <a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-apple-black">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
