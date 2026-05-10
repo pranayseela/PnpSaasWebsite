@@ -9,19 +9,18 @@
     <meta name="keywords" content="Apple native apps, privacy-first software, local-first intelligence, iOS development, macOS apps, PnP Technologies">
     <meta name="author" content="PnP Technologies LLC">
     
-    <!-- WhatsApp & Social Optimization (Text-Only) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PnP Technologies">
     <meta property="og:url" content="https://pnpsaas.com/">
     <meta property="og:title" content="PnP Technologies | Privacy-First Apple-Native Software">
     <meta property="og:description" content="Building thoughtful, local-first intelligence for the Apple ecosystem.">
 
-    <!-- Twitter Card Optimization -->
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://pnpsaas.com/">
     <meta property="twitter:title" content="PnP Technologies | Privacy-First Apple-Native Software">
-    <meta property="twitter:description" content="Building thoughtful, local-first intelligence for the Apple ecosystem.">
     
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://pnpsaas.com/">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,6 +72,7 @@
         .section-padding { padding: 120px 22px; }
         @media (max-width: 768px) { .section-padding { padding: 80px 22px; } }
         .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 0.2; }
+        nav { z-index: 10000 !important; }
     </style>
 </head>
 <body class="selection:bg-apple-blue/10">
@@ -84,18 +84,18 @@
             <div class="hidden md:flex items-center space-x-10">
                 <a href="index.html#products" class="nav-link">Software</a>
                 <a href="index.html#philosophy" class="nav-link">Philosophy</a>
-                <a href="support.html" class="nav-link">Support</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
                 <a href="terms.html" class="nav-link">Terms</a>
+                <a href="support.html" class="nav-link">Support</a>
             </div>
             <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80 focus:outline-none" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <a href="index.html#products" class="mobile-link">Software</a>
             <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
-            <a href="support.html" class="mobile-link">Support</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="terms.html" class="mobile-link">Terms</a>
+            <a href="support.html" class="mobile-link">Support</a>
             <div class="mt-auto pt-8 text-[12px] opacity-50">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
