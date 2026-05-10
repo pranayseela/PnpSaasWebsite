@@ -3,101 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms | AIExecutiveAssistant</title>
+    <title>Terms of Service | PnP Technologies LLC</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        apple: {
-                            black: '#000000',
-                            grey: '#1D1D1F',
-                            light: '#F5F5F7',
-                            muted: 'rgba(255, 255, 255, 0.05)',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
-                    }
+                    colors: { apple: { black: '#000000', grey: '#1D1D1F', light: '#F5F5F7', border: 'rgba(255, 255, 255, 0.08)', textSecondary: 'rgba(245, 245, 247, 0.6)' } },
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] },
+                    letterSpacing: { tightest: '-.025em', tighter: '-.015em' }
                 }
             }
         }
     </script>
     <style>
-        body {
-            background-color: #000000;
-            color: #F5F5F7;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass {
-            background: rgba(29, 29, 31, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; }
+        .nav-glass { background: rgba(0, 0, 0, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: #fff; letter-spacing: -0.015em; }
+        p { font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; color: rgba(245, 245, 247, 0.6); letter-spacing: -0.01em; }
     </style>
 </head>
-<body>
-    <nav class="fixed top-0 left-0 right-0 z-50 glass">
-        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
-            <a href="index.html" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Back</a>
+<body class="selection:bg-white/10">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="container mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
+            <a href="index.html" class="text-[12px] font-medium tracking-tighter uppercase text-white/50 hover:text-white transition-colors">Back to Studio</a>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-6">
-        <div class="container mx-auto max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-medium mb-12 tracking-tight">Terms of Service</h1>
-            
-            <div class="space-y-12 text-white/60 font-light leading-relaxed">
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">License Agreement</h2>
-                    <p>
-                        By using AIExecutiveAssistant, you are granted a non-exclusive, non-transferable license to use the software for personal or professional purposes. This license is tied to your hardware and does not permit redistribution or sub-licensing.
-                    </p>
-                </section>
+    <main class="content-container">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tightest mb-4">Terms of Service</h1>
+        <p class="text-xs uppercase tracking-widest font-bold text-white/20 mb-12">Last Updated: May 9, 2026</p>
+        
+        <p>Welcome to PnP Technologies LLC. By accessing our website or utilizing our Apple-native software applications, you agree to be bound by the following terms. These terms are designed to protect both you and the studio as we build thoughtful, private tools.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Acceptable Use</h2>
-                    <p>
-                        AIExecutiveAssistant is designed to be a cognitive support tool. You agree not to use the software for any illegal activities or to attempt to reverse-engineer the local-first architecture.
-                    </p>
-                </section>
+        <h2>1. Software Licensing</h2>
+        <p>Our applications are licensed, not sold. When you purchase a license for software like AIExecutiveAssistant, you are granted a non-exclusive, non-transferable right to use the software on your personal Apple devices. This license is intended for your private or professional use and may not be redistributed.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Intellectual Property</h2>
-                    <p>
-                        All software, designs, and branding associated with AIExecutiveAssistant are the exclusive property of Pnptechnologiesllc. Your use of the software does not grant you ownership of any intellectual property.
-                    </p>
-                </section>
+        <h2>2. Local-First Responsibility</h2>
+        <p>Because our software operates on a local-first model, you are solely responsible for the management and backup of your data. PnP Technologies LLC does not have access to your files or content; therefore, we cannot recover data that has been lost or deleted from your hardware.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Refund Policy</h2>
-                    <p>
-                        Due to the digital nature of the product and the "local-first" deployment model, all sales are final. We encourage users to experience the system through our documentation and previews before purchasing.
-                    </p>
-                </section>
+        <h2>3. Acceptable Use</h2>
+        <p>You agree to use our tools for lawful purposes only. Any attempt to reverse-engineer, decompile, or bypass the security systems of our software is strictly prohibited and will result in the immediate termination of your license.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Limitation of Liability</h2>
-                    <p>
-                        AIExecutiveAssistant is provided "as is". While we strive for absolute reliability in our continuity system, we are not liable for any data loss or cognitive fragmentation resulting from the use or misuse of the software.
-                    </p>
-                </section>
+        <h2>4. Intellectual Property</h2>
+        <p>All software, designs, iconography, and branding are the exclusive intellectual property of PnP Technologies LLC. Your use of the software does not grant you ownership of any patents, trademarks, or copyrights held by the studio.</p>
 
-                <section>
-                    <p class="text-sm italic mt-12">
-                        Last updated: May 9, 2026. For legal inquiries, contact support@pnpsaas.com.
-                    </p>
-                </section>
-            </div>
+        <h2>5. Refunds & Sales</h2>
+        <p>Sales are managed securely through Lemon Squeezy. Due to the digital nature of our software and the immediate access provided to the local-first builds, all sales are final. If you encounter technical issues, please reach out to our support team.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>PnP Technologies LLC provides software "as-is." While we strive for absolute reliability, we are not liable for any indirect, incidental, or consequential damages arising from the use or inability to use our tools.</p>
+
+        <div class="mt-20 pt-10 border-t border-white/5">
+            <p class="text-xs text-white/20">For inquiries regarding these terms, contact support@pnpsaas.com.</p>
         </div>
     </main>
 
-    <footer class="py-12 px-6 border-t border-white/10 text-center">
-        <p class="text-xs text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
+    <footer class="py-16 border-t border-white/5 text-center">
+        <p class="text-[11px] text-white/20 tracking-tighter font-light">© 2026 PnP Technologies LLC. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -3,101 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy | AIExecutiveAssistant</title>
+    <title>Privacy Policy | PnP Technologies LLC</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        apple: {
-                            black: '#000000',
-                            grey: '#1D1D1F',
-                            light: '#F5F5F7',
-                            muted: 'rgba(255, 255, 255, 0.05)',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
-                    }
+                    colors: { apple: { black: '#000000', grey: '#1D1D1F', light: '#F5F5F7', border: 'rgba(255, 255, 255, 0.08)', textSecondary: 'rgba(245, 245, 247, 0.6)' } },
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] },
+                    letterSpacing: { tightest: '-.025em', tighter: '-.015em' }
                 }
             }
         }
     </script>
     <style>
-        body {
-            background-color: #000000;
-            color: #F5F5F7;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass {
-            background: rgba(29, 29, 31, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; }
+        .nav-glass { background: rgba(0, 0, 0, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: #fff; letter-spacing: -0.015em; }
+        p { font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; color: rgba(245, 245, 247, 0.6); letter-spacing: -0.01em; }
     </style>
 </head>
-<body>
-    <nav class="fixed top-0 left-0 right-0 z-50 glass">
-        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
-            <a href="index.html" class="text-sm font-medium text-white/60 hover:text-white transition-colors">Back</a>
+<body class="selection:bg-white/10">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
+        <div class="container mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
+            <a href="index.html" class="text-[12px] font-medium tracking-tighter uppercase text-white/50 hover:text-white transition-colors">Back to Studio</a>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-6">
-        <div class="container mx-auto max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-medium mb-12 tracking-tight">Privacy Policy</h1>
-            
-            <div class="space-y-12 text-white/60 font-light leading-relaxed">
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Local-First by Design</h2>
-                    <p>
-                        AIExecutiveAssistant is built on a local-first architecture. This means your data—your thoughts, your voice, your memories—lives exclusively on your device. We do not use cloud storage, we do not have "accounts," and we do not maintain a central database of your private information.
-                    </p>
-                </section>
+    <main class="content-container">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tightest mb-4">Privacy Policy</h1>
+        <p class="text-xs uppercase tracking-widest font-bold text-white/20 mb-12">Last Updated: May 9, 2026</p>
+        
+        <p>At PnP Technologies LLC, we believe privacy is a fundamental human right. Our studio is built on the philosophy that your data belongs to you, and your device should be a private sanctuary. This policy outlines our commitment to that belief.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">No Data Collection</h2>
-                    <p>
-                        We do not collect, store, or sell your personal data. Because the system operates entirely on-device using the Apple Neural Engine, we have no technical means of accessing your information. Your privacy is protected by the physical isolation of your hardware.
-                    </p>
-                </section>
+        <h2>1. Local-First by Design</h2>
+        <p>The core architecture of our software, including AIExecutiveAssistant and Recording Studio, is "local-first." This means that your files, transcripts, memories, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">On-Device Intelligence</h2>
-                    <p>
-                        All semantic indexing and AI processing occur locally. When you "ask your memory," the computation happens on your CPU and GPU. No audio files or transcripts are ever transmitted to our servers for processing.
-                    </p>
-                </section>
+        <h2>2. On-Device Intelligence</h2>
+        <p>We leverage the Apple Neural Engine to perform complex AI tasks—such as semantic indexing and speech-to-text—locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Purchases</h2>
-                    <p>
-                        When you purchase a license for AIExecutiveAssistant, the transaction is handled securely by our payment processor, Lemon Squeezy. We receive only the minimum information necessary to fulfill your order and provide support (e.g., your email address for license delivery).
-                    </p>
-                </section>
+        <h2>3. Data Collection</h2>
+        <p>We do not collect personal identifiers, email addresses (unless you contact support), or usage behavior for the purpose of tracking or advertising. We do not have "accounts" for our software; your identity is managed by your device's native security systems.</p>
 
-                <section>
-                    <h2 class="text-xl font-medium text-white mb-4">Security</h2>
-                    <p>
-                        Your data is secured by Apple's native encryption and file system protections. By keeping your data local, we eliminate the risk of large-scale cloud data breaches.
-                    </p>
-                </section>
+        <h2>4. Support Communications</h2>
+        <p>If you contact us at <strong>support@pnpsaas.com</strong> or <strong>privacy@pnpsaas.com</strong>, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties or use them for marketing without your explicit consent.</p>
 
-                <section>
-                    <p class="text-sm italic mt-12">
-                        Last updated: May 9, 2026. For questions regarding our privacy philosophy, contact support@pnpsaas.com.
-                    </p>
-                </section>
-            </div>
+        <h2>5. Secure Transactions</h2>
+        <p>All licensing transactions are handled securely by our Merchant of Record, Lemon Squeezy. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
+
+        <h2>6. Your Rights</h2>
+        <p>Because your data stays on your device, you have absolute control. You can delete your information at any time simply by removing it from the application or deleting the application itself. We have no way to "recover" your data because we never had it.</p>
+
+        <div class="mt-20 pt-10 border-t border-white/5">
+            <p class="text-xs text-white/20">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
         </div>
     </main>
 
-    <footer class="py-12 px-6 border-t border-white/10 text-center">
-        <p class="text-xs text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
+    <footer class="py-16 border-t border-white/5 text-center">
+        <p class="text-[11px] text-white/20 tracking-tighter font-light">© 2026 PnP Technologies LLC. All rights reserved.</p>
     </footer>
 </body>
 </html>
