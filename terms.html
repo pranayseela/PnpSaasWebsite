@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Terms of Service | PnP Technologies</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://pnpsaas.com/terms.html">
@@ -10,64 +10,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { apple: { black: '#1D1D1F', grey: '#86868B', offwhite: '#F5F5F7', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.1)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
+            theme: { extend: { colors: { apple: { white: '#FFFFFF', offwhite: '#F5F5F7', black: '#1D1D1F', grey: '#86868B', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.05)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
         }
     </script>
     <style>
-        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        :root { --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); --nav-height: 48px; }
+        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
+        body.menu-open { overflow: hidden !important; height: 100vh !important; }
+        .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
+        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; }
+        .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; }
+        .nav-link:hover { opacity: 0.7; }
         .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
         h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: #1D1D1F; letter-spacing: -0.015em; }
         p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
-        .back-link { font-size: 17px; color: #0066CC; text-decoration: none; }
-        .back-link:hover { text-decoration: underline; }
+        #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
+        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
+        .mobile-link { font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
+        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #86868B; font-size: 12px; }
+        .footer-content { max-width: 1024px; margin: 0 auto; }
+        .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
+        .footer-column ul { space-y: 8px; }
+        .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
     </style>
 </head>
 <body class="selection:bg-apple-blue/20">
-    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="container mx-auto px-6 h-12 flex items-center justify-between max-w-[1200px]">
-            <a href="index.html" class="text-[17px] font-semibold tracking-tight">PnP Technologies</a>
-            <a href="index.html" class="back-link">Studio</a>
+
+    <!-- MASTER HEADER -->
+    <nav class="fixed top-0 left-0 right-0 nav-master">
+        <div class="nav-content">
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="index.html#products" class="nav-link">Software</a>
+                <a href="index.html#philosophy" class="nav-link">Philosophy</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="terms.html" class="nav-link">Terms</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80 focus:outline-none"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden-custom md:hidden">
+            <a href="index.html#products" class="mobile-link">Software</a>
+            <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
+            <a href="support.html" class="mobile-link">Support</a>
+            <a href="privacy.html" class="mobile-link">Privacy</a>
+            <a href="terms.html" class="mobile-link">Terms</a>
+            <div class="mt-auto pt-8 text-[12px] opacity-50">© 2026 PnP Technologies LLC. All rights reserved.</div>
         </div>
     </nav>
 
     <main class="content-container">
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Terms of Service</h1>
         <p class="text-[12px] font-semibold text-apple-grey mb-12 uppercase tracking-widest">Last Updated: May 9, 2026</p>
-        
         <p>By accessing our website or utilizing our applications, you agree to be bound by the following terms. These terms protect both you and the studio as we build private tools.</p>
-
         <h2>1. Software Licensing</h2>
         <p>Our applications are licensed, not sold. We grant you a non-exclusive right to use the software on your personal Apple devices. This license is intended for your private or professional use and may not be redistributed.</p>
-
         <h2>2. Local-First Responsibility</h2>
         <p>Because our software operates on a local-first model, you are solely responsible for the management and backup of your data. PnP Technologies LLC does not have access to your content and cannot recover lost data.</p>
-
         <h2>3. Acceptable Use</h2>
         <p>You agree to use our tools for lawful purposes. Any attempt to reverse-engineer or bypass the security systems of our software is strictly prohibited.</p>
-
         <h2>4. Intellectual Property</h2>
         <p>All software, designs, iconography, and branding are the exclusive property of PnP Technologies LLC. Your use of the software does not grant you ownership of any IP.</p>
-
         <h2>5. Refunds & Sales</h2>
         <p>Sales are managed securely through Lemon Squeezy. Due to the digital nature of our software and immediate access to the builds, all sales are final.</p>
-
         <div class="mt-24 pt-12 border-t border-apple-border">
             <p class="text-[12px] text-apple-grey">For inquiries regarding these terms, contact <a href="mailto:support@pnpsaas.com" class="text-apple-blue hover:underline">support@pnpsaas.com</a>.</p>
         </div>
     </main>
 
-    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center text-[12px] text-apple-grey">
-        <div class="container mx-auto content-width">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <p>© 2026 PnP Technologies LLC. All rights reserved.</p>
-                <div class="flex items-center gap-8">
-                    <a href="support.html" class="hover:text-apple-black">Support</a>
-                    <a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a>
-                    <a href="terms.html" class="hover:text-apple-black font-semibold">Terms of Service</a>
+    <!-- MASTER FOOTER -->
+    <footer class="footer-master">
+        <div class="footer-content">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+                <div class="footer-column">
+                    <h4>Portfolio</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="aiexecutiveassistant.html">Ai Executive Assistant</a></li>
+                        <li><a href="recordingstudio.html">Recording Studio</a></li>
+                    </ul>
                 </div>
+                <div class="footer-column">
+                    <h4>Studio</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="index.html#philosophy">Philosophy</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="mailto:support@pnpsaas.com">Email Support</a></li>
+                        <li><a href="support.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                    <span>© 2026 PnP Technologies LLC. All rights reserved.</span>
+                    <div class="flex gap-4"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="sitemap.xml">Site Map</a></div>
+                </div>
+                <div class="flex items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all"><i class="fab fa-apple text-xl"></i><span class="text-[10px] font-bold tracking-widest uppercase">Ecosystem Native</span></div>
             </div>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.05 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden-custom');
+            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times"></i>'; }
+            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; }
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; }); });
+    </script>
 </body>
 </html>
