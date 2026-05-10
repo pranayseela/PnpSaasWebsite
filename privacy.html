@@ -10,37 +10,41 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { apple: { black: '#000000', grey: '#1D1D1F', light: '#F5F5F7', border: 'rgba(255, 255, 255, 0.08)', textSecondary: 'rgba(245, 245, 247, 0.6)' } },
-                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] },
-                    letterSpacing: { tightest: '-.025em', tighter: '-.015em' }
+                    colors: { 
+                        apple: { 
+                            black: '#1D1D1F', 
+                            grey: '#86868B', 
+                            offwhite: '#F5F5F7', 
+                            blue: '#0066CC',
+                            border: 'rgba(0, 0, 0, 0.1)' 
+                        } 
+                    },
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #000000; color: #F5F5F7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        .nav-glass { background: rgba(0, 0, 0, 0.75); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-        .content-container { max-width: 720px; margin: 0 auto; padding: clamp(80px, 15vh, 140px) 24px 80px; }
-        h2 { font-weight: 600; font-size: clamp(1.25rem, 4vw, 1.75rem); margin-top: 3.5rem; margin-bottom: 1.25rem; color: #fff; letter-spacing: -0.02em; }
-        p { font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem; color: rgba(245, 245, 247, 0.6); letter-spacing: -0.01em; font-size: clamp(0.95rem, 2vw, 1.05rem); }
-        .back-link { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.4); transition: color 0.3s ease; }
-        .back-link:hover { color: #fff; }
+        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1rem; color: #1D1D1F; letter-spacing: -0.015em; }
+        p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
+        .back-link { font-size: 17px; color: #0066CC; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
-<body class="selection:bg-white/10">
+<body class="selection:bg-apple-blue/20">
     <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="container mx-auto px-6 h-14 flex items-center justify-between max-w-[1440px]">
-            <a href="index.html" class="text-sm font-semibold tracking-tighter">PnP Technologies LLC</a>
-            <a href="index.html" class="back-link flex items-center gap-2">
-                <i class="fas fa-chevron-left text-[10px]"></i>
-                Studio
-            </a>
+        <div class="container mx-auto px-6 h-12 flex items-center justify-between max-w-[1200px]">
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight">PnP Technologies LLC</a>
+            <a href="index.html" class="back-link">Studio</a>
         </div>
     </nav>
 
     <main class="content-container">
-        <h1 class="text-4xl md:text-6xl font-semibold tracking-tightest mb-6 leading-tight">Privacy Policy</h1>
-        <p class="text-[10px] uppercase tracking-widest font-bold text-white/20 mb-16">Effective Date: May 9, 2026</p>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Privacy Policy</h1>
+        <p class="text-[12px] font-semibold text-apple-grey mb-12 uppercase tracking-widest">Effective Date: May 9, 2026</p>
         
         <p>At PnP Technologies LLC, we believe privacy is a fundamental human right. Our studio is built on the philosophy that your data belongs to you, and your device should be a private sanctuary. This policy outlines our commitment to that belief.</p>
 
@@ -48,27 +52,24 @@
         <p>The core architecture of our software, including AIExecutiveAssistant and Recording Studio, is "local-first." This means that your files, transcripts, memories, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
 
         <h2>2. On-Device Intelligence</h2>
-        <p>We leverage the Apple Neural Engine to perform complex AI tasks—such as semantic indexing and speech-to-text—locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
+        <p>We leverage the Apple Neural Engine to perform complex AI tasks locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
 
         <h2>3. Data Collection</h2>
         <p>We do not collect personal identifiers, email addresses (unless you contact support), or usage behavior for the purpose of tracking or advertising. We do not have "accounts" for our software; your identity is managed by your device's native security systems.</p>
 
         <h2>4. Support Communications</h2>
-        <p>If you contact us at <strong>support@pnpsaas.com</strong> or <strong>privacy@pnpsaas.com</strong>, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties or use them for marketing without your explicit consent.</p>
+        <p>If you contact us at support@pnpsaas.com or privacy@pnpsaas.com, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties.</p>
 
         <h2>5. Secure Transactions</h2>
         <p>All licensing transactions are handled securely by our Merchant of Record, Lemon Squeezy. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
 
-        <h2>6. Your Rights</h2>
-        <p>Because your data stays on your device, you have absolute control. You can delete your information at any time simply by removing it from the application or deleting the application itself. We have no way to "recover" your data because we never had it.</p>
-
-        <div class="mt-24 pt-12 border-t border-white/5">
-            <p class="text-xs text-white/20 font-light tracking-tight">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
+        <div class="mt-24 pt-12 border-t border-apple-border">
+            <p class="text-[12px] text-apple-grey">Questions regarding this policy should be directed to privacy@pnpsaas.com.</p>
         </div>
     </main>
 
-    <footer class="py-16 border-t border-white/5 text-center">
-        <p class="text-[10px] text-white/10 tracking-widest uppercase font-bold">© 2026 PnP Technologies LLC</p>
+    <footer class="py-12 bg-apple-offwhite border-t border-apple-border text-center">
+        <p class="text-[12px] text-apple-grey">© 2026 PnP Technologies LLC. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <title>PnP Technologies LLC | Privacy-First Apple-Native Software</title>
-    <meta name="description" content="PnP Technologies LLC is a boutique software studio building thoughtful, privacy-first applications for the Apple ecosystem.">
+    <meta name="description" content="PnP Technologies LLC is a boutique software studio building thoughtful, privacy-first applications for the Apple ecosystem. Explore AIExecutiveAssistant and Recording Studio.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +22,7 @@
                             black: '#1D1D1F',
                             grey: '#86868B',
                             blue: '#0066CC',
-                            border: 'rgba(0, 0, 0, 0.1)',
+                            border: 'rgba(0, 0, 0, 0.05)',
                         }
                     },
                     fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] }
@@ -43,15 +43,15 @@
         }
 
         .hero-title {
-            font-size: clamp(3.5rem, 12vw, 8rem);
-            line-height: 1.05;
-            letter-spacing: -0.04em;
+            font-size: clamp(3.5rem, 14vw, 9rem);
+            line-height: 1.1;
+            letter-spacing: -0.05em;
             color: #1D1D1F;
         }
 
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: all 1.2s var(--apple-ease);
         }
 
@@ -68,26 +68,33 @@
 
         @media (hover: hover) {
             .product-card:hover {
-                transform: scale(1.01);
+                transform: scale(1.015);
             }
         }
 
         .section-spacing {
-            padding-top: clamp(6rem, 15vw, 12rem);
-            padding-bottom: clamp(6rem, 15vw, 12rem);
+            padding-top: clamp(8rem, 20vw, 14rem);
+            padding-bottom: clamp(8rem, 20vw, 14rem);
         }
 
         .content-width { max-width: 1200px; margin: 0 auto; }
         
         /* Mobile Menu */
         #mobile-menu {
-            transition: opacity 0.4s var(--apple-ease), transform 0.4s var(--apple-ease);
+            transition: opacity 0.5s var(--apple-ease), transform 0.5s var(--apple-ease);
             background: #FFFFFF;
         }
         #mobile-menu.hidden-custom {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
             pointer-events: none;
+        }
+
+        .scroll-indicator {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%);
+            opacity: 0.2;
         }
     </style>
 </head>
@@ -98,7 +105,7 @@
         <div class="container mx-auto px-6 h-12 md:h-14 flex items-center justify-between content-width">
             <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies LLC</a>
             
-            <div class="hidden md:flex items-center space-x-8 text-[12px] font-normal text-apple-black/80">
+            <div class="hidden md:flex items-center space-x-10 text-[12px] font-normal text-apple-black/80">
                 <a href="#products" class="hover:text-apple-blue transition-colors">Software</a>
                 <a href="#philosophy" class="hover:text-apple-blue transition-colors">Philosophy</a>
                 <a href="mailto:support@pnpsaas.com" class="hover:text-apple-blue transition-colors">Support</a>
@@ -109,30 +116,34 @@
             </button>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden-custom fixed inset-x-0 top-12 bottom-0 z-[105] flex flex-col p-10 md:hidden">
-            <div class="flex flex-col space-y-6 text-3xl font-semibold tracking-tight">
+            <div class="flex flex-col space-y-8 text-4xl font-semibold tracking-tight">
                 <a href="#products" class="mobile-link">Software</a>
                 <a href="#philosophy" class="mobile-link">Philosophy</a>
                 <a href="mailto:support@pnpsaas.com" class="mobile-link">Support</a>
+            </div>
+            <div class="mt-auto text-[12px] text-apple-grey">
+                © 2026 PnP Technologies LLC
             </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-[90svh] flex flex-col items-center justify-center text-center px-6 pt-12">
+        <section class="min-h-[100svh] flex flex-col items-center justify-center text-center px-6 pt-16 overflow-visible">
             <div class="max-w-5xl fade-in" id="hero">
-                <h1 class="hero-title font-semibold mb-6">
+                <h1 class="hero-title font-semibold mb-8 py-2">
                     PnP Technologies
                 </h1>
-                <p class="text-xl md:text-2xl lg:text-3xl text-apple-grey mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">
+                <p class="text-xl md:text-2xl lg:text-3xl text-apple-grey mb-16 max-w-3xl mx-auto font-normal leading-tight tracking-tight">
                     Building the quiet, powerful companions you need for your Apple ecosystem.
                 </p>
-                <div class="flex items-center justify-center gap-8">
-                    <a href="#products" class="text-apple-blue text-[17px] font-normal hover:underline flex items-center gap-2">
+                <div class="flex flex-col items-center gap-10">
+                    <a href="#products" class="text-apple-blue text-[19px] font-normal hover:underline flex items-center gap-3">
                         Explore the studio <i class="fas fa-chevron-right text-[10px]"></i>
                     </a>
+                    <div class="scroll-indicator"></div>
                 </div>
             </div>
         </section>
@@ -140,36 +151,36 @@
         <!-- Products Section -->
         <section id="products" class="section-spacing px-6 bg-apple-offwhite">
             <div class="container mx-auto content-width">
-                <div class="mb-16 md:mb-24 text-center fade-in">
-                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-4">Software</h2>
+                <div class="mb-20 md:mb-32 text-center fade-in">
+                    <h2 class="text-5xl md:text-7xl font-semibold tracking-tight mb-6">Software</h2>
                     <p class="text-xl md:text-2xl text-apple-grey font-normal tracking-tight">Tools designed for clarity and control.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
                     <!-- AIExecutiveAssistant -->
-                    <div class="product-card p-10 md:p-16 flex flex-col items-center text-center fade-in bg-white shadow-sm">
-                        <div class="mb-8 text-5xl text-apple-black/10">
+                    <div class="product-card p-10 md:p-20 flex flex-col items-center text-center fade-in bg-white shadow-sm">
+                        <div class="mb-12 text-6xl text-apple-black/10">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3 class="text-2xl md:text-4xl font-semibold mb-4 tracking-tight">AIExecutiveAssistant</h3>
-                        <p class="text-apple-grey font-normal leading-relaxed text-lg mb-8 tracking-tight max-w-sm">
+                        <h3 class="text-3xl md:text-5xl font-semibold mb-6 tracking-tight">AIExecutiveAssistant</h3>
+                        <p class="text-apple-grey font-normal leading-relaxed text-lg md:text-xl mb-10 tracking-tight max-w-md">
                             Private executive memory and continuity intelligence. Built for calmness and cognitive clarity.
                         </p>
-                        <a href="aiexecutiveassistant.html" class="text-apple-blue font-normal hover:underline flex items-center gap-2">
+                        <a href="aiexecutiveassistant.html" class="text-apple-blue text-[19px] font-normal hover:underline flex items-center gap-2">
                             Learn more <i class="fas fa-chevron-right text-[10px]"></i>
                         </a>
                     </div>
 
                     <!-- Recording Studio -->
-                    <div class="product-card p-10 md:p-16 flex flex-col items-center text-center fade-in bg-white shadow-sm">
-                        <div class="mb-8 text-5xl text-apple-black/10">
+                    <div class="product-card p-10 md:p-20 flex flex-col items-center text-center fade-in bg-white shadow-sm">
+                        <div class="mb-12 text-6xl text-apple-black/10">
                             <i class="fas fa-camera"></i>
                         </div>
-                        <h3 class="text-2xl md:text-4xl font-semibold mb-4 tracking-tight">Recording Studio</h3>
-                        <p class="text-apple-grey font-normal leading-relaxed text-lg mb-8 tracking-tight max-w-sm">
+                        <h3 class="text-3xl md:text-5xl font-semibold mb-6 tracking-tight">Recording Studio</h3>
+                        <p class="text-apple-grey font-normal leading-relaxed text-lg md:text-xl mb-10 tracking-tight max-w-md">
                             Professional SSD recording workflows for iPhone. High-bitrate capture with zero friction.
                         </p>
-                        <a href="recordingstudio.html" class="text-apple-blue font-normal hover:underline flex items-center gap-2">
+                        <a href="recordingstudio.html" class="text-apple-blue text-[19px] font-normal hover:underline flex items-center gap-2">
                             Learn more <i class="fas fa-chevron-right text-[10px]"></i>
                         </a>
                     </div>
@@ -180,23 +191,23 @@
         <!-- Philosophy Section -->
         <section id="philosophy" class="section-spacing px-6 bg-white">
             <div class="container mx-auto content-width text-center">
-                <div class="max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-6xl font-semibold tracking-tight mb-10">Studio Philosophy</h2>
-                    <p class="text-xl md:text-2xl text-apple-grey font-normal leading-relaxed tracking-tight mb-20">
+                <div class="max-w-4xl mx-auto fade-in">
+                    <h2 class="text-5xl md:text-7xl font-semibold tracking-tight mb-12">Studio Philosophy</h2>
+                    <p class="text-xl md:text-2xl lg:text-3xl text-apple-grey font-normal leading-relaxed tracking-tight mb-24 max-w-3xl mx-auto">
                         We believe software should be a quiet, powerful companion. Our studio is dedicated to building tools that respect your privacy and enhance your focus.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-left">
                         <div>
-                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Privacy First</h4>
-                            <p class="text-apple-grey text-[15px] leading-relaxed">Local-first by design. Your data never leaves your device.</p>
+                            <h4 class="text-[21px] font-semibold mb-4 tracking-tight">Privacy First</h4>
+                            <p class="text-apple-grey text-[17px] leading-relaxed">Local-first by design. Your data never leaves your device.</p>
                         </div>
                         <div>
-                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Native Depth</h4>
-                            <p class="text-apple-grey text-[15px] leading-relaxed">Built for the Apple ecosystem. Responsive, intuitive, and powerful.</p>
+                            <h4 class="text-[21px] font-semibold mb-4 tracking-tight">Native Depth</h4>
+                            <p class="text-apple-grey text-[17px] leading-relaxed">Built for the Apple ecosystem. Responsive, intuitive, and powerful.</p>
                         </div>
                         <div>
-                            <h4 class="text-[19px] font-semibold mb-3 tracking-tight">Calm Design</h4>
-                            <p class="text-apple-grey text-[15px] leading-relaxed">Minimalist interfaces that reduce cognitive load.</p>
+                            <h4 class="text-[21px] font-semibold mb-4 tracking-tight">Calm Design</h4>
+                            <p class="text-apple-grey text-[17px] leading-relaxed">Minimalist interfaces that reduce cognitive load.</p>
                         </div>
                     </div>
                 </div>
@@ -205,34 +216,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-24 pb-12 px-6 bg-apple-offwhite border-t border-apple-border">
+    <footer class="pt-32 pb-16 px-6 bg-apple-offwhite border-t border-apple-border">
         <div class="container mx-auto content-width">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
                 <div>
-                    <p class="text-[14px] font-semibold mb-4">PnP Technologies LLC</p>
-                    <p class="text-[12px] text-apple-grey leading-relaxed max-w-xs">
+                    <p class="text-[17px] font-semibold mb-6">PnP Technologies LLC</p>
+                    <p class="text-[14px] text-apple-grey leading-relaxed max-w-sm">
                         A boutique software studio dedicated to building private, Apple-native experiences.
                     </p>
                 </div>
-                <div class="grid grid-cols-2 gap-16">
+                <div class="grid grid-cols-2 gap-20">
                     <div>
-                        <p class="text-[12px] font-semibold mb-4">Studio</p>
-                        <ul class="space-y-3 text-[12px] text-apple-grey">
-                            <li><a href="mailto:support@pnpsaas.com" class="hover:text-apple-black">Support</a></li>
-                            <li><a href="mailto:privacy@pnpsaas.com" class="hover:text-apple-black">Privacy</a></li>
+                        <p class="text-[12px] font-bold uppercase tracking-widest text-apple-grey mb-6">Studio</p>
+                        <ul class="space-y-4 text-[14px] font-medium">
+                            <li><a href="mailto:support@pnpsaas.com" class="hover:text-apple-blue">Support</a></li>
+                            <li><a href="mailto:privacy@pnpsaas.com" class="hover:text-apple-blue">Privacy</a></li>
                         </ul>
                     </div>
                     <div>
-                        <p class="text-[12px] font-semibold mb-4">Legal</p>
-                        <ul class="space-y-3 text-[12px] text-apple-grey">
-                            <li><a href="privacy.html" class="hover:text-apple-black">Privacy Policy</a></li>
-                            <li><a href="terms.html" class="hover:text-apple-black">Terms of Service</a></li>
+                        <p class="text-[12px] font-bold uppercase tracking-widest text-apple-grey mb-6">Legal</p>
+                        <ul class="space-y-4 text-[14px] font-medium">
+                            <li><a href="privacy.html" class="hover:text-apple-blue">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="hover:text-apple-blue">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-apple-border text-[12px] text-apple-grey">
-                © 2026 PnP Technologies LLC. All rights reserved.
+            <div class="pt-10 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-10">
+                <p class="text-[12px] text-apple-grey font-medium text-center md:text-left">
+                    © 2026 PnP Technologies LLC. All rights reserved.
+                </p>
+                <div class="flex items-center gap-10 grayscale opacity-20 hover:opacity-100 transition-all duration-1000">
+                    <i class="fab fa-apple text-2xl"></i>
+                    <span class="text-[10px] font-bold tracking-[0.3em] uppercase">Ecosystem</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -245,15 +262,33 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
         menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden-custom');
-            menuToggle.querySelector('i').classList.toggle('fa-bars');
-            menuToggle.querySelector('i').classList.toggle('fa-times');
+            const isHidden = mobileMenu.classList.contains('hidden-custom');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden-custom');
+                body.style.overflow = 'hidden';
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenu.classList.add('hidden-custom');
+                body.style.overflow = '';
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden-custom');
+                body.style.overflow = '';
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
         });
     </script>
 </body>
