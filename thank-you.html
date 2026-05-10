@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Welcome | PnP Technologies</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://pnpsaas.com/thank-you.html">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { apple: { black: '#1D1D1F', grey: '#86868B', offwhite: '#F5F5F7', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.1)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
+            theme: { extend: { colors: { apple: { white: '#FFFFFF', offwhite: '#F5F5F7', black: '#1D1D1F', grey: '#86868B', blue: '#0066CC', border: 'rgba(0, 0, 0, 0.05)' } }, fontFamily: { sans: ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'] } } }
         }
     </script>
     <style>
@@ -17,17 +20,40 @@
         .nav-glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
         .text-gradient { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .content-container { padding: 120px 24px 80px; }
+        .content-width { max-width: 1200px; margin: 0 auto; }
+        #mobile-menu { transition: opacity 0.5s var(--apple-ease), transform 0.5s var(--apple-ease); background: #FFFFFF; }
+        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-20px); pointer-events: none; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1.2s var(--apple-ease); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="min-h-[100svh] flex flex-col selection:bg-apple-blue/20">
-    <nav class="fixed top-0 left-0 right-0 z-50 nav-glass">
-        <div class="container mx-auto px-6 h-12 flex items-center justify-between max-w-[1200px]">
-            <a href="index.html" class="text-[17px] font-semibold tracking-tight">PnP Technologies</a>
+    <nav class="fixed top-0 left-0 right-0 z-[100] nav-glass">
+        <div class="container mx-auto px-6 h-12 md:h-14 flex items-center justify-between content-width">
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
+            <div class="hidden md:flex items-center space-x-10 text-[12px] font-normal text-apple-black/80">
+                <a href="index.html#products" class="hover:text-apple-blue transition-colors">Software</a>
+                <a href="index.html#philosophy" class="hover:text-apple-blue transition-colors">Philosophy</a>
+                <a href="support.html" class="hover:text-apple-blue transition-colors">Support</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black/80" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden-custom fixed inset-x-0 top-12 bottom-0 z-[105] flex flex-col p-10 md:hidden">
+            <div class="flex flex-col space-y-8 text-4xl font-semibold tracking-tight">
+                <a href="index.html#products" class="mobile-link">Software</a>
+                <a href="index.html#philosophy" class="mobile-link">Philosophy</a>
+                <a href="support.html" class="mobile-link">Support</a>
+            </div>
+            <div class="mt-auto text-[12px] text-apple-grey">
+                © 2026 PnP Technologies LLC. All rights reserved.
+            </div>
         </div>
     </nav>
 
-    <main class="flex-grow flex flex-col items-center justify-center text-center content-container">
-        <div class="max-w-2xl w-full">
+    <main class="flex-grow flex flex-col items-center justify-center text-center content-container pt-32">
+        <div class="max-w-2xl w-full fade-in">
             <div class="mb-10">
                 <div class="w-16 h-16 bg-apple-offwhite rounded-full flex items-center justify-center mx-auto mb-10 border border-apple-border">
                     <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
@@ -59,5 +85,41 @@
             </div>
         </div>
     </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden-custom');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden-custom');
+                body.style.overflow = 'hidden';
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenu.classList.add('hidden-custom');
+                body.style.overflow = '';
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden-custom');
+                body.style.overflow = '';
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
 </body>
 </html>
