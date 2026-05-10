@@ -65,7 +65,7 @@
         }
 
         body {
-            background-color: #000000;
+            background: radial-gradient(circle at 50% 0%, #111111 0%, #000000 70%);
             color: #F5F5F7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -73,22 +73,22 @@
         }
         
         .nav-glass {
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .text-gradient {
-            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 1.2s var(--apple-ease);
+            transform: translateY(15px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .fade-in.visible {
@@ -97,35 +97,35 @@
         }
 
         .product-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.6s var(--apple-ease);
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.7s var(--apple-ease);
         }
 
         @media (hover: hover) {
             .product-card:hover {
-                background: rgba(255, 255, 255, 0.04);
-                border-color: rgba(255, 255, 255, 0.12);
+                background: rgba(255, 255, 255, 0.03);
+                border-color: rgba(255, 255, 255, 0.1);
                 transform: translateY(-4px);
             }
         }
 
         .section-spacing {
-            padding-top: clamp(6rem, 15vw, 12rem);
-            padding-bottom: clamp(6rem, 15vw, 12rem);
+            padding-top: clamp(8rem, 20vw, 16rem);
+            padding-bottom: clamp(8rem, 20vw, 16rem);
         }
 
         /* Responsive typography scale */
         .hero-title {
-            font-size: clamp(3.5rem, 14vw, 9rem);
-            line-height: 0.9;
-            letter-spacing: -0.05em;
+            font-size: clamp(3.5rem, 12vw, 8.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
         }
 
         .section-title {
-            font-size: clamp(2.75rem, 10vw, 5.5rem);
-            line-height: 1;
-            letter-spacing: -0.04em;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
         }
 
         /* Ultrawide containment */
@@ -191,18 +191,18 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-[100svh] flex flex-col items-center justify-center text-center px-6 pt-16">
+        <section class="min-h-[100svh] flex flex-col items-center justify-center text-center px-6 pt-16 relative overflow-visible">
             <div class="max-w-5xl fade-in" id="hero">
-                <h1 class="hero-title font-semibold mb-12 text-gradient">
+                <h1 class="hero-title font-semibold mb-12 text-gradient py-2">
                     PnP Technologies
                 </h1>
-                <p class="text-xl md:text-2xl lg:text-3xl text-apple-textSecondary mb-16 max-w-3xl mx-auto font-light leading-relaxed tracking-tighter px-4">
-                    Building thoughtful, privacy-first software for the Apple ecosystem.
+                <p class="text-xl md:text-2xl lg:text-3xl text-apple-textSecondary mb-20 max-w-3xl mx-auto font-light leading-relaxed tracking-tighter px-4">
+                    Building the quiet, powerful companions you need for your Apple ecosystem. Privacy first. Human centered.
                 </p>
                 <div class="flex items-center justify-center">
-                    <a href="#products" class="text-[11px] font-bold tracking-[0.2em] uppercase text-white/30 hover:text-white transition-all group flex items-center gap-4">
-                        The Portfolio
-                        <i class="fas fa-chevron-down text-[10px] opacity-20 group-hover:translate-y-1 transition-transform"></i>
+                    <a href="#products" class="text-[11px] font-bold tracking-[0.3em] uppercase text-white/40 hover:text-white transition-all group flex flex-col items-center gap-6">
+                        Explore the Studio
+                        <div class="w-px h-12 bg-gradient-to-b from-white/20 to-transparent group-hover:from-white/40 transition-colors"></div>
                     </a>
                 </div>
             </div>
