@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
-    <title>AIExecutiveAssistant | Your Private Executive Memory</title>
-    <meta name="title" content="AIExecutiveAssistant | Your Private Executive Memory">
-    <meta name="description" content="Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive support layer for professionals, built with local-first and privacy-first intelligence.">
+    <title>PnP Technologies LLC | Privacy-first Apple-native software</title>
+    <meta name="description" content="Building thoughtful, privacy-first apps for the Apple ecosystem. Explore AIExecutiveAssistant and Professional External Recording Studio.">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://pnpsaas.com/">
     
-    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,7 +23,7 @@
                             black: '#000000',
                             grey: '#1D1D1F',
                             light: '#F5F5F7',
-                            muted: 'rgba(255, 255, 255, 0.05)',
+                            border: 'rgba(255, 255, 255, 0.1)',
                         }
                     },
                     fontFamily: {
@@ -49,25 +45,13 @@
             background: rgba(29, 29, 31, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .text-gradient {
             background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .section-padding {
-            padding-top: 8rem;
-            padding-bottom: 8rem;
-        }
-
-        @media (max-width: 768px) {
-            .section-padding {
-                padding-top: 4rem;
-                padding-bottom: 4rem;
-            }
         }
 
         .fade-in {
@@ -80,6 +64,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .product-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+        }
+
+        .product-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-4px);
+        }
     </style>
 </head>
 <body class="selection:bg-white/20">
@@ -87,16 +80,12 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass">
         <div class="container mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-lg font-medium tracking-tight">AIExecutiveAssistant</a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/60">
-                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-                <a href="#briefing" class="hover:text-white transition-colors">Briefing</a>
-                <a href="#privacy" class="hover:text-white transition-colors">Privacy</a>
-                <a href="privacy.html" class="hover:text-white transition-colors">Legal</a>
+            <a href="#" class="text-lg font-medium tracking-tight">PnP Technologies LLC</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/60 tracking-tight">
+                <a href="#products" class="hover:text-white transition-colors">Products</a>
+                <a href="#philosophy" class="hover:text-white transition-colors">Philosophy</a>
+                <a href="mailto:support@pnpsaas.com" class="hover:text-white transition-colors">Support</a>
             </div>
-            <a href="#" class="bg-white text-black text-xs font-semibold px-4 py-2 rounded-full hover:bg-white/90 transition-all">
-                Get Started
-            </a>
         </div>
     </nav>
 
@@ -105,147 +94,122 @@
         <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
             <div class="max-w-4xl fade-in" id="hero">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8 text-gradient">
-                    Your private<br>executive memory.
+                    PnP Technologies LLC
                 </h1>
-                <p class="text-xl md:text-2xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                    Stop mentally carrying everything. AIExecutiveAssistant is a calm cognitive layer that live on your device, ensuring your thoughts never fade.
+                <p class="text-xl md:text-2xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed tracking-tight">
+                    Building thoughtful, privacy-first apps for the Apple ecosystem.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="#" class="text-lg font-medium text-white group flex items-center gap-2">
-                        Experience Continuity
-                        <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                <div class="flex items-center justify-center gap-6">
+                    <a href="#products" class="bg-white text-black text-sm font-medium px-8 py-3 rounded-full hover:bg-white/90 transition-all">
+                        View Products
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Product Experience / Semantic Recall -->
-        <section id="experience" class="section-padding px-6 bg-apple-grey">
+        <!-- Products Section -->
+        <section id="products" class="py-32 px-6">
             <div class="container mx-auto max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-20 items-center">
-                    <div class="fade-in">
-                        <span class="text-sm font-semibold tracking-widest text-white/40 uppercase mb-4 block">Semantic Recall</span>
-                        <h2 class="text-4xl md:text-5xl font-medium mb-8 leading-tight">Capture once. <br>Recall effortlessly.</h2>
-                        <p class="text-lg text-white/60 font-light leading-relaxed">
-                            Every thought, meeting, and reflection is semantically indexed on-device. No more digging through notes. Just ask, and your memory answers.
+                <div class="mb-20 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight">Our Products</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- AIExecutiveAssistant -->
+                    <div class="product-card p-10 rounded-[2.5rem] border border-white/10 bg-white/[0.01] fade-in">
+                        <span class="text-xs font-semibold tracking-widest text-white/40 uppercase mb-4 block">Product 1</span>
+                        <h3 class="text-3xl font-medium mb-4 tracking-tight text-white">AIExecutiveAssistant</h3>
+                        <p class="text-white/60 font-light leading-relaxed mb-8">
+                            Private executive memory and continuity intelligence built entirely around calmness, recall, and cognitive clarity.
                         </p>
+                        <ul class="space-y-3 mb-10 text-sm text-white/40 font-light">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> On-device intelligence</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Executive Briefs</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Semantic Recall</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Local-first privacy</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Apple-native experience</li>
+                        </ul>
+                        <a href="#" class="text-sm font-medium text-white group flex items-center gap-2">
+                            Learn More
+                            <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <div class="glass aspect-square rounded-3xl flex items-center justify-center p-12 fade-in">
-                        <div class="text-center">
-                            <i class="fas fa-brain text-6xl text-white/20 mb-6"></i>
-                            <p class="text-white/40 italic font-light">Continuity-of-thought system</p>
+
+                    <!-- External Recording Studio -->
+                    <div class="product-card p-10 rounded-[2.5rem] border border-white/10 bg-white/[0.01] fade-in">
+                        <span class="text-xs font-semibold tracking-widest text-white/40 uppercase mb-4 block">Product 2</span>
+                        <h3 class="text-3xl font-medium mb-4 tracking-tight text-white">Recording Studio</h3>
+                        <p class="text-white/60 font-light leading-relaxed mb-8">
+                            A professional iPhone camera system designed for direct photo and video capture to external SSD storage.
+                        </p>
+                        <ul class="space-y-3 mb-10 text-sm text-white/40 font-light">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Direct recording to SSD</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> ProRes workflows</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> External media management</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Apple-native experience</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-[10px]"></i> Professional creator workflows</li>
+                        </ul>
+                        <a href="#" class="text-sm font-medium text-white group flex items-center gap-2">
+                            Learn More
+                            <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="py-32 px-6 bg-white/[0.02] border-y border-white/5">
+            <div class="container mx-auto max-w-4xl text-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-medium mb-12 tracking-tight">Our Philosophy</h2>
+                    <div class="grid md:grid-cols-2 gap-16 text-left mt-20">
+                        <div>
+                            <h4 class="text-white font-medium mb-4">Privacy by Default</h4>
+                            <p class="text-white/40 font-light leading-relaxed">
+                                We believe your data belongs to you. By building for on-device intelligence and local-first storage, we ensure your most private moments stay private.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium mb-4">Calm Technology</h4>
+                            <p class="text-white/40 font-light leading-relaxed">
+                                Software should support your focus, not fragment it. We design for cognitive clarity and quiet efficiency, following Apple's native design principles.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium mb-4">Local Intelligence</h4>
+                            <p class="text-white/40 font-light leading-relaxed">
+                                Leveraging the Apple Neural Engine to bring powerful AI capabilities directly to your hardware, with zero cloud dependency and zero surveillance.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium mb-4">Thoughtful Craft</h4>
+                            <p class="text-white/40 font-light leading-relaxed">
+                                Every interaction is intentional. We spend time on the details that make software feel native, responsive, and durable.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Executive Brief Showcase -->
-        <section id="briefing" class="section-padding px-6">
-            <div class="container mx-auto max-w-4xl text-center">
-                <div class="fade-in">
-                    <span class="text-sm font-semibold tracking-widest text-white/40 uppercase mb-4 block">Flagship Feature</span>
-                    <h2 class="text-4xl md:text-6xl font-medium mb-12 text-gradient">The Executive Brief.</h2>
-                    <p class="text-xl text-white/60 font-light leading-relaxed mb-16 max-w-2xl mx-auto">
-                        A morning synthesis of your unresolved follow-ups, recurring themes, and situational clarity. It’s not a list; it’s continuity.
-                    </p>
-                </div>
-                <div class="glass p-8 md:p-12 rounded-[2rem] text-left fade-in">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-3 h-3 rounded-full bg-orange-400"></div>
-                        <span class="text-sm font-medium text-white/80">Situational Clarity</span>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="h-4 bg-white/10 rounded-full w-3/4"></div>
-                        <div class="h-4 bg-white/5 rounded-full w-full"></div>
-                        <div class="h-4 bg-white/5 rounded-full w-5/6"></div>
-                    </div>
-                    <div class="mt-12 pt-12 border-t border-white/10 flex justify-between items-center">
-                        <span class="text-xs text-white/40">CALM COGNITIVE SUPPORT</span>
-                        <span class="text-xs text-white/40">09:00 AM</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Privacy & Trust Section -->
-        <section id="privacy" class="section-padding px-6 bg-white text-black">
-            <div class="container mx-auto max-w-6xl">
-                <div class="text-center mb-20 fade-in">
-                    <h2 class="text-4xl md:text-6xl font-medium mb-8">Private by design.</h2>
-                    <p class="text-xl text-black/60 font-light max-w-2xl mx-auto">
-                        No accounts. No surveillance. No cloud dependency. Your executive memory stays exactly where it belongs: on your device.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
-                        <i class="fas fa-microchip text-2xl mb-6"></i>
-                        <h3 class="text-xl font-medium mb-4">On-Device Intelligence</h3>
-                        <p class="text-black/60 font-light">Processing happens locally using the Neural Engine. Your data never leaves your hands.</p>
-                    </div>
-                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
-                        <i class="fas fa-lock text-2xl mb-6"></i>
-                        <h3 class="text-xl font-medium mb-4">No Accounts</h3>
-                        <p class="text-black/60 font-light">We don't want your email. We don't want your password. We don't want your identity.</p>
-                    </div>
-                    <div class="p-8 rounded-3xl border border-black/5 bg-apple-light fade-in">
-                        <i class="fas fa-cloud-slash text-2xl mb-6"></i>
-                        <h3 class="text-xl font-medium mb-4">Zero Cloud</h3>
-                        <p class="text-black/60 font-light">A pure local-first architecture ensures 100% privacy and lightning-fast performance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Apple Ecosystem Integration -->
-        <section class="section-padding px-6 bg-apple-black">
-            <div class="container mx-auto max-w-4xl text-center fade-in">
-                <h2 class="text-4xl md:text-5xl font-medium mb-12">Native to your workflow.</h2>
-                <div class="flex flex-wrap justify-center gap-12 text-white/40">
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-microphone text-2xl"></i>
-                        <span class="text-xs font-medium">Siri</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-search text-2xl"></i>
-                        <span class="text-xs font-medium">Spotlight</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-calendar text-2xl"></i>
-                        <span class="text-xs font-medium">Calendar</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <i class="fas fa-bell text-2xl"></i>
-                        <span class="text-xs font-medium">Reminders</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="section-padding px-6 text-center">
-            <div class="max-w-3xl mx-auto fade-in">
-                <h2 class="text-4xl md:text-6xl font-medium mb-12 text-gradient">Regain your cognitive clarity.</h2>
-                <a href="#" class="inline-block bg-white text-black px-10 py-5 rounded-full text-xl font-medium hover:bg-white/90 transition-all transform hover:scale-105">
-                    Get Started
-                </a>
-                <p class="mt-8 text-white/40 font-light">Experience the premium continuity system.</p>
-            </div>
-        </section>
     </main>
 
-    <footer class="py-12 px-6 border-t border-white/10 text-center">
-        <div class="container mx-auto">
-            <p class="text-sm text-white/40 font-light">© 2026 AIExecutiveAssistant. Private. Local. Premium.</p>
-            <div class="mt-4 flex justify-center space-x-6 text-xs text-white/60">
+    <footer class="py-20 px-6 text-center">
+        <div class="container mx-auto max-w-6xl">
+            <p class="text-sm font-medium mb-8">PnP Technologies LLC</p>
+            <div class="flex justify-center space-x-8 text-xs text-white/40 font-light">
                 <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="mailto:support@pnpsaas.com" class="hover:text-white transition-colors">Support</a>
+                <a href="mailto:support@pnpsaas.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <div class="mt-12 pt-12 border-t border-white/5">
+                <p class="text-[10px] text-white/20 tracking-widest uppercase">© 2026 PnP Technologies LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
