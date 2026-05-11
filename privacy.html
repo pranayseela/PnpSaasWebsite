@@ -42,7 +42,7 @@
                             white: '#FFFFFF',
                             offwhite: '#F5F5F7',
                             black: '#1D1D1F',
-                            grey: '#454545',
+                            grey: '#1d1d1f',
                             lightGrey: '#FBFBFD',
                             blue: '#0066CC',
                             border: 'rgba(0, 0, 0, 0.1)',
@@ -75,7 +75,7 @@
         #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
         #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
         .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
-        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #454545; font-size: 12px; }
+        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #1d1d1f; font-size: 12px; }
         .footer-content { max-width: 1024px; margin: 0 auto; }
         .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
         .footer-column ul { space-y: 8px; }
@@ -115,7 +115,7 @@
                 <a href="terms.html" class="nav-link">Terms</a>
                 <a href="support.html" class="nav-link">Support</a>
             </div>
-            <button id="menu-toggle" class="md:hidden p-2 text-apple-black focus:outline-none" aria-label="Toggle Menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black focus:outline-none" aria-label="Toggle Menu"><i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <div class="flex flex-col space-y-2">
@@ -173,17 +173,17 @@
     <footer class="footer-master" aria-label="Studio Footer">
         <div class="footer-content">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                <div class="footer-column"><h4>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="aiexecutiveassistant.html">Ai Executive Assistant</a></li><li><a href="recordingstudio.html">Recording Studio</a></li></ul></div>
-                <div class="footer-column"><h4>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
-                <div class="footer-column"><h4>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
-                <div class="footer-column"><h4>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="aiexecutiveassistant.html">Ai Executive Assistant</a></li><li><a href="recordingstudio.html">Recording Studio</a></li></ul></div>
+                <div class="footer-column"><h3>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
+                <div class="footer-column"><h3>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
+                <div class="footer-column"><h3>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                     <span>© 2026 PnP Technologies LLC. All rights reserved.</span>
                     <div class="flex gap-4"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="sitemap.xml">Site Map</a></div>
                 </div>
-                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"><i class="fab fa-apple text-xl" aria-hidden="true"></i><span class="text-[10px] font-bold tracking-widest uppercase" style="color: #454545;">Ecosystem Native</span></div>
+                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"><i class="fab fa-apple text-xl" aria-hidden="true" aria-hidden="true"></i><span class="text-[10px] font-bold tracking-widest uppercase" style="color: #1d1d1f;">Ecosystem Native</span></div>
             </div>
         </div>
     </footer>
@@ -196,10 +196,10 @@
         const body = document.body;
         menuToggle.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden-custom');
-            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>'; }
-            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>'; }
+            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times" aria-hidden="true" aria-hidden="true"></i>'; }
+            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i>'; }
         });
-        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>'; }); });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i>'; }); });
     </script>
 </body>
 </html>
