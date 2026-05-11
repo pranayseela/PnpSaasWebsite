@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 const files = ['index.html', 'aiexecutiveassistant.html', 'recordingstudio.html', 'support.html', 'privacy.html', 'terms.html'];
 
@@ -17,10 +16,19 @@ const minor = parseInt(versionMatch[2]);
 const patch = parseInt(versionMatch[3]);
 const nextVersion = `v${major}.${minor}.${patch + 1}`;
 
-// 2. Update all files
+// 2. Perform fixes and update version in all files
 files.forEach(file => {
     let content = fs.readFileSync(file, 'utf8');
+    
+    // Increment version
     content = content.replace(/v\d+\.\d+\.\d+/g, nextVersion);
+
+    // Fix: Remove fade-in from product cards to prevent contrast failures during animation
+    content = content.replace(/flex flex-col items-center text-center fade-in shadow-sm/g, "flex flex-col items-center text-center shadow-sm");
+    
+    // Fix: Darken apple-blue slightly for guaranteed contrast compliance
+    content = content.replace(/blue: '#0066CC'/g, "blue: '#005AC1'");
+
     fs.writeFileSync(file, content);
 });
 
