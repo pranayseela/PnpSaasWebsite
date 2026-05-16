@@ -22,7 +22,7 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3">
     <link rel="canonical" href="https://pnpsaas.com/ai-executive-assistant.html">
     
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.22">
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.23">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
@@ -38,15 +38,14 @@
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
         body.menu-open { overflow: hidden !important; height: 100vh !important; }
         
-        /* Premium Glassmorphism */
         .glass-master { 
-            background: rgba(255, 255, 255, 0.7); 
+            background: rgba(255, 255, 255, 0.75); 
             backdrop-filter: saturate(180%) blur(20px); 
             -webkit-backdrop-filter: saturate(180%) blur(20px); 
             border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
         }
         
-        .nav-master { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 9999; transition: all 0.3s var(--apple-ease); }
+        .nav-master { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 9999; }
         .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
         .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
         .nav-link:hover { opacity: 0.7; }
@@ -65,79 +64,64 @@
             position: absolute;
             width: 100%; height: 100%;
             filter: blur(120px);
-            opacity: 0.25;
+            opacity: 0.2;
             mix-blend-mode: multiply;
         }
         .blob {
             position: absolute;
-            width: 70vw; height: 70vw;
+            width: 80vw; height: 80vw;
             border-radius: 50%;
             animation: move 30s infinite alternate var(--apple-ease);
-            opacity: 0.5;
+            opacity: 0.4;
         }
-        .blob-1 { background: var(--brand-cyan); top: -25%; left: -15%; animation-delay: 0s; }
-        .blob-2 { background: var(--brand-pink); bottom: -25%; right: -15%; animation-delay: -5s; }
-        .blob-3 { background: var(--brand-blue); top: 35%; right: 15%; animation-duration: 35s; }
+        .blob-1 { background: var(--brand-cyan); top: -30%; left: -20%; animation-delay: 0s; }
+        .blob-2 { background: var(--brand-pink); bottom: -30%; right: -20%; animation-delay: -5s; }
+        .blob-3 { background: var(--brand-blue); top: 40%; right: 20%; animation-duration: 35s; }
         
         @keyframes move {
-            from { transform: translate(0, 0) scale(1) rotate(0deg); }
-            to { transform: translate(10%, 10%) scale(1.1) rotate(10deg); }
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(10%, 10%) scale(1.1); }
         }
 
-        .hero-title { font-size: clamp(36px, 8vw, 72px); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
+        .hero-title { font-size: clamp(34px, 8vw, 64px); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
         .text-gradient { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         .btn-premium {
             background: #1D1D1F;
             color: white;
-            padding: 12px 32px;
+            padding: 12px 36px;
             border-radius: 99px;
             font-weight: 600;
             transition: all 0.4s var(--apple-ease);
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-decoration: none;
-            font-size: 16px;
+            font-size: 17px;
         }
         .btn-premium:hover {
-            transform: scale(1.02) translateY(-2px);
+            transform: scale(1.02) translateY(-1px);
             background: #000;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        
-        /* Refined Device Mockup */
-        .iphone-frame {
-            width: 220px; height: 450px;
-            background: #000;
-            border-radius: 40px;
-            padding: 8px;
+
+        /* Floating Icon Effect */
+        .floating-icon-wrapper {
             position: relative;
-            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.2);
-            margin: 0 auto;
-            border: 4px solid #1D1D1F;
+            display: inline-block;
+            transition: transform 0.6s var(--apple-ease);
         }
-        .iphone-screen {
-            width: 100%; height: 100%;
-            border-radius: 32px;
-            background: #000;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(255,255,255,0.05);
+        .floating-icon-wrapper:hover {
+            transform: translateY(-5px) scale(1.02);
         }
-        .iphone-notch {
-            position: absolute; top: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 80px; height: 20px;
-            background: #000;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            z-index: 10;
+        .icon-glow {
+            position: absolute;
+            inset: -20px;
+            background: var(--premium-gradient);
+            filter: blur(40px);
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 60px;
         }
 
         .brief-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
@@ -147,13 +131,13 @@
         .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
         
         .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
-        .footer-content { max-width: 1024px; margin: 0 auto; }
 
-        /* Defensive Scaling for Brand Assets */
+        /* Defensive Scaling */
         .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
-        .brand-icon-footer { width: 20px !important; height: 20px !important; object-fit: contain; }
+        .brand-icon-hero { width: 100px; height: 100px; object-fit: contain; }
+        @media (max-width: 768px) { .brand-icon-hero { width: 80px; height: 80px; } }
 
-        .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
+        .fade-in { opacity: 0; transform: translateY(15px); transition: transform 0.8s var(--apple-ease), opacity 0.5s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
@@ -192,12 +176,12 @@
             <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.22</span></div>
+            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.23</span></div>
         </div>
     </nav>
 
     <main>
-        <section class="min-h-[90svh] relative flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] overflow-hidden">
+        <section class="min-h-[85svh] relative flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] overflow-hidden">
             <div class="aurora-container">
                 <div class="aurora-blur">
                     <div class="blob blob-1"></div>
@@ -206,17 +190,11 @@
                 </div>
             </div>
             
-            <div class="max-w-5xl fade-in relative py-12 md:py-12 z-10">
-                <div class="mb-10 flex justify-center scale-90 md:scale-100">
-                    <div class="iphone-frame">
-                        <div class="iphone-notch"></div>
-                        <div class="iphone-screen bg-zinc-950">
-                             <img src="images/MASTER_APP_ICON.jpg" alt="Ai Executive Assistant" class="w-16 h-16 rounded-[14px] shadow-2xl">
-                             <div class="absolute bottom-10 left-0 right-0 px-6">
-                                 <div class="h-0.5 w-12 bg-white/20 mx-auto rounded-full mb-3"></div>
-                                 <p class="text-[8px] text-white/30 font-bold uppercase tracking-[0.2em]">Active Intelligence</p>
-                             </div>
-                        </div>
+            <div class="max-w-4xl fade-in relative py-12 md:py-16 z-10">
+                <div class="mb-12 flex justify-center">
+                    <div class="floating-icon-wrapper">
+                        <div class="icon-glow"></div>
+                        <img src="images/MASTER_APP_ICON.jpg" alt="Ai Assistant" class="brand-icon-hero rounded-[24px] shadow-2xl border border-white/10">
                     </div>
                 </div>
                 
@@ -268,11 +246,11 @@
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.22</span></span>
+                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.23</span></span>
                     <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
                 </div>
                 <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="images/MASTER_APP_ICON.jpg" alt="" class="brand-icon-footer rounded-[4px]">
+                    <img src="images/MASTER_APP_ICON.jpg" alt="" style="width: 18px; height: 18px; border-radius: 4px; object-fit: contain;">
                     <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
                 </div>
             </div>
