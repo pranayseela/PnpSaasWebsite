@@ -18,11 +18,11 @@
     <meta name="twitter:description" content="Your private executive memory. Apple-native design.">
     <meta name="twitter:image" content="https://pnpsaas.com/images/MASTER_APP_ICON.jpg">
 
-    <link rel="apple-touch-icon" href="images/favicon.svg?v=3">
+    <link rel="apple-touch-icon" href="images/MASTER_APP_ICON.jpg">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3">
     <link rel="canonical" href="https://pnpsaas.com/ai-executive-assistant.html">
     
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.19">
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.21">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
@@ -30,49 +30,133 @@
         :root { 
             --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
             --nav-height: 44px;
-            --premium-gradient: linear-gradient(135deg, #00DBFF 0%, #3A69FF 50%, #FF2BFF 100%);
+            --brand-cyan: #00DBFF;
+            --brand-blue: #3A69FF;
+            --brand-pink: #FF2BFF;
+            --premium-gradient: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-blue) 50%, var(--brand-pink) 100%);
         }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
         body.menu-open { overflow: hidden !important; height: 100vh !important; }
-        .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
+        
+        /* Premium Glassmorphism */
+        .glass-master { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: saturate(180%) blur(20px); 
+            -webkit-backdrop-filter: saturate(180%) blur(20px); 
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-master { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 9999; transition: all 0.3s var(--apple-ease); }
         .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
         .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
         .nav-link:hover { opacity: 0.7; }
         .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-        .text-apple-black { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-premium { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Aurora Living Background */
+        .aurora-container {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+            background: #fff;
+        }
+        .aurora-blur {
+            position: absolute;
+            width: 100%; height: 100%;
+            filter: blur(100px);
+            opacity: 0.3;
+            mix-blend-mode: multiply;
+        }
+        .blob {
+            position: absolute;
+            width: 60vw; height: 60vw;
+            border-radius: 50%;
+            animation: move 25s infinite alternate var(--apple-ease);
+            opacity: 0.6;
+        }
+        .blob-1 { background: var(--brand-cyan); top: -20%; left: -10%; animation-delay: 0s; }
+        .blob-2 { background: var(--brand-pink); bottom: -20%; right: -10%; animation-delay: -5s; }
+        .blob-3 { background: var(--brand-blue); top: 30%; right: 10%; animation-duration: 30s; }
+        
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1) rotate(0deg); }
+            to { transform: translate(15%, 15%) scale(1.2) rotate(15deg); }
+        }
+
+        .hero-title { font-size: clamp(40px, 9vw, 80px); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
+        .text-gradient { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Magnetic Button feel */
+        .btn-premium {
+            background: #1D1D1F;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 99px;
+            font-weight: 600;
+            transition: all 0.4s var(--apple-ease);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-decoration: none;
+        }
+        .btn-premium:hover {
+            transform: scale(1.02) translateY(-2px);
+            background: #000;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        /* Device Mockup */
+        .iphone-frame {
+            width: 260px; height: 530px;
+            background: #000;
+            border-radius: 48px;
+            padding: 10px;
+            position: relative;
+            box-shadow: 0 40px 80px -20px rgba(0,0,0,0.3);
+            margin: 0 auto;
+            border: 6px solid #1D1D1F;
+        }
+        .iphone-screen {
+            width: 100%; height: 100%;
+            border-radius: 38px;
+            background: #000;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .iphone-notch {
+            position: absolute; top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 90px; height: 22px;
+            background: #000;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 10;
+        }
+
         .brief-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
         .content-width { max-width: 1024px; margin: 0 auto; }
         #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
         #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
         .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
+        
         .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
         .footer-content { max-width: 1024px; margin: 0 auto; }
-        .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
-        .footer-column ul { space-y: 8px; }
-        .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
-        .hero-title { font-size: clamp(40px, 9vw, 80px); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
-        .section-title { font-size: clamp(32px, 7vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
-        .section-padding { padding: 80px 22px; }
-        @media (max-width: 768px) { .section-padding { padding: 60px 22px; } }
-        .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 1; }
-    
-        *:focus-visible { outline: 2px solid #3A69FF; outline-offset: 2px; }
 
         /* Defensive Scaling for Brand Assets */
         .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
-        .brand-icon-hero { width: 120px !important; height: 120px !important; object-fit: contain; }
-        @media (max-width: 768px) { .brand-icon-hero { width: 88px !important; height: 88px !important; } }
         .brand-icon-footer { width: 20px !important; height: 20px !important; object-fit: contain; }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="selection:bg-apple-vibrantBlue/20">
+<body class="selection:bg-brand-blue/20">
 
     <!-- MASTER HEADER -->
-    <nav class="fixed top-0 left-0 right-0 nav-master" aria-label="Global Navigation">
+    <nav class="nav-master glass-master" aria-label="Global Navigation">
         <div class="nav-content">
             <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity text-apple-black">
                 <img src="images/MASTER_APP_ICON.jpg" alt="" class="brand-icon-nav rounded-[4px]">
@@ -83,8 +167,8 @@
                     <a class="nav-link">Software</a>
                     <div class="nav-dropdown">
                         <div class="flex flex-col gap-4">
-                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
-                            <a href="recording-studio.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Recording Studio</a>
+                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
+                            <a href="recording-studio.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Recording Studio</a>
                             <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
                         </div>
                     </div>
@@ -97,32 +181,51 @@
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
+                <span class="text-[11px] font-bold text-brand-blue uppercase tracking-widest mb-2">Software</span>
                 <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
                 <a href="recording-studio.html" class="mobile-link">Recording Studio</a>
             </div>
             <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></div>
+            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.21</span></div>
         </div>
     </nav>
 
     <main>
-        <section class="min-h-[70svh] flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] bg-white overflow-hidden">
-            <div class="max-w-5xl fade-in relative py-12 md:py-20">
-                <div class="flex justify-center mb-8">
-                    <img src="images/MASTER_APP_ICON.jpg" alt="Ai Executive Assistant Logo" class="brand-icon-hero rounded-[28px] shadow-2xl shadow-black/10 border-[0.5px] border-black/5">
+        <section class="min-h-[90svh] relative flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] overflow-hidden">
+            <div class="aurora-container">
+                <div class="aurora-blur">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                    <div class="blob blob-3"></div>
                 </div>
-                <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-apple-blue mb-6 block">A Calm Cognitive Support Layer</span>
+            </div>
+            
+            <div class="max-w-5xl fade-in relative py-12 md:py-16 z-10">
+                <div class="mb-12 flex justify-center">
+                    <div class="iphone-frame">
+                        <div class="iphone-notch"></div>
+                        <div class="iphone-screen flex items-center justify-center bg-zinc-950">
+                             <img src="images/MASTER_APP_ICON.jpg" alt="Ai Executive Assistant" class="w-24 h-24 rounded-[22px] shadow-2xl">
+                             <div class="absolute bottom-10 left-0 right-0 px-6">
+                                 <div class="h-1 w-20 bg-white/10 mx-auto rounded-full mb-4"></div>
+                                 <p class="text-[10px] text-white/20 font-bold uppercase tracking-widest">Active Intelligence</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gradient mb-6 block">The New Executive Standard</span>
                 <h1 class="hero-title text-apple-black mb-8">Stop mentally carrying<br class="hidden md:block"> everything yourself.</h1>
-                <p class="text-lg md:text-2xl text-apple-black mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight opacity-90">Ai Executive Assistant is your private executive memory. A system designed for continuity of thought in an increasingly fragmented professional world.</p>
+                <p class="text-lg md:text-2xl text-apple-black mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight opacity-80">Ai Executive Assistant is your private executive memory. A system designed for continuity of thought in a fragmented world.</p>
+                
                 <div class="flex flex-col items-center gap-6">
-                    <a href="#" class="group px-8 py-3.5 bg-apple-black text-white rounded-full font-semibold text-[17px] hover:bg-black/90 transition-all flex items-center gap-3">
+                    <a href="#" class="btn-premium">
                         Explore on the App Store 
                         <i class="fab fa-apple text-xl"></i>
                     </a>
-                    <p class="text-apple-black/40 text-[11px] font-bold uppercase tracking-widest">Coming Soon</p>
+                    <p class="text-apple-black/40 text-[11px] font-bold uppercase tracking-widest">Available Fall 2026</p>
                 </div>
             </div>
         </section>
@@ -131,7 +234,7 @@
             <div class="container mx-auto content-width">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 items-center">
                     <div class="fade-in">
-                        <span class="text-apple-blue font-bold text-[11px] tracking-widest uppercase mb-4 block font-sans">Flagship Feature</span>
+                        <span class="text-brand-blue font-bold text-[11px] tracking-widest uppercase mb-4 block font-sans">Flagship Feature</span>
                         <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight mb-8">The Executive Brief.</h2>
                         <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic opacity-80">“What’s occupying your mind today?”</p>
                         <p class="text-lg text-apple-black font-normal leading-relaxed mb-10 tracking-tight">Start every morning with a calm, editorial-style synthesis of your recurring themes, unresolved follow-ups, and evolving projects. It’s situational clarity, designed to relieve the mental burden of management.</p>
@@ -141,7 +244,7 @@
                             <div class="border-b border-apple-border pb-8">
                                 <p class="text-[11px] uppercase tracking-widest text-apple-black font-sans mb-4">Monday Briefing</p>
                                 <h3 class="text-3xl font-semibold mb-4 italic text-apple-black">Themes of the Week</h3>
-                                <p class="text-apple-black/80 leading-relaxed text-lg">Discussions around <span class="text-apple-black font-medium">Series B strategy</span> and <span class="text-apple-black font-medium">Executive hiring</span> have surfaced in your last three voice notes.</p>
+                                <p class="text-apple-black/80 leading-relaxed text-lg">Discussions around <span class="text-apple-black font-medium border-b border-brand-blue/20">Series B strategy</span> and <span class="text-apple-black font-medium border-b border-brand-pink/20">Executive hiring</span> have surfaced in your last three voice notes.</p>
                             </div>
                         </div>
                     </div>
@@ -161,7 +264,7 @@
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></span>
+                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.21</span></span>
                     <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
                 </div>
                 <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
