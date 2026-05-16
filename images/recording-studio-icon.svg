@@ -7,9 +7,9 @@
     </linearGradient>
   </defs>
   
-  <!-- Consistent Rounded Background -->
+  <!-- Consistent Master Icon Background -->
   <rect width="1024" height="1024" rx="225" fill="url(#brand_gradient)"/>
   
-  <!-- Recording Studio Symbol (Video Camera) -->
+  <!-- Recording Studio Symbol (Video Camera) in White -->
   <path d="M720 352L544 480V352C544 316.8 515.2 288 480 288H192C156.8 288 128 316.8 128 352V672C128 707.2 156.8 736 192 736H480C515.2 736 544 707.2 544 672V544L720 672V352Z" fill="white"/>
 </svg>
