@@ -1,27 +1,34 @@
-# AIExecutiveAssistant Website
+# PnP Technologies Website
 
-A premium, Apple-inspired website for AIExecutiveAssistant.
+A premium, Apple-inspired website for PnP Technologies, featuring **Ai Executive Assistant** and **Recording Studio**.
+
+## The New Executive Standard
+
+The branding has been overhauled to align with the finalized iOS application visual identity:
+- **Premium Gradient**: A vibrant Cyan → Blue → Purple/Pink palette.
+- **Calm Cognitive Support**: Moving away from SaaS clichés towards a trusted executive memory system.
+- **Apple-Native Aesthetic**: Minimalist, high-fidelity design optimized for the Apple ecosystem.
 
 ## Features
 
-- **Calm Design System**: Dark mode palette with glassmorphism and premium typography.
 - **Privacy-First**: Focus on local-first architecture and on-device intelligence.
-- **Apple Ecosystem Integration**: Highlighted Siri, Spotlight, and native workflows.
-- **Responsive & Performant**: Buttery transitions and mobile-first optimization.
+- **Native Depth**: Deep integration with Siri, Spotlight, and iPhone camera workflows.
+- **Responsive & Performant**: Modern typography and buttery transitions.
 
 ## Technology Stack
 
-- **Tailwind CSS**: Utility-first styling via CDN.
-- **Inter/SF Pro Display**: Modern, editorial typography.
-- **Vanilla JS**: Subtle intersection animations for a high-end feel.
+- **Tailwind CSS**: Utility-first styling with custom brand color extensions.
+- **Typography**: Inter for UI, Playfair Display for editorial-style content.
+- **Assets**: High-quality SVG iconography and social discovery images.
 
 ## Structure
 
-- `index.html`: Main experience and narrative.
+- `index.html`: Studio overview and philosophy.
+- `ai-executive-assistant.html`: Product landing for the Ai Assistant.
+- `recording-studio.html`: Product landing for Recording Studio.
+- `support.html`: Customer success and app support.
 - `privacy.html`: Local-first privacy commitment.
-- `terms.html`: Premium service terms.
-- `thank-you.html`: Post-purchase experience.
+- `terms.html`: Professional service terms.
 
-## Delivery
-
-The redesign was implemented based on the "Calm Cognitive Support" direction, moving away from SaaS clichés towards a trusted executive memory system.
+## Current Version
+`v1.0.15`

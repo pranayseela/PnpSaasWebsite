@@ -7,30 +7,31 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PnP Technologies">
     <meta property="og:url" content="https://pnpsaas.com/recording-studio.html">
-    <meta property="og:title" content="Recording Studio">
-    <meta property="og:description" content="Professional external SSD recording for iPhone.">
-    <meta property="og:image" content="https://pnpsaas.com/images/studio-preview.jpg">
+    <meta property="og:title" content="Recording Studio — Cinema Grade Workflow">
+    <meta property="og:description" content="Professional external SSD recording for iPhone. ProRes capture with zero friction.">
+    <meta property="og:image" content="https://pnpsaas.com/images/ai-assistant-social.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Recording Studio">
     <meta name="twitter:description" content="Professional external SSD recording for iPhone.">
-    <meta name="twitter:image" content="https://pnpsaas.com/images/studio-preview.jpg">
+    <meta name="twitter:image" content="https://pnpsaas.com/images/ai-assistant-social.svg">
 
-    <link rel="apple-touch-icon" href="https://pnpsaas.com/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/ai-assistant-icon.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/ai-assistant-icon.svg">
     <link rel="canonical" href="https://pnpsaas.com/recording-studio.html">
     
-    
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.14">
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.15">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
-    
 
     <style>
-        :root { --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); --nav-height: 48px; }
+        :root { 
+            --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
+            --nav-height: 48px;
+            --premium-gradient: linear-gradient(135deg, #00D4FF 0%, #005BEA 50%, #B83AF3 100%);
+        }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
         body.menu-open { overflow: hidden !important; height: 100vh !important; }
         .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
@@ -40,9 +41,9 @@
         .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
         .text-apple-black { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-premium { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .brief-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
         .content-width { max-width: 1024px; margin: 0 auto; }
         #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 48px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
         #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
@@ -52,96 +53,106 @@
         .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
         .footer-column ul { space-y: 8px; }
         .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
-        .hero-title { font-size: clamp(40px, 10vw, 96px); line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
+        .hero-title { font-size: clamp(40px, 10vw, 96px); line-height: 1.1; font-weight: 600; letter-spacing: -0.025em; }
         .section-title { font-size: clamp(32px, 8vw, 56px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
         .section-padding { padding: 120px 22px; }
         @media (max-width: 768px) { .section-padding { padding: 80px 22px; } }
         .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 1; }
-        .content-container { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
-        .content-container h2 { font-weight: 600; font-size: 1.5rem; margin-top: 4rem; margin-bottom: 1.25rem; color: #1D1D1F; letter-spacing: -0.015em; border-bottom: 1px solid #F5F5F7; padding-bottom: 12px; }
-        .content-container p { font-weight: 400; line-height: 1.6; margin-bottom: 1.5rem; color: #1D1D1F; font-size: 17px; }
-        .support-card { background: #F5F5F7; border-radius: 24px; padding: 40px; margin-top: 40px; border: 1px solid rgba(0,0,0,0.02); }
     
-        *:focus-visible { outline: 2px solid #0066CC; outline-offset: 2px; }
+        *:focus-visible { outline: 2px solid #005BEA; outline-offset: 2px; }
+
+        .glass-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s var(--apple-ease); }
+        .glass-card:hover { transform: translateY(-5px); }
     </style>
 </head>
-<body class="selection:bg-apple-blue/20">
+<body class="selection:bg-apple-vibrantBlue/20">
 
     <!-- MASTER HEADER -->
     <nav class="fixed top-0 left-0 right-0 nav-master" aria-label="Global Navigation">
         <div class="nav-content">
-            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity">PnP Technologies</a>
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity text-apple-black">PnP Technologies</a>
             <div class="hidden md:flex items-center space-x-10">
                 <div class="group relative py-4">
                     <a class="nav-link">Software</a>
                     <div class="nav-dropdown">
                         <div class="flex flex-col gap-4">
-                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-blue transition-colors">Ai Executive Assistant</a>
-                            <a href="recording-studio.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-blue transition-colors">Recording Studio</a>
+                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors">Ai Executive Assistant</a>
+                            <a href="recording-studio.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors">Recording Studio</a>
                             <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
                         </div>
                     </div>
                 </div>
                 <a href="index.html#philosophy" class="nav-link">Philosophy</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
-                <a href="terms.html" class="nav-link">Terms</a>
                 <a href="support.html" class="nav-link">Support</a>
             </div>
-            <button id="menu-toggle" class="md:hidden p-2 text-apple-black focus:outline-none" aria-label="Toggle Menu"><i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i></button>
+            <button id="menu-toggle" class="md:hidden p-2 text-apple-black focus:outline-none" aria-label="Toggle Menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-apple-blue uppercase tracking-widest mb-2">Software</span>
+                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
                 <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
                 <a href="recording-studio.html" class="mobile-link">Recording Studio</a>
             </div>
             <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
-            <a href="terms.html" class="mobile-link">Terms</a>
             <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.14</span></div>
+            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.15</span></div>
         </div>
     </nav>
 
     <main>
-        <section class="min-h-[80svh] flex flex-col items-center justify-center text-center px-6 pt-16 bg-white">
+        <section class="min-h-[85svh] flex flex-col items-center justify-center text-center px-6 pt-24 bg-white overflow-hidden">
             <div class="max-w-5xl fade-in">
-                <span class="text-[12px] font-semibold tracking-[0.3em] uppercase text-apple-black mb-6 block">Cinema Grade Workflow</span>
-                <h1 class="text-5xl md:text-8xl font-semibold tracking-tight mb-8 text-apple-black leading-tight">Professional External<br>Recording Studio.</h1>
-                <p class="text-xl md:text-2xl text-apple-black mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight">Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.</p>
+                <span class="text-[12px] font-bold tracking-[0.4em] uppercase text-apple-black/40 mb-6 block">Cinema Grade Workflow</span>
+                <h1 class="hero-title text-apple-black mb-8 leading-[1.05]">Professional External<br>Recording Studio.</h1>
+                <p class="text-xl md:text-2xl text-apple-black mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight opacity-90">Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.</p>
                 <div class="flex flex-col items-center gap-6">
-                    <span class="text-apple-black font-semibold text-[17px]">Explore on the App Store <i class="fas fa-arrow-right text-[10px] ml-2" aria-hidden="true" aria-hidden="true"></i></span>
-                    <p class="text-apple-black text-sm">Coming Soon</p>
+                    <a href="#" class="group px-8 py-4 bg-apple-black text-white rounded-full font-semibold text-[17px] hover:bg-black/90 transition-all flex items-center gap-3">
+                        Coming Soon to the App Store 
+                        <i class="fab fa-apple text-xl" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 px-6 bg-apple-offwhite">
+        <section class="py-32 px-6 bg-apple-offwhite border-t border-apple-border/50">
             <div class="container mx-auto content-width">
                 <div class="grid md:grid-cols-2 gap-12">
-                    <div class="glass-card p-12 md:p-16 fade-in bg-white">
+                    <div class="glass-card p-12 md:p-16 fade-in">
+                        <div class="w-12 h-12 mb-8 flex items-center justify-center rounded-2xl bg-apple-black text-white">
+                            <i class="fas fa-video text-xl" aria-hidden="true"></i>
+                        </div>
                         <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">ProRes Direct</h3>
-                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight">Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.</p>
+                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight opacity-80">Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.</p>
                     </div>
-                    <div class="glass-card p-12 md:p-16 fade-in bg-white">
+                    <div class="glass-card p-12 md:p-16 fade-in">
+                        <div class="w-12 h-12 mb-8 flex items-center justify-center rounded-2xl bg-apple-black text-white">
+                            <i class="fas fa-layer-group text-xl" aria-hidden="true"></i>
+                        </div>
                         <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">Media Hub</h3>
-                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight">Organize, review, and offload media with a professional management layer built for the modern creator.</p>
+                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight opacity-80">Organize, review, and offload media with a professional management layer built for the modern creator.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 px-6 bg-white">
+        <section class="py-48 px-6 bg-white border-t border-apple-border/50">
             <div class="container mx-auto max-w-4xl text-center fade-in">
-                <h2 class="text-4xl text-apple-black md:text-6xl font-semibold tracking-tight mb-10">Native Power.</h2>
-                <p class="text-xl md:text-2xl text-apple-black font-normal leading-relaxed tracking-tight mb-16">Deeply integrated with iOS camera APIs and external hardware. Professional External Recording Studio turns your iPhone into a professional-grade cinema brain.</p>
-                <div class="flex flex-wrap justify-center gap-16 text-apple-black"><i class="fas fa-video text-5xl" aria-hidden="true" aria-hidden="true"></i><i class="fas fa-hdd text-5xl" aria-hidden="true" aria-hidden="true"></i><i class="fab fa-usb text-5xl" aria-hidden="true" aria-hidden="true"></i></div>
+                <span class="text-premium font-bold text-xs tracking-widest uppercase mb-6 block">Native Performance</span>
+                <h2 class="section-title text-apple-black mb-10">Native Power.</h2>
+                <p class="text-xl md:text-2xl text-apple-black font-normal leading-relaxed tracking-tight mb-16 opacity-90">Deeply integrated with iOS camera APIs and external hardware. Recording Studio turns your iPhone into a professional-grade cinema brain.</p>
+                <div class="flex flex-wrap justify-center gap-20 text-apple-black/20">
+                    <i class="fas fa-video text-6xl hover:text-apple-black transition-colors duration-500" aria-hidden="true"></i>
+                    <i class="fas fa-hdd text-6xl hover:text-apple-black transition-colors duration-500" aria-hidden="true"></i>
+                    <i class="fab fa-usb text-6xl hover:text-apple-black transition-colors duration-500" aria-hidden="true"></i>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- MASTER FOOTER -->
-    <footer class="footer-master" aria-label="Studio Footer">
+    <footer class="footer-master" aria-label="Global Footer">
         <div class="footer-content">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
                 <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="recording-studio.html">Recording Studio</a></li></ul></div>
@@ -151,10 +162,13 @@
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. All rights reserved. <span style="opacity: 1; margin-left: 10px; font-family: monospace;">v1.0.14</span></span>
-                    <div class="flex gap-4"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="sitemap.xml">Site Map</a></div>
+                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.15</span></span>
+                    <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
                 </div>
-                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"><i class="fab fa-apple text-xl" aria-hidden="true" aria-hidden="true"></i><span class="text-[10px] font-bold tracking-widest uppercase" style="color: #000000;">Ecosystem Native</span></div>
+                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="images/ai-assistant-icon.svg" alt="" class="w-5 h-5 rounded-[4px]">
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -167,10 +181,10 @@
         const body = document.body;
         menuToggle.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden-custom');
-            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times" aria-hidden="true" aria-hidden="true"></i>'; }
-            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i>'; }
+            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>'; }
+            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>'; }
         });
-        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true" aria-hidden="true"></i>'; }); });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>'; }); });
     </script>
 </body>
 </html>

@@ -12,6 +12,9 @@ module.exports = {
           lightGrey: '#FBFBFD',
           blue: '#005AC1',
           border: 'rgba(0, 0, 0, 0.1)',
+          cyan: '#00D4FF',
+          vibrantBlue: '#005BEA',
+          purple: '#B83AF3',
         }
       },
       fontFamily: { 

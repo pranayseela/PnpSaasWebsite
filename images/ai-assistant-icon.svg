@@ -1,0 +1,19 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand_gradient" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="0.5" stop-color="#005BEA"/>
+      <stop offset="1" stop-color="#B83AF3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Corners version for Favicon/Icon -->
+  <rect width="1024" height="1024" rx="225" fill="url(#brand_gradient)"/>
+  <path d="M512 176C326.4 176 176 303.6 176 460.8C176 548.8 228.8 626.4 309.6 680.8L241.6 828.8L404.8 743.2C438.4 751.2 474.4 755.2 512 755.2C697.6 755.2 848 627.6 848 470.4C848 313.2 697.6 185.6 512 185.6V176Z" fill="white"/>
+  <rect x="339" y="456" width="22" height="69" rx="11" fill="url(#brand_gradient)"/>
+  <rect x="406" y="386" width="22" height="209" rx="11" fill="url(#brand_gradient)"/>
+  <rect x="472" y="330" width="22" height="321" rx="11" fill="url(#brand_gradient)"/>
+  <rect x="539" y="367" width="22" height="247" rx="11" fill="url(#brand_gradient)"/>
+  <rect x="605" y="405" width="22" height="171" rx="11" fill="url(#brand_gradient)"/>
+  <rect x="672" y="456" width="22" height="69" rx="11" fill="url(#brand_gradient)"/>
+</svg>
