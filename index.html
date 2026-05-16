@@ -22,20 +22,20 @@
     <link rel="icon" type="image/jpeg" href="/images/MASTER_APP_ICON.jpg">
     <link rel="canonical" href="https://pnpsaas.com/">
     
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.18">
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.19">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <style>
         :root { 
             --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
-            --nav-height: 48px;
-            --premium-gradient: linear-gradient(135deg, #00D4FF 0%, #005BEA 50%, #B83AF3 100%);
+            --nav-height: 44px;
+            --premium-gradient: linear-gradient(135deg, #00DBFF 0%, #3A69FF 50%, #FF2BFF 100%);
         }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
         body.menu-open { overflow: hidden !important; height: 100vh !important; }
         .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
-        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; }
+        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
         .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
         .nav-link:hover { opacity: 0.7; }
         .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
@@ -53,18 +53,18 @@
         .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
         .footer-column ul { space-y: 8px; }
         .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
-        .hero-title { font-size: clamp(40px, 10vw, 96px); line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
-        .section-title { font-size: clamp(32px, 8vw, 56px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
-        .section-padding { padding: 120px 22px; }
-        @media (max-width: 768px) { .section-padding { padding: 80px 22px; } }
+        .hero-title { font-size: clamp(40px, 9vw, 80px); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
+        .section-title { font-size: clamp(32px, 7vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
+        .section-padding { padding: 80px 22px; }
+        @media (max-width: 768px) { .section-padding { padding: 60px 22px; } }
         .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 1; }
     
-        *:focus-visible { outline: 2px solid #005BEA; outline-offset: 2px; }
+        *:focus-visible { outline: 2px solid #3A69FF; outline-offset: 2px; }
 
         /* Defensive Scaling for Brand Assets */
-        .brand-icon-nav { width: 22px !important; height: 22px !important; min-width: 22px; min-height: 22px; object-fit: contain; }
-        .brand-icon-card { width: 80px !important; height: 80px !important; min-width: 80px; min-height: 80px; object-fit: contain; }
-        @media (max-width: 768px) { .brand-icon-card { width: 72px !important; height: 72px !important; min-width: 72px; min-height: 72px; } }
+        .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
+        .brand-icon-card { width: 80px !important; height: 80px !important; object-fit: contain; }
+        @media (max-width: 768px) { .brand-icon-card { width: 64px !important; height: 64px !important; } }
     </style>
 </head>
 <body class="selection:bg-apple-vibrantBlue/10">
@@ -92,22 +92,22 @@
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-premium uppercase tracking-widest mb-2">Software</span>
+                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
                 <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
                 <a href="recording-studio.html" class="mobile-link">Recording Studio</a>
             </div>
             <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.18</span></div>
+            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></div>
         </div>
     </nav>
 
     <main>
-        <section class="min-h-[95svh] flex flex-col items-center justify-center text-center px-6">
-            <div class="max-w-4xl fade-in" id="hero">
-                <h1 class="hero-title text-apple-black mb-6 py-2">PnP Technologies</h1>
-                <p class="text-xl md:text-2xl text-apple-black mb-12 max-w-2xl mx-auto font-normal tracking-tight">Building the quiet, powerful companions you need for your Apple ecosystem.</p>
+        <section class="min-h-[70svh] flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)]">
+            <div class="max-w-4xl fade-in py-16 md:py-24" id="hero">
+                <h1 class="hero-title text-apple-black mb-6">PnP Technologies</h1>
+                <p class="text-xl md:text-2xl text-apple-black mb-12 max-w-2xl mx-auto font-normal tracking-tight opacity-90">Building the quiet, powerful companions you need for your Apple ecosystem.</p>
                 <div class="flex flex-col items-center gap-10">
                     <a href="#products" class="text-apple-blue text-[19px] font-normal hover:underline inline-flex items-center gap-2">Explore the studio <i class="fas fa-chevron-right text-[10px]"></i></a>
                     <div class="scroll-indicator"></div>
@@ -117,23 +117,23 @@
 
         <section id="products" class="section-padding bg-apple-offwhite">
             <div class="content-width">
-                <div class="mb-24 text-center ">
+                <div class="mb-20 text-center ">
                     <h2 class="section-title text-apple-black mb-4">Software</h2>
-                    <p class="text-xl text-apple-black">Tools designed for clarity and control.</p>
+                    <p class="text-xl text-apple-black opacity-80">Tools designed for clarity and control.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-white rounded-[32px] p-12 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
+                    <div class="bg-white rounded-[32px] p-10 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
                         <div class="mb-10">
                             <img src="images/MASTER_APP_ICON.jpg" alt="Ai Executive Assistant" class="brand-icon-card rounded-[20px] shadow-lg shadow-black/5">
                         </div>
                         <h3 class="text-3xl font-semibold mb-4 tracking-tight">Ai Executive Assistant</h3>
-                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-80">Your private executive memory. Stop mentally carrying everything.</p>
+                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-70">Your private executive memory. Stop mentally carrying everything.</p>
                         <a href="ai-executive-assistant.html" class="text-premium text-[19px] font-semibold hover:opacity-80 flex items-center gap-2">Learn more <i class="fas fa-chevron-right text-[10px]"></i></a>
                     </div>
-                    <div class="bg-white rounded-[32px] p-12 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
+                    <div class="bg-white rounded-[32px] p-10 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
                         <div class="mb-10 text-6xl text-apple-black opacity-90"><i class="fas fa-video"></i></div>
                         <h3 class="text-3xl font-semibold mb-4 tracking-tight">Recording Studio</h3>
-                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-80">Professional external SSD recording workflows for iPhone.</p>
+                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-70">Professional external SSD recording workflows for iPhone.</p>
                         <a href="recording-studio.html" class="text-apple-black text-[19px] font-semibold hover:underline flex items-center gap-2">Learn more <i class="fas fa-chevron-right text-[10px]"></i></a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
             <div class="content-width text-center">
                 <div class="max-w-3xl mx-auto fade-in">
                     <h2 class="section-title text-apple-black mb-12">Studio Philosophy</h2>
-                    <p class="text-xl md:text-2xl text-apple-black mb-24 tracking-tight opacity-90">We believe software should be a quiet, powerful companion. Our studio is dedicated to building tools that respect your privacy and enhance your focus.</p>
+                    <p class="text-xl md:text-2xl text-apple-black mb-20 tracking-tight opacity-90">We believe software should be a quiet, powerful companion. Our studio is dedicated to building tools that respect your privacy and enhance your focus.</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-left">
                         <div><h3 class="text-[19px] font-semibold mb-3">Privacy First</h3><p class="text-apple-black text-[15px] opacity-70">Local-first by design. Your data never leaves your device.</p></div>
                         <div><h3 class="text-[19px] font-semibold mb-3">Native Depth</h3><p class="text-apple-black text-[15px] opacity-70">Built for the Apple ecosystem. Responsive, intuitive, and powerful.</p></div>
@@ -165,11 +165,11 @@
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.18</span></span>
+                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></span>
                     <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
                 </div>
                 <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="images/MASTER_APP_ICON.jpg" alt="" style="width: 20px; height: 20px; border-radius: 4px; object-fit: contain;">
+                    <img src="images/MASTER_APP_ICON.jpg" alt="" style="width: 18px; height: 18px; border-radius: 4px; object-fit: contain;">
                     <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
                 </div>
             </div>
@@ -177,7 +177,8 @@
     </footer>
 
     <script>
-...
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const body = document.body;
