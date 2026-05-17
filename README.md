@@ -1,6 +1,6 @@
 # PnP Technologies Website
 
-A premium, Apple-inspired website for PnP Technologies, featuring **Ai Executive Assistant** and **Recording Studio**.
+A premium, Apple-inspired website for PnP Technologies, featuring **Ai Executive Assistant** and **Cine Drive**.
 
 ## The New Executive Standard
 
@@ -25,10 +25,10 @@ The branding has been overhauled to align with the finalized iOS application vis
 
 - `index.html`: Studio overview and philosophy.
 - `ai-executive-assistant.html`: Product landing for the Ai Assistant.
-- `recording-studio.html`: Product landing for Recording Studio.
+- `cine-drive.html`: Product landing for Cine Drive.
 - `support.html`: Customer success and app support.
 - `privacy.html`: Local-first privacy commitment.
 - `terms.html`: Professional service terms.
 
 ## Current Version
-`v1.0.15`
+`v1.0.24`

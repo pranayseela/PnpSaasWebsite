@@ -35,7 +35,7 @@ This document serves as the permanent record of the end-to-end redesign and tech
 
 ## 6. Product Narratives
 *   **Ai Executive Assistant:** Overhauled based on the source-of-truth "Continuity Intelligence" positioning. Visualized "The Executive Brief" as a flagship editorial feature.
-*   **Professional External Recording Studio:** Positioned as a cinema-grade workflow tool for iPhone creators using external SSDs.
+*   **Professional External Cine Drive:** Positioned as a cinema-grade workflow tool for iPhone creators using external SSDs.
 
 ## Current Deployment
 *   **Version:** v1.0.13

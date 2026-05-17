@@ -15,7 +15,7 @@
 
 ## 3. Product Portfolio
 *   **AIExecutiveAssistant:** Private executive memory & continuity intelligence.
-*   **Professional External Recording Studio:** External SSD capture & ProRes workflows for iPhone.
+*   **Professional External Cine Drive:** External SSD capture & ProRes workflows for iPhone.
 
 ## 4. Visual Language
 *   **Colors:** Pitch Black, Pure White, Apple Grey (#1D1D1F), Material Translucency.
