@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <!-- High-Fidelity Social Discovery (iMessage/WhatsApp) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PnP Technologies">
     <meta property="og:url" content="https://pnpsaas.com/family-finance.html">
-    <meta property="og:title" content="Family Finance — Private Personal Ledger for macOS">
-    <meta property="og:description" content="Take control of your personal finances with a premium, offline-first macOS ledger. Zero tracking, local OCR, and smart statement ingestion.">
+    <meta property="og:title" content="Family Finance — Private Ledger for macOS">
+    <meta property="og:description" content="Your financial data belongs to you. Entirely local, offline-first, private, and secure. Smart statement ingestion, on-device receipt OCR, budgets, and optional iCloud sync.">
     <meta property="og:image" content="https://pnpsaas.com/images/family-finance-icon.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Family Finance">
-    <meta name="twitter:description" content="Premium offline-first macOS ledger. Zero tracking, local OCR, and smart statement ingestion.">
+    <meta name="twitter:title" content="Family Finance — Private Ledger">
+    <meta name="twitter:description" content="Offline-first personal ledger for macOS. Zero tracking, local OCR, smart imports, and private CloudKit sync.">
     <meta name="twitter:image" content="https://pnpsaas.com/images/family-finance-icon.png">
 
+    <meta name="description" content="Family Finance is a premium privacy-first ledger for macOS. Import CSV and bank PDFs, scan receipts with Vision OCR, budget with rollover, and keep everything local — with optional private iCloud sync.">
     <link rel="apple-touch-icon" href="images/family-finance-icon.png">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3">
     <link rel="canonical" href="https://pnpsaas.com/family-finance.html">
@@ -30,10 +30,10 @@
         :root { 
             --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
             --nav-height: 44px;
-            --brand-gold: #D4AF37;
-            --brand-dark: #1E293B;
-            --brand-slate: #475569;
-            --premium-gradient: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-slate) 100%);
+            --brand-cyan: #00DBFF;
+            --brand-blue: #3A69FF;
+            --brand-pink: #FF2BFF;
+            --premium-gradient: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-blue) 50%, var(--brand-pink) 100%);
         }
         body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
         body.menu-open { overflow: hidden !important; height: 100vh !important; }
@@ -52,7 +52,6 @@
         .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
 
-        /* Gold-Slate Aurora Living Background */
         .aurora-container {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -64,7 +63,7 @@
             position: absolute;
             width: 100%; height: 100%;
             filter: blur(120px);
-            opacity: 0.18;
+            opacity: 0.2;
             mix-blend-mode: multiply;
         }
         .blob {
@@ -72,11 +71,11 @@
             width: 80vw; height: 80vw;
             border-radius: 50%;
             animation: move 30s infinite alternate var(--apple-ease);
-            opacity: 0.35;
+            opacity: 0.4;
         }
-        .blob-1 { background: var(--brand-gold); top: -35%; left: -20%; animation-delay: 0s; }
-        .blob-2 { background: var(--brand-dark); bottom: -30%; right: -25%; animation-delay: -5s; }
-        .blob-3 { background: var(--brand-slate); top: 40%; right: 15%; animation-duration: 35s; }
+        .blob-1 { background: var(--brand-cyan); top: -30%; left: -20%; animation-delay: 0s; }
+        .blob-2 { background: var(--brand-pink); bottom: -30%; right: -20%; animation-delay: -5s; }
+        .blob-3 { background: var(--brand-blue); top: 40%; right: 15%; animation-duration: 35s; }
         
         @keyframes move {
             from { transform: translate(0, 0) scale(1); }
@@ -85,6 +84,7 @@
 
         .hero-title { font-size: clamp(34px, 8vw, 64px); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
         .text-gradient { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-brand-blue { color: var(--brand-blue); }
         
         .btn-premium {
             background: #1D1D1F;
@@ -105,12 +105,11 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* Floating Icon Effect with iOS Curvature */
         .floating-icon-wrapper {
             position: relative;
             display: inline-block;
             transition: transform 0.6s var(--apple-ease);
-            border-radius: 22.3%; /* Exact iOS Squircle Ratio */
+            border-radius: 22.3%;
             overflow: hidden;
         }
         .floating-icon-wrapper:hover {
@@ -121,7 +120,7 @@
             inset: -15px;
             background: var(--premium-gradient);
             filter: blur(35px);
-            opacity: 0.15;
+            opacity: 0.2;
             z-index: -1;
             border-radius: 22.3%;
         }
@@ -134,7 +133,6 @@
         
         .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
 
-        /* Defensive Scaling and Curvature */
         .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
         .brand-icon-hero { width: 115px; height: 110px; object-fit: cover; border-radius: 22.3%; }
         @media (max-width: 768px) { .brand-icon-hero { width: 88px; height: 88px; } }
@@ -145,7 +143,6 @@
 </head>
 <body class="selection:bg-apple-vibrantBlue/20">
 
-    <!-- MASTER HEADER -->
     <nav class="nav-master glass-master" aria-label="Global Navigation">
         <div class="nav-content">
             <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity text-apple-black">
@@ -185,7 +182,6 @@
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
         <section class="min-h-[85svh] relative flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] overflow-hidden">
             <div class="aurora-container">
                 <div class="aurora-blur">
@@ -203,29 +199,28 @@
                     </div>
                 </div>
                 
-                <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gradient mb-4 block">Ecosystem Native</span>
-                <h1 class="hero-title text-apple-black mb-6">Your financial records.<br class="hidden md:block"> Locally kept.</h1>
-                <p class="text-lg md:text-xl text-apple-black mb-10 max-w-2xl mx-auto font-normal leading-tight tracking-tight opacity-80">Family Finance is a premium offline-first financial ledger designed exclusively for macOS. Seamless statement ingestion, local OCR, and automatic tagging rules.</p>
+                <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gradient mb-4 block">Private Ledger for macOS</span>
+                <h1 class="hero-title text-apple-black mb-6">Your financial data<br class="hidden md:block"> belongs to you.</h1>
+                <p class="text-lg md:text-xl text-apple-black mb-10 max-w-2xl mx-auto font-normal leading-tight tracking-tight opacity-80">Family Finance is a premium privacy-first ledger designed exclusively for macOS. Entirely local, offline-first, and secure — with smart imports, on-device OCR, and optional private iCloud sync.</p>
                 
                 <div class="flex flex-col items-center gap-6">
                     <a href="#" class="group px-8 py-3.5 bg-apple-black text-white rounded-full font-semibold text-[17px] hover:bg-black/90 transition-all flex items-center gap-3">
                         Coming soon on the Mac App Store 
                         <i class="fab fa-apple text-xl"></i>
                     </a>
-                    <p class="text-apple-black/40 text-[10px] font-bold uppercase tracking-[0.3em]">Available Fall 2026</p>
+                    <p class="text-apple-black/40 text-[10px] font-bold uppercase tracking-[0.3em]">macOS Sonoma 14.0+ · Available Fall 2026</p>
                 </div>
             </div>
         </section>
 
-        <!-- MAIN HIGHLIGHT SECTION -->
         <section class="py-24 md:py-40 px-6 bg-apple-offwhite border-t border-apple-border/50">
             <div class="container mx-auto content-width">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 items-center">
                     <div class="fade-in">
-                        <span class="text-brand-blue font-bold text-[11px] tracking-widest uppercase mb-4 block font-sans">100% Offline Integrity</span>
-                        <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight mb-8">Quiet and Protected.</h2>
-                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic opacity-80">No middleman accounts. No subscription lock-in.</p>
-                        <p class="text-lg text-apple-black font-normal leading-relaxed mb-10 tracking-tight">Unlike modern SaaS trackers, Family Finance operates completely offline. Using Mac sandbox capabilities, we block all network traffic. Your transaction ledgers, imported bank sheets, and categorized budgets are stored locally on your Apple disk, keeping your sensitive wealth records where they belong: in your control.</p>
+                        <span class="text-brand-blue font-bold text-[11px] tracking-widest uppercase mb-4 block font-sans">Privacy &amp; Offline First</span>
+                        <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight mb-8">Quiet and protected.</h2>
+                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic opacity-80">No accounts. No tracking. No backend.</p>
+                        <p class="text-lg text-apple-black font-normal leading-relaxed mb-10 tracking-tight">Unlike modern finance SaaS, Family Finance keeps your ledger on your Mac. The App Sandbox disables network client and server access by default. CSV parsing, PDF statement extraction, and Vision OCR all run locally. Optional sync uses your private iCloud container via CloudKit — we never host or see your data.</p>
                     </div>
                     <div class="brief-card p-8 md:p-16 fade-in shadow-2xl shadow-black/[0.02]">
                         <div class="space-y-8 font-serif">
@@ -233,9 +228,9 @@
                                 <p class="text-[11px] uppercase tracking-widest text-apple-black font-sans mb-4">Core Principles</p>
                                 <h3 class="text-3xl font-semibold mb-4 italic text-apple-black">The Privacy Guarantee</h3>
                                 <ul class="flex flex-col gap-4 font-sans text-[15px] leading-relaxed text-apple-black/80">
-                                    <li><i class="fas fa-shield-alt text-brand-blue mr-3"></i> **Local Ingestion:** Process statement sheets on-device.</li>
-                                    <li><i class="fas fa-camera text-brand-blue mr-3"></i> **Local OCR:** Receipt character recognition using native Apple Vision.</li>
-                                    <li><i class="fas fa-sync text-brand-blue mr-3"></i> **iCloud Sync:** Private device-to-device synchronization via CloudKit.</li>
+                                    <li><i class="fas fa-shield-alt text-brand-blue mr-3"></i><strong>Local storage:</strong> SwiftData ledger sandboxed on your Mac.</li>
+                                    <li><i class="fas fa-camera text-brand-blue mr-3"></i><strong>Local OCR:</strong> Receipt recognition with Apple Vision — zero uploads.</li>
+                                    <li><i class="fas fa-cloud text-brand-blue mr-3"></i><strong>Optional iCloud:</strong> Private CloudKit sync across your Macs only.</li>
                                 </ul>
                             </div>
                         </div>
@@ -244,40 +239,47 @@
             </div>
         </section>
 
-        <!-- PRODUCT FEATURES DETAIL -->
         <section class="py-24 md:py-40 px-6 bg-white border-t border-apple-border/50">
             <div class="container mx-auto content-width">
                 <div class="text-center mb-24">
                     <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gradient mb-4 block">Product Tour</span>
-                    <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight">Designed for native depth.</h2>
+                    <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight">Built for native depth.</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div class="fade-in">
                         <i class="fas fa-file-invoice-dollar text-3xl text-brand-blue mb-6"></i>
                         <h3 class="text-2xl font-semibold mb-4">Smart Statement Ingestion</h3>
-                        <p class="text-lg leading-relaxed text-apple-black/70">Parse statement files securely. Supports automatic template mapping for Chase and Amex PDFs, customizable CSV column assignment, and local presets mapping to streamline monthly ledger updating.</p>
+                        <p class="text-lg leading-relaxed text-apple-black/70">Import bank CSVs with auto-detected separators and saved column mapping presets. Parse Chase Checking and Amex PDF statements with PDFKit — then review, edit, and commit in a duplicate-aware import grid.</p>
                     </div>
                     <div class="fade-in">
                         <i class="fas fa-receipt text-3xl text-brand-blue mb-6"></i>
-                        <h3 class="text-2xl font-semibold mb-4">Vision OCR Scanning</h3>
-                        <p class="text-lg leading-relaxed text-apple-black/70">Scan or drop receipt PDFs and images to trigger Apple's Vision framework. The engine extracts merchant data, item names, and proportional tax/discount distributions on-device with zero server uploads.</p>
+                        <h3 class="text-2xl font-semibold mb-4">Receipt OCR &amp; Itemization</h3>
+                        <p class="text-lg leading-relaxed text-apple-black/70">Drop receipt images or scanned PDFs into the Receipts workspace. On-device Vision OCR extracts merchants, line items, and distributes tax and discounts proportionally — with automatic card-suffix or cash account routing.</p>
                     </div>
                     <div class="fade-in">
                         <i class="fas fa-cogs text-3xl text-brand-blue mb-6"></i>
-                        <h3 class="text-2xl font-semibold mb-4">Rule Prioritization Pipeline</h3>
-                        <p class="text-lg leading-relaxed text-apple-black/70">Create automated category and tag mapping rules. Reorder priorities via simple drag-and-drop actions, with retroactive category propagation available instantly upon transaction edits.</p>
+                        <h3 class="text-2xl font-semibold mb-4">Rules &amp; Action Items</h3>
+                        <p class="text-lg leading-relaxed text-apple-black/70">Priority-ordered category and tag rules match payees and item memos. Seeded grocery and dining keywords help on first launch. An Action Items tab surfaces uncategorized transactions for bulk updates and retroactive rule application.</p>
                     </div>
                     <div class="fade-in">
                         <i class="fas fa-chart-pie text-3xl text-brand-blue mb-6"></i>
-                        <h3 class="text-2xl font-semibold mb-4">Calm Budgeting & Trends</h3>
-                        <p class="text-lg leading-relaxed text-apple-black/70">Establish category spending targets with sleek progress indicators. Toggle automatic rollover propagation across months, and explore long-term net worth histories with high-fidelity Swift Charts.</p>
+                        <h3 class="text-2xl font-semibold mb-4">Budgets, Charts &amp; Backups</h3>
+                        <p class="text-lg leading-relaxed text-apple-black/70">Track category limits with rollover, explore spending and net worth in Swift Charts with multi-year time ranges, and export or restore your SQLite database with integrity-checked backups.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="py-24 md:py-32 px-6 bg-apple-offwhite border-t border-apple-border/50">
+            <div class="container mx-auto content-width text-center max-w-3xl fade-in">
+                <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gradient mb-4 block">macOS Native</span>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-6">Designed for the Mac App Store.</h2>
+                <p class="text-lg text-apple-black/70 leading-relaxed mb-8">Family Finance — Private Ledger requires macOS Sonoma 14.0 or later. Built with SwiftUI, SwiftData, PDFKit, Vision, and CloudKit. No third-party analytics. No bank API connections. Your data stays yours.</p>
+                <a href="privacy.html" class="text-brand-blue text-[17px] font-semibold hover:underline inline-flex items-center gap-2">Read our privacy commitment <i class="fas fa-chevron-right text-[10px]"></i></a>
+            </div>
+        </section>
     </main>
 
-    <!-- MASTER FOOTER -->
     <footer class="footer-master" aria-label="Global Footer">
         <div class="footer-content">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
