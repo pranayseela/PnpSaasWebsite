@@ -22,7 +22,7 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3">
     <link rel="canonical" href="https://pnpsaas.com/privacy.html">
     
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.19">
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.20">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
@@ -83,6 +83,7 @@
                         <div class="flex flex-col gap-4">
                             <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
                             <a href="cine-drive.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Cine Drive</a>
+                            <a href="family-finance.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Family Finance</a>
                             <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
                         </div>
                     </div>
@@ -98,11 +99,12 @@
                 <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
                 <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
                 <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
+                <a href="family-finance.html" class="mobile-link">Family Finance</a>
             </div>
             <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
             <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></div>
+            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></div>
         </div>
     </nav>
 
@@ -116,26 +118,31 @@
 
         <section class="mb-16">
             <h2 class="text-2xl font-semibold mb-6">1. Local-First by Design</h2>
-            <p class="leading-relaxed">The core architecture of our software, including Ai Executive Assistant and Cine Drive, is "local-first." This means that your files, transcripts, memories, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
+            <p class="leading-relaxed">The core architecture of our software, including Ai Executive Assistant, Cine Drive, and Family Finance, is "local-first." This means that your files, transcripts, memories, financial transaction ledgers, and captured media are stored and processed directly on your Apple hardware. We do not maintain cloud databases for your private content.</p>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6">2. On-Device Intelligence</h2>
-            <p class="leading-relaxed">We leverage the Apple Neural Engine to perform complex AI tasks locally. No audio or sensitive data is ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without surveillance.</p>
+            <h2 class="text-2xl font-semibold mb-6">2. On-Device Intelligence & Processing</h2>
+            <p class="leading-relaxed">We leverage native on-device frameworks (such as the Apple Neural Engine, Vision OCR, and PDFKit) to perform complex tasks locally. No audio transcripts, parsed bank statements, or scanned receipt data are ever transmitted to our servers for processing. This ensures 100% privacy and lightning-fast performance without external surveillance.</p>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6">3. Data Collection</h2>
+            <h2 class="text-2xl font-semibold mb-6">3. Optional iCloud Synchronization</h2>
+            <p class="leading-relaxed">For software features that support synchronization across your personal Apple devices (such as Family Finance), all data is transferred directly and securely using Apple’s native CloudKit network. This synchronization utilizes your private iCloud container. PnP Technologies LLC does not host, run, or have access to any server middleman or database, meaning we have zero visibility or access to your synchronized ledger data.</p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6">4. Data Collection</h2>
             <p class="leading-relaxed">We do not collect personal identifiers, email addresses (unless you contact support), or usage behavior for the purpose of tracking or advertising. We do not have "accounts" for our software; your identity is managed by your device's native security systems.</p>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6">4. Support Communications</h2>
+            <h2 class="text-2xl font-semibold mb-6">5. Support Communications</h2>
             <p class="leading-relaxed">If you contact us at support@pnpsaas.com or privacy@pnpsaas.com, we will only use your email address to provide the requested assistance. We do not share these addresses with third parties.</p>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6">5. Secure Transactions</h2>
+            <h2 class="text-2xl font-semibold mb-6">6. Secure Transactions</h2>
             <p class="leading-relaxed">All licensing transactions are handled securely by our Merchant of Record. We only receive the minimum information required to deliver your license key. We never see or store your payment card details.</p>
         </section>
 
@@ -148,14 +155,14 @@
     <footer class="footer-master" aria-label="Global Footer">
         <div class="footer-content">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li></ul></div>
+                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
                 <div class="footer-column"><h3>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
                 <div class="footer-column"><h3>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
                 <div class="footer-column"><h3>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.19</span></span>
+                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></span>
                     <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
                 </div>
                 <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
