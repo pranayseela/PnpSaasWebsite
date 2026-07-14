@@ -1,5 +1,7 @@
 # AIExecutiveAssistant Website Redesign Plan
 
+> **Status:** Historical. The live studio site at `pnpsaas.com` has since shipped the portfolio redesign (Ai Executive Assistant, Cine Drive, Family Finance). For current structure, URLs, and App Store legal pages, see [README.md](README.md) and [pnpsaas.md](pnpsaas.md).
+
 ## 1. Full Website UX/UI Audit
 *   **Current State:** Generic SaaS landing page for a .NET Starter Kit.
 *   **Design Issues:** Loud gradients, busy feature grids, generic icons, and high-density technical jargon.

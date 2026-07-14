@@ -1,42 +1,54 @@
 # PnP Technologies - Studio Transformation Log
 
-This document serves as the permanent record of the end-to-end redesign and technical certification of the PnP Technologies studio footprint (pnpsaas.com).
+Permanent record of the redesign and certification of the PnP Technologies studio footprint (`pnpsaas.com`).
 
 ## 1. Core Brand Shift
-*   **Original State:** A generic SaaS landing page for a .NET Starter Kit.
-*   **Final State:** An elite, Apple-native software studio focusing on "Privacy-first Apple-native software."
-*   **Public Identity:** Strictly enforced "PnP Technologies" as the public brand and "PnP Technologies LLC" as the legal entity.
 
-## 2. The "Wonderful" Design System
-*   **Aesthetic:** Inspired by the current `apple.com` design language.
-*   **Palette:** Pure White (#FFFFFF), Apple Off-White (#F5F5F7), and Jet Black (#1D1D1F).
-*   **Typography:** Precision implementation of Apple's typographic rhythm:
-    *   **Leading:** 1.47059 (Standard Apple body line-height).
-    *   **Tracking:** -0.022em for premium character spacing.
-    *   **Hierarchy:** Inter (San-Serif) for UI/Structure; Playfair Display (Serif) for editorial reflection.
-*   **Materiality:** Shifted from harsh borders to soft, "Physical" elevations using physical-style drop shadows and translucent glass headers.
+* **Original State:** Generic SaaS landing page for a .NET Starter Kit.
+* **Final State:** Apple-native software studio: “Privacy-first Apple-native software.”
+* **Public Identity:** “PnP Technologies” (public) / “PnP Technologies LLC” (legal).
+
+## 2. Design System
+
+* **Aesthetic:** Inspired by current `apple.com` language.
+* **Palette:** Pure White (#FFFFFF), Apple Off-White (#F5F5F7), Jet Black (#1D1D1F).
+* **Typography:** Inter (UI), Playfair Display (editorial); Apple-like leading/tracking.
+* **Materiality:** Soft elevation, translucent glass headers.
 
 ## 3. Engineering & Consistency
-*   **Master Sync:** Programmatically enforced code-identical headers and footers across all 6 pages.
-*   **Universal Navigation:** Implemented a "Flat Navigation" architecture (Software, Philosophy, Privacy, Terms, Support) allowing single-click routing studio-wide.
-*   **Production Build:** Migrated from development CDN to a minified, local Tailwind CSS production engine (`dist/style.css`).
-*   **Automated Versioning:** Established a `v1.x.x` patch-level versioning system visible in all footers.
 
-## 4. Accessibility & Quality Certification
-*   **WCAG 2 AA Compliance:** Achieved a zero-defect posture in Axe DevTools.
-*   **Contrast:** Enforced a minimum 4.5:1 ratio (Solid Black on White) for all text elements.
-*   **Semantics:** Validated H1 -> H2 -> H3 hierarchy and added ARIA labels to all global navigation components.
-*   **Mobile-First Safari:** Optimized for Dynamic Viewport Height (100dvh) with isolated full-screen overlays and body-scroll locking.
+* Shared header/footer patterns across marketing and legal pages.
+* Navigation: Software, Philosophy, Privacy, Support (plus Legal in footer: Privacy, Terms).
+* Production Tailwind build at `dist/style.css`.
+* Patch versioning visible in footers (current: **v1.0.20**).
+
+## 4. Accessibility & Quality
+
+* WCAG 2 AA posture (contrast, semantics, ARIA on global nav).
+* Mobile Safari: `100dvh`, full-screen menu with body scroll lock.
 
 ## 5. Social Identity & Previews
-*   **Link Previews:** Optimized for WhatsApp, iMessage, and X (Twitter) using the latest 2025 Meta/Apple crawler specifications.
-*   **Branded OG Image:** Created a cinematic `studio-preview.jpg` (1200x630) using precision system fonts and soft radial depth.
-*   **Iconography:** Added `apple-touch-icon` support for high-quality iOS home screen and chat bubble rendering.
+
+* Open Graph / Twitter cards for iMessage, WhatsApp, and X.
+* Product and studio icons under `images/` (including Family Finance).
 
 ## 6. Product Narratives
-*   **Ai Executive Assistant:** Overhauled based on the source-of-truth "Continuity Intelligence" positioning. Visualized "The Executive Brief" as a flagship editorial feature.
-*   **Professional External Cine Drive:** Positioned as a cinema-grade workflow tool for iPhone creators using external SSDs.
+
+* **Ai Executive Assistant:** Continuity intelligence / private executive memory (iOS).
+* **Cine Drive:** Cinema-grade external SSD workflows for iPhone.
+* **Family Finance Ledger:** Offline-first macOS private ledger — local SwiftData, CSV/PDF imports, Vision OCR, budgets/charts, optional private CloudKit sync. No bank feeds. Free download with Family Finance Pro via Apple In-App Purchase (Monthly $0.99, Yearly $9.99, Lifetime $39.99; 14-day intro when eligible).
+
+## 7. Legal & App Store readiness (2026-07-14)
+
+* Restored full **Terms of Service** (`terms.html`) covering Mac App Store licensing, Free/Pro, auto-renew, cancellation in System Settings, and Apple-handled refunds.
+* Updated **Privacy Policy** purchases section for StoreKit / Apple IAP (plus optional merchant-of-record for non–App Store products).
+* Added **`privacy-policy.html`** as a **full copy** of `privacy.html` so `/privacy-policy` never 404s (older app/docs links). Preferred Connect URL remains **`https://pnpsaas.com/privacy`**.
+* Support page documents Pro subscription management.
+* Family Finance product page states Free download + optional Pro (no stale “Fall 2026 only” CTA).
+* Deployed to GitHub Pages; live checks: `/privacy`, `/privacy-policy`, `/terms`, `/support`, `/family-finance` → **200**.
 
 ## Current Deployment
-*   **Version:** v1.0.13
-*   **Status:** Production-Ready / App Store Review Certified.
+
+* **Version:** v1.0.20 (footer / asset query)
+* **Status:** Live on GitHub Pages; aligned for Family Finance Mac App Store review (privacy + terms + support must stay reachable).
+* **Canonical privacy URL for App Store Connect:** `https://pnpsaas.com/privacy`
