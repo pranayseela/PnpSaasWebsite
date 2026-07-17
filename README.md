@@ -48,7 +48,20 @@ Privacy policy states Mac App Store / StoreKit purchases are processed by Apple;
 | `terms.html` | Terms of Service |
 | `sitemap.xml` | Search / sitemap entries |
 | `dist/style.css` | Built Tailwind CSS |
-| `images/` | Icons and OG assets |
+| `images/` | Brand + product icons and OG assets (see below) |
+
+### Brand & product images (`images/`)
+
+| File | Role |
+|------|------|
+| `pnp-technologies-icon.png` | Studio mark (footer on all pages) |
+| `pnp-technologies-og.jpg` | Studio Open Graph / WhatsApp share (`1200×630`) — home, support, privacy, terms |
+| `ai-executive-assistant-icon.jpg` | Ai Executive Assistant product icon + product OG |
+| `cine-drive-icon.png` | Cine Drive product icon + product OG |
+| `family-finance-icon.png` | Family Finance product icon + product OG |
+| `favicon.svg` | Browser tab icon (brand gradient) |
+
+Product pages keep their own app icon for social previews; studio pages use `pnp-technologies-og.jpg`. Brand colors: `#00DBFF` → `#3A69FF` → `#FF2BFF`.
 
 ### Keeping privacy pages in sync
 

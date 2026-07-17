@@ -30,7 +30,9 @@ Permanent record of the redesign and certification of the PnP Technologies studi
 ## 5. Social Identity & Previews
 
 * Open Graph / Twitter cards for iMessage, WhatsApp, and X.
-* Product and studio icons under `images/` (including Family Finance).
+* **Studio mark:** `images/pnp-technologies-icon.png` (footer); share card `images/pnp-technologies-og.jpg` (`1200×630`, `summary_large_image`) on home / support / privacy / terms.
+* **Product icons** (also used as product-page OG): `ai-executive-assistant-icon.jpg`, `cine-drive-icon.png`, `family-finance-icon.png`.
+* **Favicon:** `images/favicon.svg` (brand gradient). Do not reuse a product icon for studio share or footer.
 
 ## 6. Product Narratives
 
