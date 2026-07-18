@@ -55,13 +55,22 @@ Privacy policy states Mac App Store / StoreKit purchases are processed by Apple;
 | File | Role |
 |------|------|
 | `pnp-technologies-icon.png` | Studio mark (footer on all pages) |
-| `pnp-technologies-og.jpg` | Studio Open Graph / WhatsApp share (`1200×630`) — home, support, privacy, terms |
-| `ai-executive-assistant-icon.jpg` | Ai Executive Assistant product icon + product OG |
-| `cine-drive-icon.png` | Cine Drive product icon + product OG |
-| `family-finance-icon.png` | Family Finance product icon + product OG |
+| `pnp-technologies-og.jpg` | Studio WhatsApp / Open Graph share (`1200×630`, &lt;600KB) |
+| `ai-executive-assistant-icon.jpg` | Ai Executive Assistant product icon + OG |
+| `cine-drive-icon.png` | Cine Drive on-page product icon |
+| `cine-drive-og.jpg` | Cine Drive WhatsApp / OG share (&lt;600KB) |
+| `family-finance-icon.png` | Family Finance on-page product icon |
+| `family-finance-og.jpg` | Family Finance WhatsApp / OG share (&lt;600KB) |
 | `favicon.svg` | Browser tab icon (brand gradient) |
 
-Product pages keep their own app icon for social previews; studio pages use `pnp-technologies-og.jpg`. Brand colors: `#00DBFF` → `#3A69FF` → `#FF2BFF`.
+Product pages keep high-res icons for on-page display; WhatsApp/OG uses dedicated assets under **600KB**. Brand colors: `#00DBFF` → `#3A69FF` → `#FF2BFF`.
+
+**WhatsApp link preview requirements (studio + product pages):**
+- Required in `<head>`: `og:title`, `og:description`, `og:url`, `og:image` (absolute URL, no tracking params)
+- `og:description` ≈ 80 characters
+- `og:image` ≥ 300px wide, aspect ratio width/height ≤ 4:1, file size **&lt; 600KB**
+- Studio share card: `pnp-technologies-og.jpg` (1200×630)
+- Product share cards: `*-og.jpg` (1024×1024) — not the large PNGs
 
 ### Keeping privacy pages in sync
 
