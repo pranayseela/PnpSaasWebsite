@@ -16,7 +16,9 @@ GitHub Pages hosts this repo. Clean URLs (e.g. `/privacy`, `/terms`) resolve to 
 |--------|----------|-----------|--------|
 | Ai Executive Assistant | iOS | `ai-executive-assistant.html` | Private executive memory |
 | Cine Drive | iOS | `cine-drive.html` | External SSD recording for iPhone |
-| Family Finance Ledger | macOS | `family-finance.html` | Offline-first private ledger; Free + Pro via Mac App Store IAP |
+| Family Finance Ledger | macOS | `family-finance.html` | **Live** on Mac App Store — Free + Pro via IAP |
+
+**Mac App Store:** https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
 **Family Finance Pro (App Store):** Monthly ($0.99), Yearly ($9.99), Lifetime ($39.99); optional 14-day intro on subscriptions when eligible. Cancel Monthly/Yearly in System Settings → Apple ID → Subscriptions.
 
@@ -31,6 +33,7 @@ Use these on App Store Connect and in-app legal links:
 | Support | `https://pnpsaas.com/support` | Also `support.html` — includes Family Finance Pro / subscription help. |
 | Marketing | `https://pnpsaas.com` | Studio home |
 | Product | `https://pnpsaas.com/family-finance` | Product landing |
+| Mac App Store | `https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12` | Family Finance Ledger download |
 
 Privacy policy states Mac App Store / StoreKit purchases are processed by Apple; Family Finance has no PnP billing backend. Optional iCloud sync uses the user’s private CloudKit container.
 

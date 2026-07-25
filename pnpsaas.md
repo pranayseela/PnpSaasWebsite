@@ -38,7 +38,7 @@ Permanent record of the redesign and certification of the PnP Technologies studi
 
 * **Ai Executive Assistant:** Continuity intelligence / private executive memory (iOS).
 * **Cine Drive:** Cinema-grade external SSD workflows for iPhone.
-* **Family Finance Ledger:** Offline-first macOS private ledger — local SwiftData, CSV/PDF imports, Vision OCR, budgets/charts, optional private CloudKit sync. No bank feeds. Free download with Family Finance Pro via Apple In-App Purchase (Monthly $0.99, Yearly $9.99, Lifetime $39.99; 14-day intro when eligible).
+* **Family Finance Ledger:** Offline-first macOS private ledger — local SwiftData, CSV/PDF imports, Vision OCR, budgets/charts, optional private CloudKit sync. No bank feeds. **Live** on the Mac App Store (Free + Family Finance Pro via IAP: Monthly $0.99, Yearly $9.99, Lifetime $39.99; 14-day intro when eligible). Store: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
 ## 7. Legal & App Store readiness (2026-07-14)
 
@@ -46,11 +46,18 @@ Permanent record of the redesign and certification of the PnP Technologies studi
 * Updated **Privacy Policy** purchases section for StoreKit / Apple IAP (plus optional merchant-of-record for non–App Store products).
 * Added **`privacy-policy.html`** as a **full copy** of `privacy.html` so `/privacy-policy` never 404s (older app/docs links). Preferred Connect URL remains **`https://pnpsaas.com/privacy`**.
 * Support page documents Pro subscription management.
-* Family Finance product page states Free download + optional Pro (no stale “Fall 2026 only” CTA).
+* Family Finance product page CTA points to the Mac App Store (live 2026-07-24).
 * Deployed to GitHub Pages; live checks: `/privacy`, `/privacy-policy`, `/terms`, `/support`, `/family-finance` → **200**.
+
+## 8. Mac App Store launch (2026-07-24)
+
+* Family Finance Ledger **1.1** approved and publicly live.
+* Site CTAs updated: `family-finance.html` hero, home product card, support download link.
+* Canonical Mac App Store URL: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
 ## Current Deployment
 
 * **Version:** v1.0.20 (footer / asset query)
-* **Status:** Live on GitHub Pages; aligned for Family Finance Mac App Store review (privacy + terms + support must stay reachable).
+* **Status:** Live on GitHub Pages; Family Finance **Live** on Mac App Store.
 * **Canonical privacy URL for App Store Connect:** `https://pnpsaas.com/privacy`
+* **Mac App Store:** https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12

@@ -21,7 +21,7 @@
 
 * **Ai Executive Assistant (iOS):** Private executive memory & continuity intelligence.
 * **Cine Drive (iOS):** External SSD capture & ProRes workflows for iPhone.
-* **Family Finance Ledger (macOS):** Offline-first private ledger — imports, on-device OCR, budgets, optional private iCloud sync. Monetization: Free + Pro via Mac App Store In-App Purchase (subscriptions + lifetime). No bank API / no PnP cloud ledger backend.
+* **Family Finance Ledger (macOS):** Offline-first private ledger — imports, on-device OCR, budgets, optional private iCloud sync. **Live** on the Mac App Store: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12. Monetization: Free + Pro via In-App Purchase (subscriptions + lifetime). No bank API / no PnP cloud ledger backend.
 
 ## 4. Visual Language
 
