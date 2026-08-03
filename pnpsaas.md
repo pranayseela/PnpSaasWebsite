@@ -36,7 +36,7 @@ Permanent record of the redesign and certification of the PnP Technologies studi
 
 ## 6. Product Narratives
 
-* **Ai Executive Assistant:** Continuity intelligence / private executive memory (iOS).
+* **Ai Executive Assistant:** Continuity intelligence / private executive memory (iOS). **Live** on the App Store: https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650
 * **Cine Drive:** Cinema-grade external SSD workflows for iPhone.
 * **Family Finance Ledger:** Offline-first macOS private ledger — local SwiftData, CSV/PDF imports, Vision OCR, budgets/charts, optional private CloudKit sync. No bank feeds. **Live** on the Mac App Store (Free + Family Finance Pro via IAP: Monthly $0.99, Yearly $9.99, Lifetime $39.99; 14-day intro when eligible). Store: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
@@ -55,9 +55,16 @@ Permanent record of the redesign and certification of the PnP Technologies studi
 * Site CTAs updated: `family-finance.html` hero, home product card, support download link.
 * Canonical Mac App Store URL: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
+## 9. iOS App Store launch — Ai Executive Assistant Pro (2026-08-02)
+
+* Ai Executive Assistant Pro approved and publicly live.
+* Site CTAs updated: `ai-executive-assistant.html` hero, home product card, support download link.
+* Canonical App Store URL: https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650
+
 ## Current Deployment
 
 * **Version:** v1.0.20 (footer / asset query)
-* **Status:** Live on GitHub Pages; Family Finance **Live** on Mac App Store.
+* **Status:** Live on GitHub Pages; Family Finance **Live** on Mac App Store; Ai Executive Assistant Pro **Live** on the iOS App Store.
 * **Canonical privacy URL for App Store Connect:** `https://pnpsaas.com/privacy`
+* **iOS App Store:** https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650
 * **Mac App Store:** https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12

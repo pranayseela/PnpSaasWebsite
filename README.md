@@ -14,11 +14,13 @@ GitHub Pages hosts this repo. Clean URLs (e.g. `/privacy`, `/terms`) resolve to 
 
 | Product | Platform | Site page | Notes |
 |--------|----------|-----------|--------|
-| Ai Executive Assistant | iOS | `ai-executive-assistant.html` | Private executive memory |
+| Ai Executive Assistant | iOS | `ai-executive-assistant.html` | **Live** on the App Store — Free + Executive Pro via IAP |
 | Cine Drive | iOS | `cine-drive.html` | External SSD recording for iPhone |
 | Family Finance Ledger | macOS | `family-finance.html` | **Live** on Mac App Store — Free + Pro via IAP |
 
-**Mac App Store:** https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
+**iOS App Store (Ai Executive Assistant Pro):** https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650
+
+**Mac App Store (Family Finance Ledger):** https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12
 
 **Family Finance Pro (App Store):** Monthly ($0.99), Yearly ($9.99), Lifetime ($39.99); optional 14-day intro on subscriptions when eligible. Cancel Monthly/Yearly in System Settings → Apple ID → Subscriptions.
 
@@ -33,6 +35,7 @@ Use these on App Store Connect and in-app legal links:
 | Support | `https://pnpsaas.com/support` | Also `support.html` — includes Family Finance Pro / subscription help. |
 | Marketing | `https://pnpsaas.com` | Studio home |
 | Product | `https://pnpsaas.com/family-finance` | Product landing |
+| iOS App Store | `https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650` | Ai Executive Assistant Pro download |
 | Mac App Store | `https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12` | Family Finance Ledger download |
 
 Privacy policy states Mac App Store / StoreKit purchases are processed by Apple; Family Finance has no PnP billing backend. Optional iCloud sync uses the user’s private CloudKit container.
