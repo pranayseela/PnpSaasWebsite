@@ -19,7 +19,7 @@
 
 ## 3. Product Portfolio
 
-* **Ai Executive Assistant (iOS):** Private executive memory & continuity intelligence.
+* **Ai Executive Assistant (iOS):** Private executive memory & continuity intelligence. **Live** on the App Store: https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650
 * **Cine Drive (iOS):** External SSD capture & ProRes workflows for iPhone.
 * **Family Finance Ledger (macOS):** Offline-first private ledger — imports, on-device OCR, budgets, optional private iCloud sync. **Live** on the Mac App Store: https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12. Monetization: Free + Pro via In-App Purchase (subscriptions + lifetime). No bank API / no PnP cloud ledger backend.
 
