@@ -3,171 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta property="og:title" content="PnP Technologies">
-    <meta property="og:description" content="Privacy-first software for the Apple ecosystem.">
+    <title>PnP Technologies — Private, Native Apple Software</title>
+    <meta name="description" content="PnP Technologies builds focused, privacy-first native apps for iPhone, iPad, and Mac. Private. Native. Purpose-built.">
+
+    <meta property="og:title" content="PnP Technologies — Private, Native Apple Software">
+    <meta property="og:description" content="Focused tools for the Apple ecosystem — private by design, native to Apple, built for everyday use.">
     <meta property="og:url" content="https://pnpsaas.com/">
     <meta property="og:image" content="https://pnpsaas.com/images/pnp-technologies-og.jpg">
-
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PnP Technologies">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PnP Technologies">
-    <meta name="twitter:description" content="Privacy-first software for the Apple ecosystem.">
+    <meta name="twitter:title" content="PnP Technologies — Private, Native Apple Software">
+    <meta name="twitter:description" content="Focused tools for the Apple ecosystem — private by design, native to Apple, built for everyday use.">
     <meta name="twitter:image" content="https://pnpsaas.com/images/pnp-technologies-og.jpg">
 
-    <link rel="apple-touch-icon" href="images/pnp-technologies-icon.png?v=4">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=4">
+    <link rel="apple-touch-icon" href="images/pnp-technologies-icon.png?v=6">
+    <link rel="icon" href="favicon.ico?v=6" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=6">
     <link rel="canonical" href="https://pnpsaas.com/">
-    
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.20">
+
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.22">
+    <link rel="stylesheet" href="css/site.css?v=v1.0.22">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <style>
-        :root { 
-            --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
-            --nav-height: 44px;
-            --premium-gradient: linear-gradient(135deg, #00DBFF 0%, #3A69FF 50%, #FF2BFF 100%);
-        }
-        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
-        body.menu-open { overflow: hidden !important; height: 100vh !important; }
-        .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
-        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: relative; z-index: 10000; }
-        .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
-        .nav-link:hover { opacity: 0.7; }
-        .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-        .text-apple-black { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-premium { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .content-width { max-width: 1024px; margin: 0 auto; }
-        #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 24px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
-        @media (min-width: 480px) { #mobile-menu { padding-left: 48px; padding-right: 48px; } }
-        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-        .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
-        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
-        .footer-content { max-width: 1024px; margin: 0 auto; }
-        .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
-        .footer-column ul { space-y: 8px; }
-        .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
-        .hero-title { font-size: clamp(40px, 9vw, 80px); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
-        .section-title { font-size: clamp(32px, 7vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
-        .section-padding { padding: 80px 22px; }
-        @media (max-width: 768px) { .section-padding { padding: 60px 22px; } }
-        .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 1; }
-    
-        *:focus-visible { outline: 2px solid #3A69FF; outline-offset: 2px; }
-
-        /* Defensive Scaling for Brand Assets */
-        .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
-        .brand-icon-card { width: 80px !important; height: 80px !important; object-fit: contain; }
-        @media (max-width: 768px) { .brand-icon-card { width: 64px !important; height: 64px !important; } }
-    </style>
 </head>
-<body class="selection:bg-apple-vibrantBlue/10">
+<body class="selection:bg-apple-vibrantBlue/10" data-page="home">
 
-    <!-- MASTER HEADER -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <nav class="fixed top-0 left-0 right-0 nav-master" aria-label="Global Navigation">
         <div class="nav-content">
             <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity text-apple-black whitespace-nowrap">PnP Technologies</a>
-            <div class="hidden md:flex items-center space-x-10">
+            <div class="hidden md:flex items-center space-x-9">
                 <div class="group relative py-4">
-                    <a class="nav-link">Software</a>
-                    <div class="nav-dropdown">
+                    <a href="index.html#apps" class="nav-link">Apps</a>
+                    <div class="nav-dropdown" role="menu">
                         <div class="flex flex-col gap-4">
-                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
-                            <a href="cine-drive.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Cine Drive</a>
-                            <a href="family-finance.html" class="text-[14px] font-semibold text-apple-black hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Family Finance</a>
-                            <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
+                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
+                            <a href="cine-drive.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Cine Drive</a>
+                            <a href="family-finance.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors whitespace-nowrap">Family Finance</a>
+                            <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#apps" class="text-[11px] font-medium text-[#1D1D1F]/60 hover:text-[#1D1D1F] uppercase tracking-wider">All Apps</a></div>
                         </div>
                     </div>
                 </div>
-                <a href="index.html#philosophy" class="nav-link">Philosophy</a>
+                <a href="about.html" class="nav-link">About</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
-                <a href="support.html" class="nav-link">Support</a>
+                <a href="support.html" class="nav-link">Contact</a>
+                <a href="index.html#apps" class="nav-cta">Explore Apps</a>
             </div>
-            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-apple-black focus:outline-none" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-[#1D1D1F] focus:outline-none" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
             <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
+                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Apps</span>
                 <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
                 <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
                 <a href="family-finance.html" class="mobile-link">Family Finance</a>
             </div>
-            <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
+            <a href="about.html" class="mobile-link mt-4">About</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
-            <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></div>
+            <a href="support.html" class="mobile-link">Contact</a>
+            <a href="index.html#apps" class="mobile-link">Explore Apps</a>
+            <div class="mt-auto pt-8 text-[12px] opacity-70">© 2026 PnP Technologies LLC.<span class="opacity-40 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.22</span></div>
         </div>
     </nav>
 
-    <main>
-        <section class="min-h-[70svh] flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)]">
-            <div class="max-w-4xl fade-in py-16 md:py-24" id="hero">
-                <h1 class="hero-title text-apple-black mb-6">PnP Technologies</h1>
-                <p class="text-xl md:text-2xl text-apple-black mb-12 max-w-2xl mx-auto font-normal tracking-tight opacity-90">Building the quiet, powerful companions you need for your Apple ecosystem.</p>
-                <div class="flex flex-col items-center gap-10">
-                    <a href="#products" class="text-apple-blue text-[19px] font-normal hover:underline inline-flex items-center gap-2">Explore the studio <i class="fas fa-chevron-right text-[10px]"></i></a>
-                    <div class="scroll-indicator"></div>
-                </div>
+    <main id="main">
+        <section class="hero-compact text-center hero-wash border-b border-black/[0.04]">
+            <div class="max-w-3xl mx-auto fade-in">
+                <p class="text-[12px] font-semibold tracking-[0.16em] uppercase text-[#1D1D1F]/45 mb-5">Private. Native. Purpose-built.</p>
+                <h1 class="hero-title text-apple-black mb-5">Software for the<br class="hidden sm:block"> Apple ecosystem.</h1>
+                <p class="text-[17px] md:text-xl text-[#1D1D1F]/75 mb-3 max-w-2xl mx-auto leading-relaxed tracking-tight">I build focused tools for problems I actually encounter — private by design, native to Apple.</p>
+                <p class="text-[15px] text-[#1D1D1F]/50 mb-9 max-w-xl mx-auto">Independent studio. Apps for iPhone, iPad, and Mac.</p>
+                <a href="#apps" class="inline-flex items-center justify-center min-h-[48px] px-8 py-3 rounded-full bg-[#1D1D1F] text-white text-[15px] font-semibold hover:bg-black transition-colors">Explore the Apps</a>
             </div>
         </section>
 
-        <section id="products" class="section-padding bg-apple-offwhite">
+        <section id="apps" class="section-padding bg-apple-offwhite">
             <div class="content-width">
-                <div class="mb-20 text-center ">
-                    <h2 class="section-title text-apple-black mb-4">Software</h2>
-                    <p class="text-xl text-apple-black opacity-80">Tools designed for clarity and control.</p>
+                <div class="mb-10 md:mb-12 text-center fade-in">
+                    <h2 class="section-title text-apple-black mb-3">Apps</h2>
+                    <p class="text-[17px] text-[#1D1D1F]/65 max-w-xl mx-auto">Each one solves a clear problem. No feature bloat.</p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                    <div class="bg-white rounded-[32px] p-10 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
-                        <div class="mb-10">
-                            <img src="images/ai-executive-assistant-icon.jpg" alt="Ai Executive Assistant" class="brand-icon-card rounded-[20px] shadow-lg shadow-black/5">
+                <div id="product-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
+                    <article class="product-card" data-product-id="ai-executive-assistant">
+                        <div class="mb-6">
+                            <img src="images/ai-executive-assistant-icon.jpg" alt="" class="brand-icon-card shadow-sm" width="64" height="64" loading="lazy">
                         </div>
-                        <h3 class="text-3xl font-semibold mb-4 tracking-tight">Ai Executive Assistant</h3>
-                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-70">Your private executive memory. Stop mentally carrying everything.</p>
-                        <div class="flex flex-col items-center gap-3">
-                            <a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer" class="text-premium text-[19px] font-semibold hover:opacity-80 flex items-center gap-2">App Store <i class="fab fa-apple text-[14px]"></i></a>
-                            <a href="ai-executive-assistant.html" class="text-apple-black text-[15px] font-semibold hover:opacity-70 flex items-center gap-2">Learn more <i class="fas fa-chevron-right text-[10px]"></i></a>
+                        <span class="product-badge live mb-3">Available on the App Store</span>
+                        <h3 class="text-[22px] md:text-2xl font-semibold mb-1 tracking-tight text-[#1D1D1F]">Ai Executive Assistant</h3>
+                        <p class="text-[13px] text-[#1D1D1F]/45 mb-4">iOS</p>
+                        <p class="text-[#1D1D1F]/80 text-[15px] leading-relaxed mb-3">Private executive memory for a fragmented day — so you stop mentally carrying everything yourself.</p>
+                        <p class="text-[#1D1D1F]/50 text-[14px] leading-relaxed mb-7 flex-1">For founders and professionals who need continuity without another noisy task app.</p>
+                        <div class="flex flex-col items-start gap-3 mt-auto">
+                            <a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer" class="text-premium text-[16px] font-semibold hover:opacity-80 inline-flex items-center gap-2">Download on the App Store <i class="fab fa-apple text-[13px]" aria-hidden="true"></i></a>
+                            <a href="ai-executive-assistant.html" class="text-[#1D1D1F] text-[14px] font-semibold hover:opacity-70 inline-flex items-center gap-2">View App <i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i></a>
                         </div>
-                    </div>
-                    <div class="bg-white rounded-[32px] p-10 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
-                        <div class="mb-10">
-                            <img src="images/cine-drive-icon.png" alt="Cine Drive" class="brand-icon-card rounded-[20px] shadow-lg shadow-black/5">
+                    </article>
+                    <article class="product-card" data-product-id="cine-drive">
+                        <div class="mb-6">
+                            <img src="images/cine-drive-icon.jpg" alt="" class="brand-icon-card shadow-sm" width="64" height="64" loading="lazy">
                         </div>
-                        <h3 class="text-3xl font-semibold mb-4 tracking-tight">Cine Drive</h3>
-                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-70">Professional external SSD recording workflows for iPhone.</p>
-                        <a href="cine-drive.html" class="text-premium text-[19px] font-semibold hover:opacity-80 flex items-center gap-2">Learn more <i class="fas fa-chevron-right text-[10px]"></i></a>
-                    </div>
-                    <div class="bg-white rounded-[32px] p-10 md:p-16 flex flex-col items-center text-center shadow-sm border border-black/[0.02]">
-                        <div class="mb-10">
-                            <img src="images/family-finance-icon.png" alt="Family Finance" class="brand-icon-card rounded-[20px] shadow-lg shadow-black/5">
+                        <span class="product-badge soon mb-3">Coming Soon</span>
+                        <h3 class="text-[22px] md:text-2xl font-semibold mb-1 tracking-tight text-[#1D1D1F]">Cine Drive</h3>
+                        <p class="text-[13px] text-[#1D1D1F]/45 mb-4">iOS</p>
+                        <p class="text-[#1D1D1F]/80 text-[15px] leading-relaxed mb-3">Professional video recording built around the iPhone — ProRes to external SSDs.</p>
+                        <p class="text-[#1D1D1F]/50 text-[14px] leading-relaxed mb-7 flex-1">For creators who shoot on iPhone and need external storage without friction.</p>
+                        <div class="flex flex-col items-start gap-3 mt-auto">
+                            <span class="text-[15px] font-medium text-[#1D1D1F]/40">Coming Soon</span>
+                            <a href="cine-drive.html" class="text-[#1D1D1F] text-[14px] font-semibold hover:opacity-70 inline-flex items-center gap-2">View App <i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i></a>
                         </div>
-                        <h3 class="text-3xl font-semibold mb-4 tracking-tight">Family Finance</h3>
-                        <p class="text-apple-black text-lg mb-8 max-w-xs opacity-70">Offline-first private ledger for macOS. Local OCR, statement imports, budgets, and optional iCloud sync.</p>
-                        <div class="flex flex-col items-center gap-3">
-                            <a href="https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12" target="_blank" rel="noopener noreferrer" class="text-premium text-[19px] font-semibold hover:opacity-80 flex items-center gap-2">Mac App Store <i class="fab fa-apple text-[14px]"></i></a>
-                            <a href="family-finance.html" class="text-apple-black text-[15px] font-semibold hover:opacity-70 flex items-center gap-2">Learn more <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </article>
+                    <article class="product-card" data-product-id="family-finance">
+                        <div class="mb-6">
+                            <img src="images/family-finance-icon.jpg" alt="" class="brand-icon-card shadow-sm" width="64" height="64" loading="lazy">
                         </div>
-                    </div>
+                        <span class="product-badge live mb-3">Available on the Mac App Store</span>
+                        <h3 class="text-[22px] md:text-2xl font-semibold mb-1 tracking-tight text-[#1D1D1F]">Family Finance</h3>
+                        <p class="text-[13px] text-[#1D1D1F]/45 mb-4">macOS</p>
+                        <p class="text-[#1D1D1F]/80 text-[15px] leading-relaxed mb-3">A private Mac ledger — imports, on-device OCR, and budgets. Local by default.</p>
+                        <p class="text-[#1D1D1F]/50 text-[14px] leading-relaxed mb-7 flex-1">For households that want a ledger without bank feeds or a studio-hosted cloud.</p>
+                        <div class="flex flex-col items-start gap-3 mt-auto">
+                            <a href="https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12" target="_blank" rel="noopener noreferrer" class="text-premium text-[16px] font-semibold hover:opacity-80 inline-flex items-center gap-2">Download on the Mac App Store <i class="fab fa-apple text-[13px]" aria-hidden="true"></i></a>
+                            <a href="family-finance.html" class="text-[#1D1D1F] text-[14px] font-semibold hover:opacity-70 inline-flex items-center gap-2">View App <i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="philosophy" class="section-padding bg-white">
-            <div class="content-width text-center">
-                <div class="max-w-3xl mx-auto fade-in">
-                    <h2 class="section-title text-apple-black mb-12">Studio Philosophy</h2>
-                    <p class="text-xl md:text-2xl text-apple-black mb-20 tracking-tight opacity-90">We believe software should be a quiet, powerful companion. Our studio is dedicated to building tools that respect your privacy and enhance your focus.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-left">
-                        <div><h3 class="text-[19px] font-semibold mb-3">Privacy First</h3><p class="text-apple-black text-[15px] opacity-70">Local-first by design. Your data never leaves your device.</p></div>
-                        <div><h3 class="text-[19px] font-semibold mb-3">Native Depth</h3><p class="text-apple-black text-[15px] opacity-70">Built for the Apple ecosystem. Responsive, intuitive, and powerful.</p></div>
-                        <div><h3 class="text-[19px] font-semibold mb-3">Calm Design</h3><p class="text-apple-black text-[15px] opacity-70">Minimalist interfaces that reduce cognitive load.</p></div>
+        <section id="privacy-philosophy" class="section-padding bg-white">
+            <div class="content-width max-w-3xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-5">Your data belongs to you.</h2>
+                <p class="text-[17px] md:text-lg text-[#1D1D1F]/72 leading-relaxed mb-8">Whenever possible, work happens on your Apple device — not on a studio server. No unnecessary accounts. Optional sync, when offered, uses your private iCloud container.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left sm:text-center">
+                    <div class="principle-item"><h3>Local-first</h3><p>Processing and storage stay on-device when the task allows.</p></div>
+                    <div class="principle-item"><h3>Minimal cloud</h3><p>No PnP-hosted database of your private app content.</p></div>
+                    <div class="principle-item"><h3>Apple-native</h3><p>Built with the platforms’ own privacy model — SwiftUI, Vision, CloudKit.</p></div>
+                </div>
+                <p class="mt-10"><a href="privacy.html" class="text-apple-blue hover:underline text-[15px] font-medium">Privacy Policy</a></p>
+            </div>
+        </section>
+
+        <section id="origin" class="section-padding bg-apple-offwhite">
+            <div class="content-width max-w-2xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-5">I build the tools I wish existed.</h2>
+                <p class="text-[17px] text-[#1D1D1F]/72 leading-relaxed mb-8">When a tool doesn’t exist — or existing ones ask for more account and cloud than the job needs — I build something quieter and more precise.</p>
+                <div class="grid grid-cols-2 gap-8 text-left max-w-lg mx-auto mb-10">
+                    <div class="principle-item"><h3>Native</h3><p>Made for Apple platforms, not forced onto every OS.</p></div>
+                    <div class="principle-item"><h3>Focused</h3><p>One clear job per app — not an overloaded suite.</p></div>
+                    <div class="principle-item"><h3>Private</h3><p>Minimize collection and unnecessary cloud dependency.</p></div>
+                    <div class="principle-item"><h3>Useful</h3><p>Starts from a real workflow, not a feature checklist.</p></div>
+                </div>
+                <a href="about.html" class="text-apple-blue text-[15px] hover:underline inline-flex items-center gap-2">About the studio <i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i></a>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="content-width fade-in">
+                <div class="final-cta-band">
+                    <h2 class="text-2xl md:text-[28px] font-semibold tracking-tight mb-3 text-white" style="-webkit-text-fill-color:#fff;">Download what’s ready.</h2>
+                    <p class="text-[15px] md:text-[16px] text-white/65 mb-7 max-w-md mx-auto leading-relaxed">Ai Executive Assistant and Family Finance are on the App Store. Cine Drive is next.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                        <a href="#apps" class="inline-flex items-center justify-center min-h-[44px] px-7 py-3 rounded-full bg-white text-[#1D1D1F] text-[15px] font-semibold hover:bg-white/90 transition-colors">Explore Apps</a>
+                        <a href="support.html" class="text-[15px] font-medium text-[#7EB6FF] hover:underline">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -176,37 +178,53 @@
 
     <footer class="footer-master" aria-label="Studio Footer">
         <div class="footer-content">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
-                <div class="footer-column"><h3>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
-                <div class="footer-column"><h3>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
-                <div class="footer-column"><h3>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+            <div class="mb-10 max-w-md">
+                <p class="text-[15px] font-semibold text-[#1D1D1F] mb-2">PnP Technologies</p>
+                <p class="text-[13px] leading-relaxed text-black/55">Private, native, purpose-built software for Apple devices.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+                <div class="footer-column">
+                    <h3>Apps</h3>
+                    <ul>
+                        <li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li>
+                        <li><a href="cine-drive.html">Cine Drive</a></li>
+                        <li><a href="family-finance.html">Family Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Studio</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="support.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>App Store</h3>
+                    <ul>
+                        <li><a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer">Ai Executive Assistant</a></li>
+                        <li><a href="https://apps.apple.com/us/app/family-finance-ledger/id6790012195?mt=12" target="_blank" rel="noopener noreferrer">Family Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></span>
-                    <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-                </div>
-                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="images/pnp-technologies-icon.png" alt="PnP Technologies" style="width: 18px; height: 18px; border-radius: 4px; object-fit: contain;">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
+                <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.22</span></span>
+                <div class="flex items-center gap-3 opacity-60">
+                    <img src="images/pnp-technologies-icon.png" alt="" class="brand-icon-footer rounded-[4px]" width="20" height="20">
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-[#1D1D1F]">Apple Ecosystem</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
-        menuToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden-custom');
-            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times"></i>'; menuToggle.setAttribute('aria-label', 'Close Menu'); menuToggle.setAttribute('aria-expanded', 'true'); }
-            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }); });
-    </script>
+    <script src="js/products.js?v=v1.0.22"></script>
+    <script src="js/site.js?v=v1.0.22"></script>
 </body>
 </html>

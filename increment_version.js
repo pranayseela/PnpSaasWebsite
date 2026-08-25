@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const files = ['index.html', 'ai-executive-assistant.html', 'cine-drive.html', 'family-finance.html', 'support.html', 'privacy.html', 'privacy-policy.html', 'terms.html'];
+const files = ['index.html', 'about.html', 'ai-executive-assistant.html', 'cine-drive.html', 'family-finance.html', 'support.html', 'privacy.html', 'privacy-policy.html', 'terms.html', 'css/site.css', 'js/site.js', 'js/products.js'];
 
 // 1. Get current version
 const indexContent = fs.readFileSync('index.html', 'utf8');

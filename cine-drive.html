@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta property="og:title" content="Cine Drive">
-    <meta property="og:description" content="Professional external SSD recording for iPhone.">
+    <title>Cine Drive — PnP Technologies</title>
+    <meta name="description" content="Cine Drive brings professional external SSD recording to iPhone — ProRes capture for creators. Coming soon to the App Store.">
+
+    <meta property="og:title" content="Cine Drive — PnP Technologies">
+    <meta property="og:description" content="Professional video recording, built around the iPhone.">
     <meta property="og:url" content="https://pnpsaas.com/cine-drive.html">
     <meta property="og:image" content="https://pnpsaas.com/images/cine-drive-og.jpg">
     <meta property="og:type" content="website">
@@ -13,189 +16,152 @@
     <meta property="og:image:height" content="1024">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Cine Drive">
-    <meta name="twitter:description" content="Professional external SSD recording for iPhone.">
+    <meta name="twitter:title" content="Cine Drive — PnP Technologies">
+    <meta name="twitter:description" content="Professional video recording, built around the iPhone.">
     <meta name="twitter:image" content="https://pnpsaas.com/images/cine-drive-og.jpg">
 
-    <link rel="apple-touch-icon" href="images/cine-drive-icon.png">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=4">
+    <link rel="apple-touch-icon" href="images/cine-drive-icon.jpg">
+    <link rel="icon" href="favicon.ico?v=6" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=6">
     <link rel="canonical" href="https://pnpsaas.com/cine-drive.html">
-    
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.20">
+
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.22">
+    <link rel="stylesheet" href="css/site.css?v=v1.0.22">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <style>
-        :root { 
-            --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
-            --nav-height: 44px;
-            --premium-gradient: linear-gradient(135deg, #00DBFF 0%, #3A69FF 50%, #FF2BFF 100%);
-        }
-        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
-        body.menu-open { overflow: hidden !important; height: 100vh !important; }
-        .nav-master { background: rgba(255, 255, 255, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1); height: var(--nav-height); z-index: 9999; }
-        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: relative; z-index: 10000; }
-        .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
-        .nav-link:hover { opacity: 0.7; }
-        .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-        .text-apple-black { background: linear-gradient(180deg, #1D1D1F 0%, rgba(29, 29, 31, 0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-premium { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: transform 0.8s var(--apple-ease), opacity 0.4s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .content-width { max-width: 1024px; margin: 0 auto; }
-        #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 24px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
-        @media (min-width: 480px) { #mobile-menu { padding-left: 48px; padding-right: 48px; } }
-        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-        .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
-        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
-        .footer-content { max-width: 1024px; margin: 0 auto; }
-        .footer-column h4 { color: #1D1D1F; font-weight: 600; margin-bottom: 12px; }
-        .footer-column ul { space-y: 8px; }
-        .footer-column a:hover { color: #1D1D1F; text-decoration: underline; }
-        .hero-title { font-size: clamp(40px, 9vw, 80px); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
-        .section-title { font-size: clamp(32px, 7vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; }
-        .section-padding { padding: 80px 22px; }
-        @media (max-width: 768px) { .section-padding { padding: 60px 22px; } }
-        .scroll-indicator { width: 1px; height: 60px; background: linear-gradient(to bottom, #1D1D1F 0%, transparent 100%); opacity: 1; }
-    
-        *:focus-visible { outline: 2px solid #3A69FF; outline-offset: 2px; }
-
-        .glass-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s var(--apple-ease); }
-        .glass-card:hover { transform: translateY(-5px); }
-
-        /* Defensive Scaling for Brand Assets */
-        .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
-        .brand-icon-hero { width: 120px !important; height: 120px !important; object-fit: contain; }
-        @media (max-width: 768px) { .brand-icon-hero { width: 88px !important; height: 88px !important; } }
-        .brand-icon-footer { width: 20px !important; height: 20px !important; object-fit: contain; }
-    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cine Drive","operatingSystem":"iOS","applicationCategory":"MultimediaApplication","description":"Professional external SSD recording workflows for iPhone.","url":"https://pnpsaas.com/cine-drive.html","author":{"@type":"Organization","name":"PnP Technologies LLC","url":"https://pnpsaas.com/"}}
+    </script>
 </head>
-<body class="selection:bg-apple-vibrantBlue/20">
-
-    <!-- MASTER HEADER -->
+<body class="selection:bg-apple-vibrantBlue/15">
+    <a class="skip-link" href="#main">Skip to content</a>
     <nav class="fixed top-0 left-0 right-0 nav-master" aria-label="Global Navigation">
         <div class="nav-content">
             <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity text-apple-black whitespace-nowrap">PnP Technologies</a>
-            <div class="hidden md:flex items-center space-x-10">
+            <div class="hidden md:flex items-center space-x-9">
                 <div class="group relative py-4">
-                    <a class="nav-link">Software</a>
+                    <a href="index.html#apps" class="nav-link">Apps</a>
                     <div class="nav-dropdown">
                         <div class="flex flex-col gap-4">
-                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
-                            <a href="cine-drive.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Cine Drive</a>
-                            <a href="family-finance.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Family Finance</a>
-                            <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
+                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Ai Executive Assistant</a>
+                            <a href="cine-drive.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Cine Drive</a>
+                            <a href="family-finance.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Family Finance</a>
                         </div>
                     </div>
                 </div>
-                <a href="index.html#philosophy" class="nav-link">Philosophy</a>
+                <a href="about.html" class="nav-link">About</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
-                <a href="support.html" class="nav-link">Support</a>
+                <a href="support.html" class="nav-link">Contact</a>
+                <a href="index.html#apps" class="nav-cta">Explore Apps</a>
             </div>
-            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-apple-black focus:outline-none" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-[#1D1D1F]" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
-            <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-apple-vibrantBlue uppercase tracking-widest mb-2">Software</span>
-                <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
-                <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
-                <a href="family-finance.html" class="mobile-link">Family Finance</a>
-            </div>
-            <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
+            <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
+            <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
+            <a href="family-finance.html" class="mobile-link">Family Finance</a>
+            <a href="about.html" class="mobile-link mt-4">About</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
-            <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></div>
+            <a href="support.html" class="mobile-link">Contact</a>
+            <div class="mt-auto pt-8 text-[12px] opacity-70">© 2026 PnP Technologies LLC.<span class="opacity-40 ml-4 font-mono text-[9px]">v1.0.22</span></div>
         </div>
     </nav>
 
-    <main>
-        <section class="min-h-[70svh] flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] bg-white overflow-hidden">
-            <div class="max-w-5xl fade-in py-16 md:py-24">
-                <div class="flex justify-center mb-8">
-                    <img src="images/cine-drive-icon.png" alt="Cine Drive Icon" class="brand-icon-hero rounded-[28px] shadow-2xl shadow-black/10 border-[0.5px] border-black/5">
-                </div>
-                <span class="text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.4em] uppercase text-apple-black/40 mb-6 block">Cinema Grade Workflow</span>
-                <h1 class="hero-title text-apple-black mb-8">Professional External<br>SSD Recording.</h1>
-                <p class="text-lg md:text-2xl text-apple-black mb-12 max-w-3xl mx-auto font-normal leading-tight tracking-tight opacity-90">Professional iPhone camera workflows designed for external SSD storage. High-bitrate ProRes capture with zero friction.</p>
-                <div class="flex flex-col items-center gap-6">
-                    <span class="px-5 sm:px-8 py-3.5 bg-apple-black text-white rounded-full font-semibold text-[15px] sm:text-[17px] flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-center max-w-full">
-                        Coming soon to the iOS App Store
-                        <i class="fab fa-apple text-xl"></i>
-                    </span>
-                </div>
+    <main id="main">
+        <section class="hero-compact text-center hero-wash">
+            <div class="max-w-2xl mx-auto fade-in">
+                <img src="images/cine-drive-icon.jpg" alt="Cine Drive app icon" class="brand-icon-hero mx-auto mb-8 shadow-lg shadow-black/10" width="96" height="96">
+                <p class="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#1D1D1F]/45 mb-3">iOS · Coming Soon</p>
+                <h1 class="hero-title text-apple-black mb-4">Cine Drive</h1>
+                <p class="text-[17px] md:text-lg text-[#1D1D1F]/75 mb-8 leading-relaxed">Professional video recording, built around the iPhone — external SSD workflows for high-bitrate ProRes.</p>
+                <span class="inline-flex items-center justify-center gap-3 min-h-[48px] px-7 py-3.5 rounded-full bg-[#1D1D1F] text-white text-[15px] font-semibold">
+                    Coming soon to the App Store <i class="fab fa-apple text-xl" aria-hidden="true"></i>
+                </span>
             </div>
         </section>
 
-        <section class="py-24 md:py-40 px-6 bg-apple-offwhite border-t border-apple-border/50">
-            <div class="container mx-auto content-width">
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="glass-card p-8 sm:p-12 md:p-16 fade-in">
-                        <div class="w-12 h-12 mb-8 flex items-center justify-center rounded-2xl bg-apple-black text-white">
-                            <i class="fas fa-video text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">ProRes Direct</h3>
-                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight opacity-80">Capture cinema-grade ProRes video directly to external USB-C drives. No more internal storage bottlenecks.</p>
-                    </div>
-                    <div class="glass-card p-8 sm:p-12 md:p-16 fade-in">
-                        <div class="w-12 h-12 mb-8 flex items-center justify-center rounded-2xl bg-apple-black text-white">
-                            <i class="fas fa-layer-group text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">Media Hub</h3>
-                        <p class="text-apple-black font-normal leading-relaxed text-lg tracking-tight opacity-80">Organize, review, and offload media with a professional management layer built for the modern creator.</p>
+        <section class="px-5 pb-12 md:pb-16" aria-label="Product visuals">
+            <div class="content-width">
+                <div class="product-media fade-in">
+                    <div class="product-gallery" data-product-gallery>
+                        <figure class="gallery-frame gallery-frame--hero">
+                            <img src="images/cine-drive-icon.jpg" alt="Cine Drive" width="120" height="120">
+                        </figure>
+                        <!-- Add screenshots when available:
+                        <figure class="gallery-frame gallery-frame--shot"><img src="images/cine-drive-screen-1.jpg" alt="Recording" loading="lazy"></figure>
+                        -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-48 px-6 bg-white border-t border-apple-border/50">
-            <div class="container mx-auto max-w-4xl text-center fade-in">
-                <span class="text-premium font-bold text-xs tracking-widest uppercase mb-6 block">Native Performance</span>
-                <h2 class="section-title text-apple-black mb-10">Native Power.</h2>
-                <p class="text-xl md:text-2xl text-apple-black font-normal leading-relaxed tracking-tight mb-16 opacity-90">Deeply integrated with iOS camera APIs and external hardware. Cine Drive turns your iPhone into a professional-grade cinema brain.</p>
-                <div class="flex flex-wrap justify-center gap-20 text-apple-black/20">
-                    <i class="fas fa-video text-6xl hover:text-apple-black transition-colors duration-500"></i>
-                    <i class="fas fa-hdd text-6xl hover:text-apple-black transition-colors duration-500"></i>
-                    <i class="fab fa-usb text-6xl hover:text-apple-black transition-colors duration-500"></i>
+        <section class="section-padding bg-white border-t border-black/[0.04]">
+            <div class="content-width grid lg:grid-cols-2 gap-10 lg:gap-14">
+                <div class="fade-in">
+                    <h2 class="section-title text-apple-black mb-4">The problem</h2>
+                    <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed">iPhone can capture remarkable footage, but long high-bitrate sessions fill internal storage fast. Creators need a reliable path to record straight to external drives.</p>
                 </div>
+                <div class="fade-in">
+                    <h2 class="section-title text-apple-black mb-4">The solution</h2>
+                    <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed">Cine Drive focuses on external SSD recording for iPhone — ProRes to USB-C storage, with a workflow for review and offload.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-apple-offwhite">
+            <div class="content-width max-w-xl mx-auto fade-in">
+                <h2 class="section-title text-apple-black mb-6 text-center">What it does</h2>
+                <ul class="feature-list">
+                    <li>ProRes capture to external USB-C drives</li>
+                    <li>Workflow centered on external SSD recording</li>
+                    <li>Media organization and review for creators</li>
+                    <li>Built around iOS camera APIs and external hardware</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="content-width max-w-2xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-4">Privacy</h2>
+                <p class="text-[17px] text-[#1D1D1F]/75 leading-relaxed mb-3">Your media stays on your device and drives you control.</p>
+                <p class="text-[15px] text-[#1D1D1F]/55 leading-relaxed">Built for local capture and storage. <a href="privacy.html" class="text-apple-blue hover:underline">Privacy Policy</a></p>
+            </div>
+        </section>
+
+        <section class="section-padding bg-apple-offwhite" id="pricing">
+            <div class="content-width max-w-2xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-4">Availability</h2>
+                <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed mb-6">In development. Pricing will be announced with the App Store release.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-md mx-auto opacity-60" data-pricing-tiers>
+                    <div class="price-card">
+                        <p class="text-[12px] font-semibold uppercase tracking-wider text-[#1D1D1F]/45 mb-2">Pricing</p>
+                        <p class="text-xl font-semibold">TBA</p>
+                    </div>
+                    <div class="price-card">
+                        <p class="text-[12px] font-semibold uppercase tracking-wider text-[#1D1D1F]/45 mb-2">Status</p>
+                        <p class="text-xl font-semibold">Coming Soon</p>
+                    </div>
+                </div>
+                <a href="support.html" class="text-apple-blue text-[15px] font-semibold hover:underline inline-flex items-center gap-2">Contact Support <i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i></a>
             </div>
         </section>
     </main>
 
-    <!-- MASTER FOOTER -->
-    <footer class="footer-master" aria-label="Global Footer">
+    <footer class="footer-master" aria-label="Studio Footer">
         <div class="footer-content">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
-                <div class="footer-column"><h3>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
-                <div class="footer-column"><h3>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
-                <div class="footer-column"><h3>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+            <div class="mb-10 max-w-md">
+                <p class="text-[15px] font-semibold text-[#1D1D1F] mb-2">PnP Technologies</p>
+                <p class="text-[13px] leading-relaxed text-black/55">Private, native, purpose-built software for Apple devices.</p>
             </div>
-            <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></span>
-                    <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-                </div>
-                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="images/pnp-technologies-icon.png" alt="PnP Technologies" class="brand-icon-footer rounded-[4px]">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
-                </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+                <div class="footer-column"><h3>Apps</h3><ul><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
+                <div class="footer-column"><h3>Studio</h3><ul><li><a href="about.html">About</a></li><li><a href="support.html">Contact</a></li></ul></div>
+                <div class="footer-column"><h3>Discover</h3><ul><li><a href="index.html#apps">All apps</a></li></ul></div>
+                <div class="footer-column"><h3>Legal</h3><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
             </div>
+            <div class="pt-8 border-t border-apple-border"><span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px]">v1.0.22</span></span></div>
         </div>
     </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.05 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
-        menuToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden-custom');
-            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times"></i>'; menuToggle.setAttribute('aria-label', 'Close Menu'); menuToggle.setAttribute('aria-expanded', 'true'); }
-            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }); });
-    </script>
+    <script src="js/site.js?v=v1.0.22"></script>
 </body>
 </html>

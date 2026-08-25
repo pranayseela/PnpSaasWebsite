@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta property="og:title" content="Ai Executive Assistant">
-    <meta property="og:description" content="Your private executive memory. Calm, on-device cognitive support.">
+    <title>Ai Executive Assistant — PnP Technologies</title>
+    <meta name="description" content="Ai Executive Assistant is your private executive memory for iPhone. Calm continuity of thought — on-device, Apple-native, on the App Store.">
+
+    <meta property="og:title" content="Ai Executive Assistant — PnP Technologies">
+    <meta property="og:description" content="Your private executive memory. Calm, on-device continuity for iPhone.">
     <meta property="og:url" content="https://pnpsaas.com/ai-executive-assistant.html">
     <meta property="og:image" content="https://pnpsaas.com/images/ai-executive-assistant-icon.jpg">
     <meta property="og:type" content="website">
@@ -13,266 +16,159 @@
     <meta property="og:image:height" content="1024">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Ai Executive Assistant">
-    <meta name="twitter:description" content="Your private executive memory. Apple-native design.">
+    <meta name="twitter:title" content="Ai Executive Assistant — PnP Technologies">
+    <meta name="twitter:description" content="Your private executive memory. Calm, on-device continuity for iPhone.">
     <meta name="twitter:image" content="https://pnpsaas.com/images/ai-executive-assistant-icon.jpg">
 
     <link rel="apple-touch-icon" href="images/ai-executive-assistant-icon.jpg">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=4">
+    <link rel="icon" href="favicon.ico?v=6" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=6">
     <link rel="canonical" href="https://pnpsaas.com/ai-executive-assistant.html">
-    
-    <link rel="stylesheet" href="dist/style.css?v=v1.0.20">
+
+    <link rel="stylesheet" href="dist/style.css?v=v1.0.22">
+    <link rel="stylesheet" href="css/site.css?v=v1.0.22">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <style>
-        :root { 
-            --apple-ease: cubic-bezier(0.28, 0.11, 0.32, 1); 
-            --nav-height: 44px;
-            --brand-cyan: #00DBFF;
-            --brand-blue: #3A69FF;
-            --brand-pink: #FF2BFF;
-            --premium-gradient: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-blue) 50%, var(--brand-pink) 100%);
-        }
-        body { background-color: #FFFFFF; color: #1D1D1F; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.47059; letter-spacing: -0.022em; }
-        body.menu-open { overflow: hidden !important; height: 100vh !important; }
-        
-        .glass-master { 
-            background: rgba(255, 255, 255, 0.75); 
-            backdrop-filter: saturate(180%) blur(20px); 
-            -webkit-backdrop-filter: saturate(180%) blur(20px); 
-            border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        .nav-master { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 9999; }
-        .nav-content { max-width: 1024px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: relative; z-index: 10000; }
-        .nav-link { font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.8); text-decoration: none; transition: opacity 0.2s ease; cursor: pointer; }
-        .nav-link:hover { opacity: 0.7; }
-        .nav-dropdown { position: absolute; top: var(--nav-height); left: 50%; transform: translateX(-50%) translateY(-10px); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border: 0.5px solid rgba(0, 0, 0, 0.1); border-top: none; border-radius: 0 0 18px 18px; padding: 24px; min-width: 240px; opacity: 0; pointer-events: none; transition: all 0.3s var(--apple-ease); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .group:hover .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-
-        /* Aurora Living Background */
-        .aurora-container {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            overflow: hidden;
-            z-index: -1;
-            background: #fff;
-        }
-        .aurora-blur {
-            position: absolute;
-            width: 100%; height: 100%;
-            filter: blur(120px);
-            opacity: 0.2;
-            mix-blend-mode: multiply;
-        }
-        .blob {
-            position: absolute;
-            width: 80vw; height: 80vw;
-            border-radius: 50%;
-            animation: move 30s infinite alternate var(--apple-ease);
-            opacity: 0.4;
-        }
-        .blob-1 { background: var(--brand-cyan); top: -30%; left: -20%; animation-delay: 0s; }
-        .blob-2 { background: var(--brand-pink); bottom: -30%; right: -20%; animation-delay: -5s; }
-        .blob-3 { background: var(--brand-blue); top: 40%; right: 20%; animation-duration: 35s; }
-        
-        @keyframes move {
-            from { transform: translate(0, 0) scale(1); }
-            to { transform: translate(10%, 10%) scale(1.1); }
-        }
-
-        .hero-title { font-size: clamp(34px, 8vw, 64px); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
-        .text-gradient { background: var(--premium-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .btn-premium {
-            background: #1D1D1F;
-            color: white;
-            padding: 12px 36px;
-            border-radius: 99px;
-            font-weight: 600;
-            transition: all 0.4s var(--apple-ease);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        .btn-premium:hover {
-            transform: scale(1.02) translateY(-1px);
-            background: #000;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Floating Icon Effect with iOS Curvature */
-        .floating-icon-wrapper {
-            position: relative;
-            display: inline-block;
-            transition: transform 0.6s var(--apple-ease);
-            border-radius: 22.3%; /* Exact iOS Squircle Ratio */
-            overflow: hidden;
-        }
-        .floating-icon-wrapper:hover {
-            transform: translateY(-5px) scale(1.02);
-        }
-        .icon-glow {
-            position: absolute;
-            inset: -15px;
-            background: var(--premium-gradient);
-            filter: blur(35px);
-            opacity: 0.12;
-            z-index: -1;
-            border-radius: 22.3%;
-        }
-
-        .brief-card { background: #FFFFFF; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
-        .content-width { max-width: 1024px; margin: 0 auto; }
-        #mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background-color: #FFFFFF; z-index: 9998; padding: 80px 24px; display: flex; flex-direction: column; transition: opacity 0.3s ease, transform 0.4s var(--apple-ease); }
-        @media (min-width: 480px) { #mobile-menu { padding-left: 48px; padding-right: 48px; } }
-        #mobile-menu.hidden-custom { opacity: 0; transform: translateY(-10px); pointer-events: none; }
-        .mobile-link { min-height: 44px; display: flex; align-items: center;  font-size: 28px; font-weight: 600; color: #1D1D1F; padding: 12px 0; border-bottom: 1px solid #F5F5F7; }
-        
-        .footer-master { background-color: #F5F5F7; padding: 64px 22px; color: #000000; font-size: 12px; }
-
-        /* Defensive Scaling and Curvature */
-        .brand-icon-nav { width: 18px !important; height: 18px !important; object-fit: contain; }
-        .brand-icon-hero { width: 115px; height: 110px; object-fit: cover; border-radius: 22.3%; }
-        @media (max-width: 768px) { .brand-icon-hero { width: 88px; height: 88px; } }
-
-        .fade-in { opacity: 0; transform: translateY(15px); transition: transform 0.8s var(--apple-ease), opacity 0.5s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ai Executive Assistant","operatingSystem":"iOS","applicationCategory":"UtilitiesApplication","description":"Private executive memory for iPhone — calm continuity of thought, on-device.","url":"https://pnpsaas.com/ai-executive-assistant.html","downloadUrl":"https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PnP Technologies LLC","url":"https://pnpsaas.com/"}}
+    </script>
 </head>
-<body class="selection:bg-brand-blue/20">
-
-    <!-- MASTER HEADER -->
-    <nav class="nav-master glass-master" aria-label="Global Navigation">
+<body class="selection:bg-apple-vibrantBlue/15">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="fixed top-0 left-0 right-0 nav-master" aria-label="Global Navigation">
         <div class="nav-content">
-            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity text-apple-black">
-                <img src="images/ai-executive-assistant-icon.jpg" alt="" class="brand-icon-nav rounded-[4px]">
-                <span class="text-[17px] font-semibold tracking-tight whitespace-nowrap">Ai Assistant</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-10">
+            <a href="index.html" class="text-[17px] font-semibold tracking-tight hover:opacity-70 transition-opacity text-apple-black whitespace-nowrap">PnP Technologies</a>
+            <div class="hidden md:flex items-center space-x-9">
                 <div class="group relative py-4">
-                    <a class="nav-link">Software</a>
+                    <a href="index.html#apps" class="nav-link">Apps</a>
                     <div class="nav-dropdown">
                         <div class="flex flex-col gap-4">
-                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Ai Executive Assistant</a>
-                            <a href="cine-drive.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Cine Drive</a>
-                            <a href="family-finance.html" class="text-[14px] font-semibold text-apple-black hover:text-brand-blue transition-colors whitespace-nowrap">Family Finance</a>
-                            <div class="pt-2 border-t border-apple-offwhite"><a href="index.html#products" class="text-[11px] font-medium text-apple-black hover:text-apple-black uppercase tracking-wider">All Software</a></div>
+                            <a href="ai-executive-assistant.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Ai Executive Assistant</a>
+                            <a href="cine-drive.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Cine Drive</a>
+                            <a href="family-finance.html" class="text-[14px] font-semibold text-[#1D1D1F] hover:text-apple-vibrantBlue transition-colors">Family Finance</a>
                         </div>
                     </div>
                 </div>
-                <a href="index.html#philosophy" class="nav-link">Philosophy</a>
+                <a href="about.html" class="nav-link">About</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
-                <a href="support.html" class="nav-link">Support</a>
+                <a href="support.html" class="nav-link">Contact</a>
+                <a href="index.html#apps" class="nav-cta">Explore Apps</a>
             </div>
-            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-apple-black focus:outline-none" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <button id="menu-toggle" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-[#1D1D1F]" aria-label="Open Menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
         <div id="mobile-menu" class="hidden-custom md:hidden">
-            <div class="flex flex-col space-y-2">
-                <span class="text-[11px] font-bold text-brand-blue uppercase tracking-widest mb-2">Software</span>
-                <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
-                <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
-                <a href="family-finance.html" class="mobile-link">Family Finance</a>
-            </div>
-            <a href="index.html#philosophy" class="mobile-link mt-4">Philosophy</a>
+            <a href="ai-executive-assistant.html" class="mobile-link">Ai Executive Assistant</a>
+            <a href="cine-drive.html" class="mobile-link">Cine Drive</a>
+            <a href="family-finance.html" class="mobile-link">Family Finance</a>
+            <a href="about.html" class="mobile-link mt-4">About</a>
             <a href="privacy.html" class="mobile-link">Privacy</a>
-            <a href="support.html" class="mobile-link">Support</a>
-            <div class="mt-auto pt-8 text-[12px] opacity-100">© 2026 PnP Technologies LLC. All rights reserved.<span class="opacity-30 ml-4 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></div>
+            <a href="support.html" class="mobile-link">Contact</a>
+            <div class="mt-auto pt-8 text-[12px] opacity-70">© 2026 PnP Technologies LLC.<span class="opacity-40 ml-4 font-mono text-[9px]">v1.0.22</span></div>
         </div>
     </nav>
 
-    <main>
-        <section class="min-h-[85svh] relative flex flex-col items-center justify-center text-center px-6 pt-[var(--nav-height)] overflow-hidden">
-            <div class="aurora-container">
-                <div class="aurora-blur">
-                    <div class="blob blob-1"></div>
-                    <div class="blob blob-2"></div>
-                    <div class="blob blob-3"></div>
-                </div>
+    <main id="main">
+        <section class="hero-compact text-center hero-wash">
+            <div class="max-w-2xl mx-auto fade-in">
+                <img src="images/ai-executive-assistant-icon.jpg" alt="Ai Executive Assistant app icon" class="brand-icon-hero mx-auto mb-8 shadow-lg shadow-black/10" width="96" height="96">
+                <p class="text-[12px] font-semibold tracking-[0.14em] uppercase text-[#1D1D1F]/45 mb-3">iOS · App Store</p>
+                <h1 class="hero-title text-apple-black mb-4">Ai Executive Assistant</h1>
+                <p class="text-[17px] md:text-lg text-[#1D1D1F]/75 mb-8 leading-relaxed">Your private executive memory — continuity of thought without carrying everything yourself.</p>
+                <a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 min-h-[48px] px-7 py-3.5 rounded-full bg-[#1D1D1F] text-white text-[15px] font-semibold hover:bg-black transition-colors">
+                    Download on the App Store <i class="fab fa-apple text-xl" aria-hidden="true"></i>
+                </a>
+                <p class="mt-4 text-[11px] font-medium uppercase tracking-wider text-[#1D1D1F]/40">iOS 17.0+ · Free download · Optional Executive Pro</p>
             </div>
-            
-            <div class="max-w-4xl fade-in relative py-12 md:py-16 z-10">
-                <div class="mb-12 flex justify-center">
-                    <div class="floating-icon-wrapper shadow-2xl">
-                        <div class="icon-glow"></div>
-                        <img src="images/ai-executive-assistant-icon.jpg" alt="Ai Assistant" class="brand-icon-hero border border-white/10">
+        </section>
+
+        <section class="px-5 pb-12 md:pb-16" aria-label="Product visuals">
+            <div class="content-width">
+                <div class="product-media fade-in">
+                    <div class="product-gallery" data-product-gallery>
+                        <figure class="gallery-frame gallery-frame--hero">
+                            <img src="images/ai-executive-assistant-icon.jpg" alt="Ai Executive Assistant" width="120" height="120">
+                        </figure>
+                        <!-- Add App Store screenshots here later:
+                        <figure class="gallery-frame gallery-frame--shot"><img src="images/aiea-screen-1.jpg" alt="Executive Brief" loading="lazy"></figure>
+                        <figure class="gallery-frame gallery-frame--shot"><img src="images/aiea-screen-2.jpg" alt="Capture" loading="lazy"></figure>
+                        -->
                     </div>
-                </div>
-                
-                <span class="text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.4em] uppercase text-gradient mb-4 block">The New Executive Standard</span>
-                <h1 class="hero-title text-apple-black mb-6">Stop mentally carrying<br class="hidden md:block"> everything yourself.</h1>
-                <p class="text-lg md:text-xl text-apple-black mb-10 max-w-2xl mx-auto font-normal leading-tight tracking-tight opacity-80">Ai Executive Assistant is your private executive memory. A system designed for continuity of thought in a fragmented world.</p>
-                
-                <div class="flex flex-col items-center gap-6">
-                    <a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer" class="group px-5 sm:px-8 py-3.5 bg-apple-black text-white rounded-full font-semibold text-[15px] sm:text-[17px] hover:bg-black/90 transition-all flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-center max-w-full">
-                        Download on the App Store
-                        <i class="fab fa-apple text-xl"></i>
-                    </a>
-                    <p class="text-apple-black/40 text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.3em] px-2">iOS 17.0+ · Free download · Optional Executive Pro</p>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 md:py-40 px-6 bg-apple-offwhite border-t border-apple-border/50">
-            <div class="container mx-auto content-width">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 items-center">
-                    <div class="fade-in">
-                        <span class="text-brand-blue font-bold text-[11px] tracking-widest uppercase mb-4 block font-sans">Flagship Feature</span>
-                        <h2 class="text-4xl text-apple-black md:text-5xl font-semibold tracking-tight mb-8">The Executive Brief.</h2>
-                        <p class="text-xl text-apple-black font-normal leading-relaxed mb-8 tracking-tight font-serif italic opacity-80">“What’s occupying your mind today?”</p>
-                        <p class="text-lg text-apple-black font-normal leading-relaxed mb-10 tracking-tight">Start every morning with a calm, editorial-style synthesis of your recurring themes, unresolved follow-ups, and evolving projects. It’s situational clarity, designed to relieve the mental burden of management.</p>
-                    </div>
-                    <div class="brief-card p-8 md:p-16 fade-in shadow-2xl shadow-black/[0.02]">
-                        <div class="space-y-8 font-serif">
-                            <div class="border-b border-apple-border pb-8">
-                                <p class="text-[11px] uppercase tracking-widest text-apple-black font-sans mb-4">Monday Briefing</p>
-                                <h3 class="text-3xl font-semibold mb-4 italic text-apple-black">Themes of the Week</h3>
-                                <p class="text-apple-black/80 leading-relaxed text-lg">Discussions around <span class="text-apple-black font-medium border-b border-brand-blue/20">Series B strategy</span> and <span class="text-apple-black font-medium border-b border-brand-pink/20">Executive hiring</span> have surfaced in your last three voice notes.</p>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section-padding bg-white border-t border-black/[0.04]">
+            <div class="content-width grid lg:grid-cols-2 gap-10 lg:gap-14">
+                <div class="fade-in">
+                    <h2 class="section-title text-apple-black mb-4">The problem</h2>
+                    <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed">Important threads live across notes, conversations, and unfinished thoughts. Keeping them all in your head is exhausting — and most task apps add noise instead of clarity.</p>
                 </div>
+                <div class="fade-in">
+                    <h2 class="section-title text-apple-black mb-4">The solution</h2>
+                    <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed">Capture what matters, then return to a calm Executive Brief that surfaces themes and follow-ups — built for continuity, not notification overload.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-apple-offwhite">
+            <div class="content-width max-w-xl mx-auto fade-in">
+                <h2 class="section-title text-apple-black mb-6 text-center">What it does</h2>
+                <ul class="feature-list">
+                    <li>Executive Brief for morning situational clarity</li>
+                    <li>Private continuity for notes and voice capture</li>
+                    <li>Interface designed for focus, not distraction</li>
+                    <li>Built natively for iOS</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="content-width max-w-2xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-4">Privacy</h2>
+                <p class="text-[17px] text-[#1D1D1F]/75 leading-relaxed mb-3">Your data stays on your device.</p>
+                <p class="text-[15px] text-[#1D1D1F]/55 leading-relaxed">Private content is processed and stored on your iPhone — not in a studio-hosted cloud database. <a href="privacy.html" class="text-apple-blue hover:underline">Privacy Policy</a></p>
+            </div>
+        </section>
+
+        <section class="section-padding bg-apple-offwhite" id="pricing">
+            <div class="content-width max-w-2xl mx-auto text-center fade-in">
+                <h2 class="section-title text-apple-black mb-4">Pricing</h2>
+                <p class="text-[16px] text-[#1D1D1F]/72 leading-relaxed mb-8">Free to download. Optional Executive Pro via Apple In-App Purchase — prices are shown in the App Store at purchase time.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-md mx-auto" data-pricing-tiers>
+                    <div class="price-card">
+                        <p class="text-[12px] font-semibold uppercase tracking-wider text-[#1D1D1F]/45 mb-2">Free</p>
+                        <p class="text-xl font-semibold">$0</p>
+                        <p class="text-[13px] text-[#1D1D1F]/5 mt-2">Download &amp; get started</p>
+                    </div>
+                    <div class="price-card">
+                        <p class="text-[12px] font-semibold uppercase tracking-wider text-[#1D1D1F]/45 mb-2">Executive Pro</p>
+                        <p class="text-xl font-semibold">In-app</p>
+                        <p class="text-[13px] text-[#1D1D1F]/5 mt-2">Shown in the App Store</p>
+                    </div>
+                    <!-- Add exact Pro tiers here when confirmed, e.g. Monthly / Yearly -->
+                </div>
+                <a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 min-h-[48px] px-7 py-3.5 rounded-full bg-[#1D1D1F] text-white text-[15px] font-semibold hover:bg-black transition-colors">
+                    Download on the App Store <i class="fab fa-apple text-xl" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- MASTER FOOTER -->
-    <footer class="footer-master" aria-label="Global Footer">
+    <footer class="footer-master" aria-label="Studio Footer">
         <div class="footer-content">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
-                <div class="footer-column"><h3>Portfolio</h3><ul class="flex flex-col gap-2"><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
-                <div class="footer-column"><h3>Studio</h3><ul class="flex flex-col gap-2"><li><a href="index.html#philosophy">Philosophy</a></li><li><a href="support.html">Support</a></li></ul></div>
-                <div class="footer-column"><h3>Support</h3><ul class="flex flex-col gap-2"><li><a href="mailto:support@pnpsaas.com">Email Support</a></li><li><a href="support.html">Help Center</a></li></ul></div>
-                <div class="footer-column"><h3>Legal</h3><ul class="flex flex-col gap-2"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+            <div class="mb-10 max-w-md">
+                <p class="text-[15px] font-semibold text-[#1D1D1F] mb-2">PnP Technologies</p>
+                <p class="text-[13px] leading-relaxed text-black/55">Private, native, purpose-built software for Apple devices.</p>
             </div>
-            <div class="pt-8 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                    <span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px] uppercase tracking-tighter">v1.0.20</span></span>
-                    <div class="flex gap-4"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-                </div>
-                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="images/pnp-technologies-icon.png" alt="PnP Technologies" style="width: 18px; height: 18px; border-radius: 4px; object-fit: contain;">
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-apple-black">Ecosystem Native</span>
-                </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+                <div class="footer-column"><h3>Apps</h3><ul><li><a href="ai-executive-assistant.html">Ai Executive Assistant</a></li><li><a href="cine-drive.html">Cine Drive</a></li><li><a href="family-finance.html">Family Finance</a></li></ul></div>
+                <div class="footer-column"><h3>Studio</h3><ul><li><a href="about.html">About</a></li><li><a href="support.html">Contact</a></li></ul></div>
+                <div class="footer-column"><h3>App Store</h3><ul><li><a href="https://apps.apple.com/us/app/ai-executive-assistant-pro/id6769393650" target="_blank" rel="noopener noreferrer">Download</a></li></ul></div>
+                <div class="footer-column"><h3>Legal</h3><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
             </div>
+            <div class="pt-8 border-t border-apple-border"><span>© 2026 PnP Technologies LLC. <span class="opacity-30 ml-2 font-mono text-[9px]">v1.0.22</span></span></div>
         </div>
     </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.05 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
-        menuToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden-custom');
-            if (isHidden) { mobileMenu.classList.remove('hidden-custom'); body.classList.add('menu-open'); menuToggle.innerHTML = '<i class="fas fa-times"></i>'; menuToggle.setAttribute('aria-label', 'Close Menu'); menuToggle.setAttribute('aria-expanded', 'true'); }
-            else { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden-custom'); body.classList.remove('menu-open'); menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; menuToggle.setAttribute('aria-label', 'Open Menu'); menuToggle.setAttribute('aria-expanded', 'false'); }); });
-    </script>
+    <script src="js/site.js?v=v1.0.22"></script>
 </body>
 </html>
